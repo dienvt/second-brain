@@ -1,0 +1,21 @@
+---
+tags:
+  - dev
+  - prod
+---
+- [x] Health-check ([https://confluence.zalopay.vn/x/jLZ0AQ](https://confluence.zalopay.vn/x/jLZ0AQ))
+    - [x] /health
+    - [x] /info
+    - [ ] Grpc [https://github.com/grpc-ecosystem/grpc-health-probe](https://github.com/grpc-ecosystem/grpc-health-probe)
+- [x] Config ([https://confluence.zalopay.vn/x/rM5xAw](https://confluence.zalopay.vn/x/rM5xAw))
+    - [x] new config folder
+    - [ ] setup value in CMDB ([https://cmdb.zalopay.vn](https://cmdb.zalopay.vn/))
+- [x] Dockerfile ([https://confluence.zalopay.vn/x/fLQiAQ](https://confluence.zalopay.vn/x/fLQiAQ))
+    - [x] build stage
+    - [x] run stage
+- [x] Tracing
+    - [x] agent
+- [x] Metrics
+    - [x] Prometheus
+    - [x] Grafana
+- [ ] Require domain ([https://confluence.zalopay.vn/x/AzPVAw](https://confluence.zalopay.vn/x/AzPVAw))

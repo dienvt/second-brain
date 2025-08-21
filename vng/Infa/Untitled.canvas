@@ -1,0 +1,36 @@
+{
+	"nodes":[
+		{"type":"text","text":"Core-API","id":"1b38c9611d0b29e1","x":-280,"y":-178,"width":250,"height":60},
+		{"type":"text","text":"AQR : public domain","id":"3b0e2ba7f221e7d4","x":-180,"y":-390,"width":250,"height":60},
+		{"type":"text","text":"TPE: public domain","id":"41743e69c94e0351","x":95,"y":-390,"width":250,"height":60},
+		{"type":"text","text":"refund: public domain","id":"be81865c4d006960","x":390,"y":-390,"width":250,"height":60},
+		{"type":"text","text":"ZP-Noti: SVC\nhttp://reminder-service.aqr-growth-qc.svc/","id":"05e0052cee31704c","x":-540,"y":-390,"width":322,"height":83},
+		{"type":"text","text":"bill-storage","id":"ebb6aceadb63fc91","x":-120,"y":260,"width":152,"height":60},
+		{"type":"text","text":"Common-Section\ndns:///session-service.common-services-authentication-production:8082","id":"574fe698aa8f94dd","x":-717,"y":-65,"width":355,"height":100},
+		{"type":"text","text":"payment","id":"34cd92d5dd1f00da","x":-280,"y":260,"width":145,"height":60},
+		{"type":"text","text":"remind","id":"2bd5e8fc74b05625","x":65,"y":260,"width":125,"height":60},
+		{"type":"text","text":"auto-debit","id":"81835bde20d3c723","x":-602,"y":-238,"width":125,"height":60},
+		{"type":"text","text":"Tracking: SVC","id":"c3ec917cf0c3a140","x":-218,"y":60,"width":250,"height":60},
+		{"type":"text","text":"https://zalopay.com.vn/ummerchant\nhttps://zalopay.com.vn/um\nhttps://cps.zalopay.com.vn\nhttps://cps.zpapps.vn/cpscore/promotion\nhttps://cps.zpapps.vn/cpscore/promotion\nhttps://zlp-bill-storage.zalopay.vn","id":"e0477cd0d8f7dc61","x":-765,"y":183,"width":450,"height":155},
+		{"type":"text","text":"Provider-Adapter","id":"6bf2fbcfb3117544","x":70,"y":-78,"width":250,"height":113},
+		{"type":"text","text":"query-hub (done)","id":"1ceff9729091f59e","x":420,"y":-51,"width":125,"height":60},
+		{"type":"text","text":"bill-storage","id":"d66f56c5e4e2c8e7","x":220,"y":120,"width":152,"height":60}
+	],
+	"edges":[
+		{"id":"b09fce411e11b42e","fromNode":"1b38c9611d0b29e1","fromSide":"bottom","toNode":"6bf2fbcfb3117544","toSide":"left"},
+		{"id":"6a5cc2a1eb2c629b","fromNode":"1b38c9611d0b29e1","fromSide":"bottom","toNode":"c3ec917cf0c3a140","toSide":"top"},
+		{"id":"bf551cbe7c27dc15","fromNode":"1b38c9611d0b29e1","fromSide":"top","toNode":"05e0052cee31704c","toSide":"bottom"},
+		{"id":"0dd99aadd17b93e8","fromNode":"1b38c9611d0b29e1","fromSide":"bottom","toNode":"574fe698aa8f94dd","toSide":"top"},
+		{"id":"ffa6253f8f0acdd8","fromNode":"c3ec917cf0c3a140","fromSide":"left","toNode":"574fe698aa8f94dd","toSide":"bottom"},
+		{"id":"e43b846a983c4fc2","fromNode":"1b38c9611d0b29e1","fromSide":"top","toNode":"3b0e2ba7f221e7d4","toSide":"bottom"},
+		{"id":"1c1f61cf52959378","fromNode":"1b38c9611d0b29e1","fromSide":"top","toNode":"41743e69c94e0351","toSide":"bottom"},
+		{"id":"4c2ec22fb1f4576f","fromNode":"1b38c9611d0b29e1","fromSide":"top","toNode":"be81865c4d006960","toSide":"bottom"},
+		{"id":"3d9991db6451270f","fromNode":"1ceff9729091f59e","fromSide":"left","toNode":"6bf2fbcfb3117544","toSide":"right"},
+		{"id":"308af0e24e797d5a","fromNode":"ebb6aceadb63fc91","fromSide":"top","toNode":"c3ec917cf0c3a140","toSide":"bottom"},
+		{"id":"6250ed1c2a37e6d6","fromNode":"2bd5e8fc74b05625","fromSide":"top","toNode":"c3ec917cf0c3a140","toSide":"bottom"},
+		{"id":"604980acd6b2c90d","fromNode":"34cd92d5dd1f00da","fromSide":"top","toNode":"c3ec917cf0c3a140","toSide":"bottom"},
+		{"id":"dc88cc1805ebd152","fromNode":"81835bde20d3c723","fromSide":"right","toNode":"1b38c9611d0b29e1","toSide":"left"},
+		{"id":"869d54d0013319d7","fromNode":"c3ec917cf0c3a140","fromSide":"left","toNode":"e0477cd0d8f7dc61","toSide":"top"},
+		{"id":"7483fc10ed46d400","fromNode":"c3ec917cf0c3a140","fromSide":"right","toNode":"d66f56c5e4e2c8e7","toSide":"left"}
+	]
+}

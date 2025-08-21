@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"39abef42ad825e77","type":"text","text":"TiDB","x":-125,"y":-30,"width":250,"height":60},
+		{"id":"8c7fcf1c7fdbc481","type":"text","text":"Indexes","x":125,"y":-200,"width":250,"height":60},
+		{"id":"2cc8f380b2667ae6","x":409,"y":-391,"width":250,"height":60,"type":"text","text":"Explain"}
+	],
+	"edges":[
+		{"id":"aed7b81247156973","fromNode":"39abef42ad825e77","fromSide":"right","toNode":"8c7fcf1c7fdbc481","toSide":"bottom"},
+		{"id":"c8de78e0726b9aa4","fromNode":"8c7fcf1c7fdbc481","fromSide":"right","toNode":"2cc8f380b2667ae6","toSide":"left"}
+	]
+}

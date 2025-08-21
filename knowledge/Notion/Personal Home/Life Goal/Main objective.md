@@ -1,0 +1,14 @@
+- [ ] Clear bank's debt (400tr)
+- [ ] Have an invest channel:
+    - [ ] stock trading,
+    - [ ] invest to company,
+    - [ ] invest to foundation
+    - [ ] immovable Property
+    - [ ] crypto currency
+- [ ] Master golang
+- [ ] Learning another font end: react or flutter
+- [ ] Learning dev ops
+- [ ] Learning english
+    - [ ] Writing
+    - [ ] Speaking
+    - [ ] achieve IELT degree

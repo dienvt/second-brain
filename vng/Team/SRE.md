@@ -1,0 +1,3 @@
+- Daily support: TienCT  
+- Database (Tidv, Tikv): HienLQ   
+- ElasticSearch, etcd, partner connections (leaseline, VPN), etc: TinhHN   

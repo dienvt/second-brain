@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"type":"text","text":"T-shirt sizing","id":"ae27c5af8657cd5d","x":-360,"y":-280,"width":250,"height":70,"color":"3"},
+		{"type":"text","text":"S = 5 Points\nM = 8  Points\nL = 13 Points\nXL  = 21 Points\nXXL  = 34 Points","id":"f401ed21b0b4e4eb","x":-607,"y":-487,"width":167,"height":147}
+	],
+	"edges":[
+		{"id":"ab122c0506fb55a9","fromNode":"ae27c5af8657cd5d","fromSide":"left","toNode":"f401ed21b0b4e4eb","toSide":"bottom"}
+	]
+}

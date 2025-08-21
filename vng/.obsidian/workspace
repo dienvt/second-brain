@@ -1,0 +1,152 @@
+{
+  "main": {
+    "id": "382d8454e01e8d47",
+    "type": "split",
+    "children": [
+      {
+        "id": "c52592ab8774e989",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Query.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c3006e8d116840a0",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b2f8f400a56b881",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24ab6e5acbad0d32",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "233bedc962f6499d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "ip public",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "65479387e2a23115",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fb3f04dee055603e",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab1fc1677f2ecb41",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d6612890125cc44",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Query.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "be4311f54a8675a9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Query.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "61e6e9b604104346",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "633ed6dcd0259c86",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Query.md"
+              }
+            }
+          },
+          {
+            "id": "0b661910dbc24b7a",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c52592ab8774e989",
+  "lastOpenFiles": [
+    "VNPT/Reconcile.md",
+    "2022-10-10.md",
+    "Auto debit/High.md",
+    "Bill V2/Architech.md",
+    "Auto debit/Auto Debit CF.md",
+    "Query.md",
+    "Infa/Public IPs.md",
+    "VETC/Infa.md",
+    "VETC/Đối soát.md",
+    "VETC/OrderID.md"
+  ]
+}

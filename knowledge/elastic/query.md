@@ -1,0 +1,17 @@
+# Limit 
+```
+GET /_search
+{
+  "from": 5,
+  "size": 20,
+  "query": {
+    "match": {
+      "user.id": "kimchy"
+    }
+  }
+}
+```
+
+[[upsert]]
+
+[[Kafka]]

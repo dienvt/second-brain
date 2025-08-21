@@ -1,0 +1,14 @@
+Remove tables
+zpCPSPlatformLog
+ApiLog
+ConsistBillTrackingLog
+CreateOrderLog
+GenIDConfig
+GenIDData
+GetRegisterBillDetailLog
+GetRegisterBillLog
+HandlerLog
+ProviderApiLog
+RegisterCustomerLog
+SkipGetRegisterBill
+SkipGetRegisterBillDetail

@@ -1,0 +1,6 @@
+-   Providers: 
+	- 10.50.32.45:8383 (2G) (moved)
+	- 10.164.9.11:6380 (current)
+-   Core: 
+	- 10.50.49.70:6382 (5G) (moved)
+	- current use redis from platform team.

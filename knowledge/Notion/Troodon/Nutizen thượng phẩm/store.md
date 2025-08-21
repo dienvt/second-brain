@@ -1,0 +1,5 @@
+- area ( southern, northern, middle)
+- city
+- address
+- phone (optional)
+- location (map loc, optional)

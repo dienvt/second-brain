@@ -1,0 +1,18 @@
+---
+Status: Ready to Start
+Score /5: ⭐️⭐️⭐️⭐️⭐️
+Type: Book
+"\bGenre":
+  - novel
+---
+# How do I know it?
+
+Quora Viet Nam
+
+# Summary
+
+> Write some thing about this book? what does it talk about? how author organize?
+
+# Review
+
+> Personal thinking? How this book help me? Who should read it?

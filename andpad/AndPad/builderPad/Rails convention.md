@@ -1,0 +1,1 @@
+https://github.com/rubocop/rspec-style-guide

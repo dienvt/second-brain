@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "2aa909ac78488da1",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e4603b32738e732",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Interface/Interface Synature.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8ed203e3d722393",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b177975ac7d0977",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "464829fcb1f5f708",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9659652e950a6500",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0deb4e3294281c2f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9e98afb75dc1932f",
+    "type": "split",
+    "children": [
+      {
+        "id": "b777125517ce1de5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55bf5ed3b86885d6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Interface/Interface Synature.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a1747e810a582e4d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Interface/Interface Synature.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b5629225b6f13e05",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9c9ede014f5ee78c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Interface/Interface Synature.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1e4603b32738e732",
+  "lastOpenFiles": [
+    "Agile/Estimate & Planning.md",
+    "Agile/Manifesto.md",
+    "Kafka/Script.md",
+    "Kafka/Rebalance Error.md",
+    "Kafka/Kafka.md",
+    "elastic/Create.md",
+    "elastic/query.md",
+    "elastic/upsert.md",
+    "2022-09-15.md",
+    "BillTracking/New k8s check.md"
+  ]
+}

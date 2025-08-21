@@ -1,0 +1,1 @@
+Fail ngay vòng phỏng vấn với HR.

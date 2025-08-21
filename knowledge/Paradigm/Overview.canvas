@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"type":"text","text":"DEV - Paradigm","id":"8c53a25b96302da5","x":-125,"y":-260,"width":250,"height":60},
+		{"type":"file","file":"Paradigm/OOP/SOLID.md","id":"efc5240e081d091e","x":820,"y":-980,"width":400,"height":400},
+		{"type":"file","file":"Paradigm/OOP/Relation between objects.md","id":"4bc64d5df1059c18","x":820,"y":-497,"width":400,"height":400},
+		{"type":"file","file":"Paradigm/OOP/Key Pillars.md","id":"7ad3797051139f03","x":820,"y":-1460,"width":400,"height":400},
+		{"type":"text","text":"Object Oriented Programming\n\n“Object-orient­ed program­ming is a par­a­digm based on the con­cept of wrap­ping pieces of data, and behav­ior relat­ed to that data, into spe­cial bun­dles called objects, which are con­struct­ed from a set of “blue­prints”, defined by a pro­gram­mer, called class­es.”","id":"aa8ddcea9ea4abe5","x":340,"y":-527,"width":380,"height":287}
+	],
+	"edges":[
+		{"id":"0abb09c95934a7cb","fromNode":"8c53a25b96302da5","fromSide":"right","toNode":"aa8ddcea9ea4abe5","toSide":"left"},
+		{"id":"e4ca3085a6798a11","fromNode":"aa8ddcea9ea4abe5","fromSide":"top","toNode":"7ad3797051139f03","toSide":"left"},
+		{"id":"ea5e0821e5de637e","fromNode":"aa8ddcea9ea4abe5","fromSide":"right","toNode":"efc5240e081d091e","toSide":"left"},
+		{"id":"d475b31328835879","fromNode":"aa8ddcea9ea4abe5","fromSide":"right","toNode":"4bc64d5df1059c18","toSide":"left"}
+	]
+}

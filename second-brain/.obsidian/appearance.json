@@ -1,0 +1,16 @@
+{
+  "accentColor": "#000000",
+  "cssTheme": "Typora-Vue",
+  "theme": "system",
+  "enabledCssSnippets": [
+    "HideMarkdownEmbedTitle",
+    "MultiColumn",
+    "ImageWidth",
+    "Checkboxes",
+    "DoneTaskInEditingMode"
+  ],
+  "baseFontSize": 16,
+  "nativeMenus": false,
+  "showViewHeader": true,
+  "translucency": false
+}

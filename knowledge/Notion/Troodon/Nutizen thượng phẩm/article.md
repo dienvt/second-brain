@@ -1,0 +1,12 @@
+- type : ["Blog cây thuốc" ,"Tin tức"]
+- background
+- name
+- date post?
+- content : html
+- author:
+- comment
+    
+    - content
+    - name
+    - email
+    - website

@@ -1,0 +1,4 @@
+- Gitlab để quản lý
+- Jenkin để build
+- K8s để deploy
+- kibana để log

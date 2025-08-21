@@ -1,0 +1,8 @@
+
+```
+@startmindmap
+* root
+** child
+
+@endmindmap
+```
