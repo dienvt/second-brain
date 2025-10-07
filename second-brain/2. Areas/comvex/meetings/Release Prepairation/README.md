@@ -47,10 +47,19 @@ Now in the releasing project
 	* checkout branch `develop`
 	* Update the package.yml
 ```
-chore: Bump version x.x.x
+chore: Bump app version to x.x.x
 ```
 
 We have to update the print page when create release
 Frontend have another way, we have to push to master for the production release.
+
+#### Backend App
+Run the promotion: https://jenkins.mgmt.digima.com/view/App%20-%20Backend/job/Digima%20Staging%20Backend%20Promotion/339/
+Do we need to build????
+Get the commit from the pull request which merge. For ex: https://github.com/comvex-jp/digima-backend-app/pull/5656
+Then run the promotion.
+For update version we have to alter the `composer.json`
+https://github.com/comvex-jp/digima-backend-app/blob/develop/composer.json
+
 
 # Post Meeting

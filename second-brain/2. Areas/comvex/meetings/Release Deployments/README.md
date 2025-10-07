@@ -15,6 +15,8 @@ Should return 
 ---
 ## Process
 After the [[2. Areas/comvex/meetings/Release Prepairation/README|Release Preparation]]
-Now we already have the release tag in repository.
+Now we already have the release tag in repository. Verify by check the digma-infra tags [here](https://github.com/comvex-jp/digima-infra/tags)
 The Deplopment we only need to run the production release
-
+Jenkins parameter:
+- infra_branch: `v3.19.0-sms-api` Have to check is it exist in `digima-infra`
+- image_tag: `v3.19.0`

@@ -8,6 +8,7 @@ mutagen sync list
 ## Test specifice package
 ```
 php artisan test tests/Integration/Listeners/Lead/Inbox/Message/ProduceLeadEmailMessageConvertedEventSubscriberTest.php
+
 ```
 
 ## Install package
@@ -44,4 +45,13 @@ docker exec -it app-api git config --global --add safe.directory /var/www/digima
 
 docker exec -it app-api composer dump-autoload
 
+```
+
+## Run PHP function on demand
+```
+> php artisan tinker
+
+-- then run 
+> use Digima\Services\UidGenerator;
+> UidGenerator::make(12)
 ```

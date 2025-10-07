@@ -16,10 +16,13 @@ https://comvex.atlassian.net/wiki/spaces/SE/pages/2421227545/Meeting+Schedules#S
 	- Spend 5 minutes for everyone put remaining effort to the comments section
 ## In the Meetings
 ### 1. Review and present each cards:
+
+Take Screen shot
+
 Switch to [PdM Sprint Management](https://comvex.myjetbrains.com/youtrack/agiles/107-133/current?query=%23Corellian%20) - Where all story was listed.
 * **Finish Cards**: 
 	* Add tag "To be deployed" or "QA Validation"
-	* Not to the [Repositories to be deployed](https://comvex.atlassian.net/wiki/spaces/SE/pages/2667184129/Sprint+141#Repositories-to-be-deployed)
+	* Note to the [Repositories to be deployed](https://comvex.atlassian.net/wiki/spaces/SE/pages/2667184129/Sprint+141#Repositories-to-be-deployed)
 * **Not Finish Cards**:
 	* Move card to the next sprint
 	* Negotiate the story point

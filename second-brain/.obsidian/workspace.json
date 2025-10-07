@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c7f636a19837a28a",
+        "id": "ce454b88721f34cc",
         "type": "tabs",
         "children": [
           {
-            "id": "157651568e57eac6",
+            "id": "0cb0a35356e015d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/comvex/Question/Email creation.md",
+                "file": "2. Areas/aws/AWS Lambda.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Email creation"
+              "title": "AWS Lambda"
             }
           },
           {
-            "id": "d7852d4b74587b6d",
+            "id": "42ac23e0997b0476",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/comvex/projects/email/dependencies.md",
+                "file": "2. Areas/mongodb/Connect.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "dependencies"
+              "title": "Connect"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "select for update",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -162,12 +161,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2. Areas/comvex/projects/email/dependencies.md",
+                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from dependencies"
+              "title": "Outgoing links from Upgrade Go-Framework to v8"
             }
           },
           {
@@ -176,13 +175,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2. Areas/comvex/projects/email/dependencies.md",
+                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of dependencies"
+              "title": "Outline of Upgrade Go-Framework to v8"
             }
           },
           {
@@ -191,7 +190,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2. Areas/comvex/projects/email/dependencies.md",
+                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +200,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for dependencies"
+              "title": "Backlinks for Upgrade Go-Framework to v8"
             }
           },
           {
@@ -219,16 +218,6 @@
             }
           },
           {
-            "id": "20908efc18f469c4",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
-            }
-          },
-          {
             "id": "2990fe6c1bc92d36",
             "type": "leaf",
             "state": {
@@ -237,9 +226,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "43383e91489c8733",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -247,6 +246,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -261,44 +261,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d7852d4b74587b6d",
+  "active": "2990fe6c1bc92d36",
   "lastOpenFiles": [
-    "2. Areas/comvex/projects/email/dependencies.md",
-    "2. Areas/comvex/projects/email/models.md",
-    "2. Areas/comvex/projects/email/README.md",
-    "2. Areas/comvex/domain/email.md",
-    "0. PeriodicNotes/2025/Daily/08/2025-08-20.md",
+    "2. Areas/comvex/projects/framework/Worker.md",
+    "2. Areas/comvex/projects/framework/README.md",
+    "2. Areas/comvex/Architecture/Overview 2025-08-03 12.22.37.excalidraw.md",
+    "2. Areas/comvex/Architecture/Overview.md",
+    "2. Areas/comvex/comvex.README.md",
+    "2. Areas/comvex/Introduction.md",
+    "2. Areas/comvex/Lead-acquiration.excalidraw.md",
+    "2. Areas/comvex/meetings/1on1/2025-07-25 Yoshi.md",
     "2. Areas/laravel/Script.md",
     "2. Areas/laravel/laravel.README.md",
-    "0. PeriodicNotes/2025/Daily/08/2025-08-19.md",
-    "1. Projects/corellian_sprint_143/corellian_sprint_143.README.md",
-    "0. PeriodicNotes/Templates/Daily.md",
+    "2. Areas/comvex/projects/billing/Invoice flow.md",
+    "2. Areas/comvex/projects/billing/Test generate bill local.md",
+    "2. Areas/mongodb/Connect.md",
+    "2. Areas/comvex/projects/billing/Todo.md",
+    "2. Areas/mongodb/README.md",
+    "0. PeriodicNotes/2025/Daily/09/2025-09-15.md",
+    "Excalidraw/Drawing 2025-10-01 15.51.59.excalidraw.md",
+    "2. Areas/comvex/infra/mongodb/Connect to the STG.md",
+    "2. Areas/comvex/infra/mongodb/Untitled.md",
+    "2. Areas/mongodb",
+    "2. Areas/comvex/Untitled.md",
+    "2. Areas/comvex/projects/framework",
+    "2. Areas/comvex/projects/billing/README.md",
+    "2. Areas/comvex/projects/billing/worker.md",
+    "2. Areas/aws/AWS Lambda.md",
+    "2. Areas/aws/Profiles.md",
+    "2. Areas/aws/Untitled.md",
+    "2. Areas/aws/AWS IAM.md",
+    "2. Areas/comvex/projects/scheduler",
+    "0. PeriodicNotes/2025/Daily/09",
+    "1. Projects/ha_giang_2025",
+    "1. Projects/kitoc/teckstack",
+    "1. Projects/kitoc",
+    "2. Areas/comvex/projects/sms",
     "1. Projects/corellian_sprint_143",
-    "2. Areas/comvex/meetings/Release Prepairation/2025-08-19.md",
-    "0. PeriodicNotes/2025/Daily/08/2025-08-21.md",
-    "3. Resources/corellian_sp143/corellian_sp143.README.md",
-    "4. Archives/corellian_sprint_142/corellian_sprint_142.README.md",
     "3. Resources/corellian_sp143",
-    "2. Areas/laravel/Troubleshoter.md",
-    "2. Areas/comvex/meetings/Release Prepairation/README.md",
-    "2. Areas/comvex/meetings/Release Deployments/README.md",
-    "2. Areas/comvex/comvex.README.md",
-    "2. Areas/comvex/procedure/Release process.md",
-    "4. Archives/comvex-onboarding/Ehancement.md",
-    "4. Archives/comvex-onboarding/Lead-acquiration.excalidraw.md",
-    "3. Resources/os-operation-system/Context Switching.md",
-    "4. Archives/comvex-onboarding/comvex corp.md",
-    "2. Areas/andpadvn/Remote prj/BE Release feature.md",
-    "2. Areas/comvex/meetings/1on1/2025-06-26 1on1.md",
-    "2. Areas/comvex/procedure/Billing Check.md",
-    "2. Areas/comvex/meetings/Release Deployments",
-    "2. Areas/comvex/Question",
-    "3. Resources/terraform",
-    "2. Areas/comvex/convention/lint",
-    "2. Areas/comvex/convention",
-    "1. Projects/administraton_correct",
-    "2. Areas/comvex/projects/email",
-    "2. Areas/comvex/projects/auth/Untitled",
     "HOME.canvas",
     "4. Archives/personal-brand-wot-sharing-meeting/architecture diagram/Monorepo.svg",
     "4. Archives/personal-brand-wot-sharing-meeting/architecture diagram/Polyrepo.svg",
