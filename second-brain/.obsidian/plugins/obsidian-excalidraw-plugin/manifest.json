@@ -1,11 +1,7 @@
 {
   "id": "obsidian-excalidraw-plugin",
   "name": "Excalidraw",
-<<<<<<< HEAD
   "version": "2.14.0",
-=======
-  "version": "2.16.1",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   "minAppVersion": "1.5.7",
   "description": "An Obsidian plugin to edit and view Excalidraw drawings",
   "author": "Zsolt Viczian",

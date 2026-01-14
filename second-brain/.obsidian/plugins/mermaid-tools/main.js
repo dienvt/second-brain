@@ -12,23 +12,26 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === "object") || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+        __defProp(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toCommonJS = (mod) =>
+  __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // main.ts
 var main_exports = {};
 __export(main_exports, {
   TRIDENT_ICON_NAME: () => TRIDENT_ICON_NAME,
-  default: () => MermaidPlugin
+  default: () => MermaidPlugin,
 });
 module.exports = __toCommonJS(main_exports);
-<<<<<<< HEAD
 var import_obsidian6 = require("obsidian");
 
 // src/core/ElementCategory.ts
@@ -55,9 +58,6 @@ var ElementCategory = /* @__PURE__ */ ((ElementCategory2) => {
   ElementCategory2["Packet"] = "Packet";
   return ElementCategory2;
 })(ElementCategory || {});
-=======
-var import_obsidian7 = require("obsidian");
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 
 // src/elements/sampleDiagrams.ts
 var sampleDiagrams = {
@@ -262,18 +262,14 @@ columns 1
     db:L -- R:server
     disk1:T -- B:server
     disk2:T -- B:db
-`
+`,
 };
 
 // src/elements/architecture.ts
 var architectureElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Architecture" /* Architecture */,
-=======
-    categoryId: "architecture",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample architecture diagram",
     content: `architecture-beta
     group api(cloud)[API]
@@ -288,19 +284,15 @@ var architectureElements = [
     disk2:T -- B:db
 `,
     sortingOrder: 0,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/blockDiagram.ts
 var blockDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Block" /* Block */,
-=======
-    categoryId: "block",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample block diagram",
     content: `block-beta
 columns 1
@@ -318,19 +310,15 @@ columns 1
   style B fill:#969,stroke:#333,stroke-width:4px
 `,
     sortingOrder: 0,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/c4Diagram.ts
 var c4DiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "C4Diagram" /* C4Diagram */,
-=======
-    categoryId: "c4Diagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample C4 diagram (compatible with PlantUML)",
     content: `C4Context
 		title System Context diagram for Internet Banking System
@@ -375,19 +363,15 @@ var c4DiagramElements = [
   
 		UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")`,
     sortingOrder: 1,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/classDiagram.ts
 var classDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample class",
     content: `class Duck{
             +String beakColor
@@ -395,15 +379,11 @@ var classDiagramElements = [
             +quack()
         }`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample class",
     content: `class BankAccount
         BankAccount : +String owner
@@ -411,15 +391,11 @@ var classDiagramElements = [
         BankAccount : +deposit(amount)
         BankAccount : +withdrawal(amount)`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "generic class",
     content: `class Square~Shape~{
             int id
@@ -432,123 +408,83 @@ var classDiagramElements = [
         Square : +setMessages(List~string~ messages)
         Square : +getMessages() List~string~`,
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "inheritance",
     content: "classA <|-- classB",
     sortingOrder: 3,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "composition",
     content: "classC *-- classD",
     sortingOrder: 4,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "aggregation",
     content: "classE o-- classF",
     sortingOrder: 5,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "association",
     content: "classG <-- classH",
     sortingOrder: 6,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "solid link",
     content: "classI -- classJ",
     sortingOrder: 7,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "dependency",
     content: "classK <.. classL",
     sortingOrder: 8,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "realization",
     content: "classM <|.. classN",
     sortingOrder: 9,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "dashed link",
     content: "classO .. classP",
     sortingOrder: 10,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "two-way relation",
     content: "Animal <|--|> Zebra",
     sortingOrder: 11,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "ClassDiagram" /* ClassDiagram */,
-=======
-    categoryId: "classDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample class diagram",
     content: `classDiagram
         Animal <|-- Duck
@@ -572,34 +508,26 @@ var classDiagramElements = [
             +run()
         }`,
     sortingOrder: 12,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/entityRelationshipDiagram.ts
 var entityRelationshipDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample entity relationship diagram",
     content: `erDiagram
         CUSTOMER ||--o{ ORDER : places
         ORDER ||--|{ LINE-ITEM : contains
         CUSTOMER }|..|{ DELIVERY-ADDRESS : uses`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "an entity",
     content: `    CUSTOMER {
             string name
@@ -607,420 +535,284 @@ var entityRelationshipDiagramElements = [
             string sector
         }`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "one-to-many relationship",
     content: `A ||--|{ B : label`,
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "many-to-many relationship",
     content: `A }|--|{ B : label`,
     sortingOrder: 3,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "one-to-one relationship",
     content: `A ||--|| B : label`,
     sortingOrder: 4,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "many-to-one relationship",
     content: `A }|--|| B : label`,
     sortingOrder: 5,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "zero/one-to-one relationship",
     content: `A |o--|| B : label`,
     sortingOrder: 6,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "one-to-one/zero relationship",
     content: `A ||--o| B : label`,
     sortingOrder: 7,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "zero-or-more-to-one relationship",
     content: `A }o--|| B : label`,
     sortingOrder: 8,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "one-to-zero-or-more relationship",
     content: `A ||--o{ B : label`,
     sortingOrder: 9,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "zero-or-more-to-many relationship",
     content: `A }o--|{ B : label`,
     sortingOrder: 10,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "EntityRelationshipDiagram" /* EntityRelationshipDiagram */,
-=======
-    categoryId: "entityRelationshipDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "many-to-zero-or-more relationship",
     content: `A }|--o{ B : label`,
     sortingOrder: 11,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/flowchart.ts
 var flowchartElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a simple flowchart with top to down direction",
     content: `flowchart TD
 Start --> Stop`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a simple flowchart with left to right direction",
     content: "flowchart LR\nStart --> Stop",
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "A node with round edges",
     content: "id1(Some text)",
     sortingOrder: 3,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "A stadium-shaped node",
     content: "id1([Some text])",
     sortingOrder: 4,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "A node in a cylindrical shape",
     content: "id1[(Database)]",
     sortingOrder: 5,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Circle",
     content: "id1((Some text))",
     sortingOrder: 6,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Rhombus",
     content: "id1{Some text}",
     sortingOrder: 7,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Hexagon",
     content: "id1{{Some text}}",
     sortingOrder: 8,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Parallelogram skewed right",
     content: "id1[/Some text/]",
     sortingOrder: 9,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Parallelogram skewed left",
     content: "id1[\\Some text\\]",
     sortingOrder: 10,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Trapezoid",
     content: "A[/Some text\\]",
     sortingOrder: 11,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Trapezoid upside down",
     content: "A[\\Some text/]",
     sortingOrder: 12,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Double circle node",
     content: "id1(((Some text)))",
     sortingOrder: 13,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "A link with arrow head",
     content: "A-->B",
     sortingOrder: 14,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "An open link",
     content: "A --- B",
     sortingOrder: 15,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Text on links",
     content: "A-- This is the text! ---B",
     sortingOrder: 16,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "A link with arrow head and text",
     content: "A-->|text|B",
     sortingOrder: 17,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Dotted link",
     content: "A-.->B",
     sortingOrder: 18,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Thick link",
     content: "A ==> B",
     sortingOrder: 19,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Invisible link",
     content: "A ~~~ B",
     sortingOrder: 20,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Link with circle edge",
     content: "A --o B",
     sortingOrder: 21,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Link with cross edge",
     content: "A --x B",
     sortingOrder: 22,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Flowchart" /* Flowchart */,
-=======
-    categoryId: "flowchart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "Subgraph",
     content: "subgraph one\na1-->a2\nend",
     sortingOrder: 14,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/ganntChart.ts
 var ganttChartElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GanttChart" /* GanttChart */,
-=======
-    categoryId: "ganttChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "simple gantt chart",
     content: `gantt
         title A Gantt Diagram
@@ -1032,15 +824,11 @@ var ganttChartElements = [
         Task in sec      :2014-01-12  , 12d
         another task      : 24d`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GanttChart" /* GanttChart */,
-=======
-    categoryId: "ganttChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "rich gantt chart",
     content: `gantt
         dateFormat  YYYY-MM-DD
@@ -1072,15 +860,11 @@ var ganttChartElements = [
         Add gantt diagram to demo page      :20h
         Add another diagram to demo page    :48h`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GanttChart" /* GanttChart */,
-=======
-    categoryId: "ganttChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "milestones example",
     content: `gantt
         dateFormat HH:mm
@@ -1090,19 +874,15 @@ var ganttChartElements = [
         taska3 : 5min
         Final milestone : milestone, m2, 18:14, 2min`,
     sortingOrder: 2,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/gitGraph.ts
 var gitGraphElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GitGraph" /* GitGraph */,
-=======
-    categoryId: "gitGraph",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "simple git graph",
     content: `gitGraph
         commit
@@ -1116,63 +896,43 @@ var gitGraphElements = [
         commit
         commit`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GitGraph" /* GitGraph */,
-=======
-    categoryId: "gitGraph",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "tagged commit",
     content: `commit id: "Normal" tag: "v1.0.0"`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GitGraph" /* GitGraph */,
-=======
-    categoryId: "gitGraph",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "reverse commit",
     content: `commit id: "Reverse" type: REVERSE`,
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GitGraph" /* GitGraph */,
-=======
-    categoryId: "gitGraph",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "highlighted commit",
     content: `commit id: "Highlight" type: HIGHLIGHT`,
     sortingOrder: 3,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GitGraph" /* GitGraph */,
-=======
-    categoryId: "gitGraph",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "reverse commit",
     content: `commit id: "Reverse" type: REVERSE`,
     sortingOrder: 4,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "GitGraph" /* GitGraph */,
-=======
-    categoryId: "gitGraph",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "git graph with cherry-pick",
     content: `gitGraph
         commit id: "ZERO"
@@ -1189,19 +949,15 @@ var gitGraphElements = [
         checkout develop
         commit id:"C"`,
     sortingOrder: 5,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/kanban.ts
 var kanbanElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Kanban" /* Kanban */,
-=======
-    categoryId: "kanban",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample kanban diagram",
     content: `kanban
   Todo
@@ -1222,19 +978,15 @@ var kanbanElements = [
   id12[Can't reproduce]
     id3[Weird flickering in Firefox]`,
     sortingOrder: 0,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/mindMap.ts
 var mindMapElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a simple mindmap",
     content: `mindmap
         Root
@@ -1242,99 +994,67 @@ var mindMapElements = [
               B
               C`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "square",
     content: `id[I am a square]`,
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "rounded square",
     content: `id(I am a rounded square)`,
     sortingOrder: 3,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "circle",
     content: `id((I am a circle))`,
     sortingOrder: 4,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "bang",
     content: `id))I am a bang((`,
     sortingOrder: 5,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "cloud",
     content: `id)I am a cloud(`,
     sortingOrder: 6,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "hexagon",
     content: `id{{I am a hexagon}}`,
     sortingOrder: 7,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "default",
     content: `I am the default shape`,
     sortingOrder: 8,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Mindmap" /* Mindmap */,
-=======
-    categoryId: "mindmap",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample mindmap",
     content: `mindmap
         root((mindmap))
@@ -1353,19 +1073,15 @@ var mindMapElements = [
             Pen and paper
             Mermaid`,
     sortingOrder: 9,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/packet.ts
 var packetElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Packet" /* Packet */,
-=======
-    categoryId: "packet",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample packet diagram",
     content: `packet-beta
 title UDP Packet
@@ -1376,53 +1092,41 @@ title UDP Packet
 64-95: "Data (variable length)"
 `,
     sortingOrder: 0,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/pieChart.ts
 var pieChartElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "PieChart" /* PieChart */,
-=======
-    categoryId: "pieChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample pie chart",
     content: `pie title /r/obsidianmd posts by type
         "Graphs" : 85
         "Dashboards" : 14
         "Tips" : 1`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "PieChart" /* PieChart */,
-=======
-    categoryId: "pieChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample pie chart with values shown in legend",
     content: `pie showData title /r/obsidianmd posts by type
         "Graphs" : 85
         "Dashboards" : 14
         "Tips" : 1`,
     sortingOrder: 1,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/quadrant.ts
 var quadrantElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "QuadrantChart" /* QuadrantChart */,
-=======
-    categoryId: "quadrantChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample quadrant chart",
     content: `quadrantChart
 		title Reach and engagement of campaigns
@@ -1439,15 +1143,11 @@ var quadrantElements = [
 		Campaign E: [0.40, 0.34]
 		Campaign F: [0.35, 0.78]`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "QuadrantChart" /* QuadrantChart */,
-=======
-    categoryId: "quadrantChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "themed quadrant chart",
     content: `%%{init: {"quadrantChart": {"chartWidth": 400, "chartHeight": 400}, "themeVariables": {"quadrant1TextFill": "#ff0000"} }}%%
 		quadrantChart
@@ -1458,19 +1158,15 @@ var quadrantElements = [
 		  quadrant-3 Delegate
 		  quadrant-4 Delete`,
     sortingOrder: 1,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/requirementDiagram.ts
 var requirementDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "RequirementDiagram" /* RequirementDiagram */,
-=======
-    categoryId: "requirementDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample requirements diagram",
     content: `    requirementDiagram
 
@@ -1487,30 +1183,22 @@ var requirementDiagramElements = [
     
         test_entity - satisfies -> test_req`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "RequirementDiagram" /* RequirementDiagram */,
-=======
-    categoryId: "requirementDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample requirements diagram",
     content: `element customElement {
             type: customType
             docref: customDocRef
         }`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "RequirementDiagram" /* RequirementDiagram */,
-=======
-    categoryId: "requirementDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a requirement with high risk",
     content: `functionalRequirement myReq {
             id: reqId
@@ -1519,15 +1207,11 @@ var requirementDiagramElements = [
             verifymethod: analysis
         }`,
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "RequirementDiagram" /* RequirementDiagram */,
-=======
-    categoryId: "requirementDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample requirements diagram",
     content: `interfaceRequirement myReq2 {
             id: reqId
@@ -1536,15 +1220,11 @@ var requirementDiagramElements = [
             verifymethod: demonstration
         }`,
     sortingOrder: 3,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "RequirementDiagram" /* RequirementDiagram */,
-=======
-    categoryId: "requirementDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample requirements diagram",
     content: `designConstraint myReq3 {
             id: reqId
@@ -1553,19 +1233,15 @@ var requirementDiagramElements = [
             verifymethod: test
         }`,
     sortingOrder: 4,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/sankeyDiagram.ts
 var sankeyDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "SankeyDiagram" /* SankeyDiagram */,
-=======
-    categoryId: "sankeyDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "",
     content: `sankey-beta
         %% source,target,value
@@ -1573,34 +1249,26 @@ var sankeyDiagramElements = [
         Electricity grid,Heating and cooling - homes,113.726
         Electricity grid,H2 conversion,27.14`,
     sortingOrder: 0,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/sequenceDiagram.ts
 var sequenceDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "SequenceDiagram" /* SequenceDiagram */,
-=======
-    categoryId: "sequenceDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a simple sequence diagram",
     content: `sequenceDiagram
 Alice->>John: Hello John, how are you?
 John-->>Alice: Great!
 Alice-)John: See you later!`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "SequenceDiagram" /* SequenceDiagram */,
-=======
-    categoryId: "sequenceDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a simple sequence diagram with actors",
     content: `sequenceDiagram
 actor Alice
@@ -1609,19 +1277,15 @@ Alice->>John: Hello John, how are you?
 John-->>Alice: Great!
 Alice-)John: See you later!`,
     sortingOrder: 1,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/stateDiagram.ts
 var stateDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample state diagram",
     content: `stateDiagram-v2
         [*] --> Still
@@ -1632,15 +1296,11 @@ var stateDiagramElements = [
         Moving --> Crash
         Crash --> [*]`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample state diagram with left-to-right direction",
     content: `stateDiagram-v2
         direction LR
@@ -1652,51 +1312,35 @@ var stateDiagramElements = [
         Moving --> Crash
         Crash --> [*]`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "node with description",
     content: `s2 : This is a state description`,
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a transition",
     content: `s1 --> s2`,
     sortingOrder: 3,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a transition with label",
     content: `s1 --> s2: A transition`,
     sortingOrder: 4,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "composite state",
     content: `
         [*] --> First
@@ -1705,15 +1349,11 @@ var stateDiagramElements = [
             second --> [*]
         }`,
     sortingOrder: 5,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "diagram with choice",
     content: `stateDiagram-v2
         state if_state <<choice>>
@@ -1722,15 +1362,11 @@ var stateDiagramElements = [
         if_state --> False: if n < 0
         if_state --> True : if n >= 0`,
     sortingOrder: 6,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "diagram with fork",
     content: `stateDiagram-v2
         state fork_state <<fork>>
@@ -1744,15 +1380,11 @@ var stateDiagramElements = [
           join_state --> State4
           State4 --> [*]`,
     sortingOrder: 7,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "StateDiagram" /* StateDiagram */,
-=======
-    categoryId: "stateDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a diagram with concurrency",
     content: `stateDiagram-v2
         [*] --> Active
@@ -1771,19 +1403,15 @@ var stateDiagramElements = [
             ScrollLockOn --> ScrollLockOff : EvScrollLockPressed
         }`,
     sortingOrder: 8,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/timeline.ts
 var timelineElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Timeline" /* Timeline */,
-=======
-    categoryId: "timeline",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "sample timeline",
     content: `timeline
 		title History of Social Media Platform
@@ -1793,15 +1421,11 @@ var timelineElements = [
 		2005 : Youtube
 		2006 : Twitter`,
     sortingOrder: 1,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Timeline" /* Timeline */,
-=======
-    categoryId: "timeline",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "timeline with grouping",
     content: `timeline
 		title Timeline of Industrial Revolution
@@ -1813,16 +1437,13 @@ var timelineElements = [
 			Industry 4.0 : Internet, Robotics, Internet of Things
 			Industry 5.0 : Artificial intelligence, Big data,3D printing`,
     sortingOrder: 2,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "Timeline" /* Timeline */,
-=======
-    categoryId: "timeline",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-    description: "timeline with Forest theme. see the docs for additional themes",
+    description:
+      "timeline with Forest theme. see the docs for additional themes",
     content: `%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
 		timeline
 			title History of Social Media Platform
@@ -1834,19 +1455,15 @@ var timelineElements = [
 			  2008 : Instagram
 			  2010 : Pinterest`,
     sortingOrder: 3,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/userJourneyDiagram.ts
 var userJourneyDiagramElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "UserJourneyDiagram" /* UserJourneyDiagram */,
-=======
-    categoryId: "userJourneyDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample user journey diagram",
     content: `journey
         title My working day
@@ -1858,31 +1475,23 @@ var userJourneyDiagramElements = [
           Go downstairs: 5: Me
           Sit down: 5: Me`,
     sortingOrder: 0,
-    isPinned: false
+    isPinned: false,
   },
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "UserJourneyDiagram" /* UserJourneyDiagram */,
-=======
-    categoryId: "userJourneyDiagram",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a step in user journey",
     content: `      Step Title: 5: ActorName`,
     sortingOrder: 1,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/xyChart.ts
 var xyChartElements = [
   {
     id: crypto.randomUUID(),
-<<<<<<< HEAD
     category: "XyChart" /* XyChart */,
-=======
-    categoryId: "xyChart",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     description: "a sample XYChart diagram",
     content: `xychart-beta
         title "Sales Revenue"
@@ -1891,8 +1500,8 @@ var xyChartElements = [
         bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
         line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]`,
     sortingOrder: 0,
-    isPinned: false
-  }
+    isPinned: false,
+  },
 ];
 
 // src/elements/defaultElements.ts
@@ -1916,13 +1525,15 @@ var defaultElements = [
   ...packetElements,
   ...kanbanElements,
   ...blockDiagramElements,
-  ...architectureElements
+  ...architectureElements,
 ];
 
-<<<<<<< HEAD
 // src/core/elementService.ts
 var wrappingsForElementCategories = {
-  Flowchart: { defaultWrapping: "flowchart LR", wrappings: ["flowchart LR", "flowchart TD"] },
+  Flowchart: {
+    defaultWrapping: "flowchart LR",
+    wrappings: ["flowchart LR", "flowchart TD"],
+  },
   SequenceDiagram: { defaultWrapping: "sequenceDiagram", wrappings: null },
   ClassDiagram: { defaultWrapping: "classDiagram", wrappings: null },
   StateDiagram: { defaultWrapping: "stateDiagram-v2", wrappings: null },
@@ -1930,7 +1541,10 @@ var wrappingsForElementCategories = {
   UserJourneyDiagram: { defaultWrapping: "journey", wrappings: null },
   GanttChart: { defaultWrapping: "gantt", wrappings: null },
   PieChart: { defaultWrapping: "pie", wrappings: null },
-  RequirementDiagram: { defaultWrapping: "requirementDiagram", wrappings: null },
+  RequirementDiagram: {
+    defaultWrapping: "requirementDiagram",
+    wrappings: null,
+  },
   GitGraph: { defaultWrapping: "gitGraph", wrappings: null },
   Mindmap: { defaultWrapping: "mindmap", wrappings: ["mindmap"] },
   Timeline: { defaultWrapping: "timeline", wrappings: null },
@@ -1941,265 +1555,22 @@ var wrappingsForElementCategories = {
   Packet: { defaultWrapping: "packet-beta", wrappings: null },
   Kanban: { defaultWrapping: "kanban", wrappings: null },
   Block: { defaultWrapping: "block-beta", wrappings: null },
-  Architecture: { defaultWrapping: "architecture-beta", wrappings: null }
+  Architecture: { defaultWrapping: "architecture-beta", wrappings: null },
 };
 var MermaidElementService = class {
-=======
-// src/core/defaultCategories.ts
-var DEFAULT_CATEGORIES = [
-  {
-    id: "flowchart",
-    name: "Flowchart",
-    defaultWrapping: "flowchart LR",
-    wrappings: ["flowchart LR", "flowchart TD"],
-    isCustom: false,
-    sortOrder: 0
-  },
-  {
-    id: "sequenceDiagram",
-    name: "SequenceDiagram",
-    defaultWrapping: "sequenceDiagram",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 1
-  },
-  {
-    id: "classDiagram",
-    name: "ClassDiagram",
-    defaultWrapping: "classDiagram",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 2
-  },
-  {
-    id: "stateDiagram",
-    name: "StateDiagram",
-    defaultWrapping: "stateDiagram-v2",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 3
-  },
-  {
-    id: "entityRelationshipDiagram",
-    name: "EntityRelationshipDiagram",
-    defaultWrapping: "erDiagram",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 4
-  },
-  {
-    id: "userJourneyDiagram",
-    name: "UserJourneyDiagram",
-    defaultWrapping: "journey",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 5
-  },
-  {
-    id: "ganttChart",
-    name: "GanttChart",
-    defaultWrapping: "gantt",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 6
-  },
-  {
-    id: "pieChart",
-    name: "PieChart",
-    defaultWrapping: "pie",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 7
-  },
-  {
-    id: "requirementDiagram",
-    name: "RequirementDiagram",
-    defaultWrapping: "requirementDiagram",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 8
-  },
-  {
-    id: "gitGraph",
-    name: "GitGraph",
-    defaultWrapping: "gitGraph",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 9
-  },
-  {
-    id: "mindmap",
-    name: "Mindmap",
-    defaultWrapping: "mindmap",
-    wrappings: ["mindmap"],
-    isCustom: false,
-    sortOrder: 10
-  },
-  {
-    id: "timeline",
-    name: "Timeline",
-    defaultWrapping: "timeline",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 11
-  },
-  {
-    id: "c4Diagram",
-    name: "C4Diagram",
-    defaultWrapping: "C4Context",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 12
-  },
-  {
-    id: "quadrantChart",
-    name: "QuadrantChart",
-    defaultWrapping: "quadrantChart",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 13
-  },
-  {
-    id: "sankeyDiagram",
-    name: "SankeyDiagram",
-    defaultWrapping: "sankey-beta",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 14
-  },
-  {
-    id: "xyChart",
-    name: "XyChart",
-    defaultWrapping: "xychart-beta",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 15
-  },
-  {
-    id: "kanban",
-    name: "Kanban",
-    defaultWrapping: "kanban",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 16
-  },
-  {
-    id: "architecture",
-    name: "Architecture",
-    defaultWrapping: "architecture-beta",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 17
-  },
-  {
-    id: "block",
-    name: "Block",
-    defaultWrapping: "block-beta",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 18
-  },
-  {
-    id: "packet",
-    name: "Packet",
-    defaultWrapping: "packet-beta",
-    wrappings: null,
-    isCustom: false,
-    sortOrder: 19
-  }
-];
-
-// src/core/categoryService.ts
-var CategoryService = class {
-  constructor() {
-    this.categories = [];
-    this.categories = [...DEFAULT_CATEGORIES];
-  }
-  static getInstance() {
-    if (!CategoryService.instance) {
-      CategoryService.instance = new CategoryService();
-    }
-    return CategoryService.instance;
-  }
-  getCategories() {
-    return [...this.categories].sort((a, b) => a.sortOrder - b.sortOrder);
-  }
-  getCategoryById(id) {
-    return this.categories.find((cat) => cat.id === id);
-  }
-  getCategoryByName(name) {
-    return this.categories.find((cat) => cat.name === name);
-  }
-  addCategory(category) {
-    if (this.categories.some((cat) => cat.id === category.id)) {
-      throw new Error(`Category with ID '${category.id}' already exists`);
-    }
-    this.categories.push(category);
-  }
-  updateCategory(category) {
-    const index = this.categories.findIndex((cat) => cat.id === category.id);
-    if (index === -1) {
-      throw new Error(`Category with ID '${category.id}' not found`);
-    }
-    this.categories[index] = category;
-  }
-  deleteCategory(id) {
-    var _a;
-    if (!((_a = this.getCategoryById(id)) == null ? void 0 : _a.isCustom)) {
-      throw new Error("Cannot delete default categories");
-    }
-    this.categories = this.categories.filter((cat) => cat.id !== id);
-  }
-  loadCategories(customCategories, defaultCategorySortOrders = {}) {
-    const defaultCategories = DEFAULT_CATEGORIES.map((cat) => ({
-      ...cat,
-      sortOrder: defaultCategorySortOrders[cat.id] !== void 0 ? defaultCategorySortOrders[cat.id] : cat.sortOrder
-    }));
-    const customCats = customCategories.filter((cat) => cat.isCustom);
-    this.categories = [...defaultCategories, ...customCats];
-  }
-  getCustomCategories() {
-    return this.categories.filter((cat) => cat.isCustom);
-  }
-  getWrappingData(categoryId) {
-    var _a;
-    const category = this.getCategoryById(categoryId);
-    if (!category)
-      return null;
-    return {
-      defaultWrapping: category.defaultWrapping,
-      wrappings: (_a = category.wrappings) != null ? _a : null
-    };
-  }
-  getNextSortOrder() {
-    return Math.max(...this.categories.map((cat) => cat.sortOrder), -1) + 1;
-  }
-};
-
-// src/core/elementService.ts
-var MermaidElementService = class {
-  constructor() {
-    this.categoryService = CategoryService.getInstance();
-  }
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   static DefaultElements() {
     return defaultElements;
   }
   saveElement(element, plugin) {
-    const elementExists = plugin.settings.elements.some((el) => el.id === element.id);
+    const elementExists = plugin.settings.elements.some(
+      (el) => el.id === element.id
+    );
     if (elementExists) {
-<<<<<<< HEAD
       plugin.settings.elements.forEach((el) => {
         if (el.id === element.id) {
           el = element;
         }
       });
-=======
-      const index = plugin.settings.elements.findIndex((el) => el.id === element.id);
-      if (index !== -1) {
-        plugin.settings.elements[index] = element;
-      }
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     } else {
       this.fixSortOrder(element, plugin);
       plugin.settings.elements.push(element);
@@ -2207,34 +1578,21 @@ var MermaidElementService = class {
     plugin.saveSettings();
   }
   fixSortOrder(element, plugin) {
-<<<<<<< HEAD
-    const elementsFromSameCategory = plugin.settings.elements.filter((element2) => element2.category === element2.category);
-    if (elementsFromSameCategory.some((element2) => element2.sortingOrder === element2.sortingOrder)) {
+    const elementsFromSameCategory = plugin.settings.elements.filter(
+      (element2) => element2.category === element2.category
+    );
+    if (
+      elementsFromSameCategory.some(
+        (element2) => element2.sortingOrder === element2.sortingOrder
+      )
+    ) {
       element.sortingOrder = elementsFromSameCategory.length;
     }
   }
   getSampleDiagram(category) {
-    return this.wrapForPastingIntoEditor(this.wrapWithMermaidBlock(sampleDiagrams[category]));
-=======
-    const elementsFromSameCategory = plugin.settings.elements.filter((el) => el.categoryId === element.categoryId);
-    if (elementsFromSameCategory.some((el) => el.sortingOrder === element.sortingOrder)) {
-      element.sortingOrder = elementsFromSameCategory.length;
-    }
-  }
-  getSampleDiagram(categoryId) {
-    const category = this.categoryService.getCategoryById(categoryId);
-    if (!category) {
-      console.warn(`[Mermaid Tools] No category found for ID: ${categoryId}, using default sample`);
-      return this.wrapForPastingIntoEditor(this.wrapWithMermaidBlock("flowchart TD\nStart --> End"));
-    }
-    const sampleKey = category.name;
-    const sample = sampleDiagrams[sampleKey];
-    if (sample) {
-      return this.wrapForPastingIntoEditor(this.wrapWithMermaidBlock(sample));
-    }
-    console.warn(`[Mermaid Tools] No sample diagram found for category: ${category.name}, using default sample`);
-    return this.wrapForPastingIntoEditor(this.wrapWithMermaidBlock("flowchart TD\nStart --> End"));
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+    return this.wrapForPastingIntoEditor(
+      this.wrapWithMermaidBlock(sampleDiagrams[category])
+    );
   }
   wrapForPastingIntoEditor(text) {
     return `${text}
@@ -2246,49 +1604,14 @@ ${text}
 \`\`\``;
   }
   wrapAsCompleteDiagram(element) {
-<<<<<<< HEAD
     const wrapping = wrappingsForElementCategories[element.category];
-    return (wrapping.wrappings ? wrapping.wrappings.some((w) => element.content.contains(w)) : element.content.contains(wrapping.defaultWrapping)) ? element.content : wrapping.defaultWrapping + "\n" + element.content;
-=======
-    const wrapping = this.categoryService.getWrappingData(element.categoryId);
-    if (!wrapping) {
-      console.warn(`[Mermaid Tools] No wrapping data found for category: ${element.categoryId}`);
-      return element.content;
-    }
-    const contentAlreadyWrapped = wrapping.wrappings ? wrapping.wrappings.some((w) => element.content.contains(w)) : element.content.contains(wrapping.defaultWrapping);
-    if (contentAlreadyWrapped) {
-      return element.content;
-    }
-    const wrappedContent = wrapping.defaultWrapping + "\n" + element.content;
-    const firstWord = wrapping.defaultWrapping.trim().split(/\s+/)[0];
-    const validDiagramTypes = [
-      "flowchart",
-      "graph",
-      "sequenceDiagram",
-      "classDiagram",
-      "stateDiagram-v2",
-      "erDiagram",
-      "journey",
-      "gantt",
-      "pie",
-      "requirementDiagram",
-      "gitGraph",
-      "mindmap",
-      "timeline",
-      "quadrantChart",
-      "C4Context",
-      "sankey-beta",
-      "xychart-beta",
-      "packet-beta",
-      "kanban",
-      "block-beta",
-      "architecture-beta"
-    ];
-    if (!validDiagramTypes.includes(firstWord)) {
-      console.warn(`[Mermaid Tools] Potentially invalid diagram type "${firstWord}" in category ${element.categoryId}. This may cause rendering errors.`);
-    }
-    return wrappedContent;
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+    return (
+      wrapping.wrappings
+        ? wrapping.wrappings.some((w) => element.content.contains(w))
+        : element.content.contains(wrapping.defaultWrapping)
+    )
+      ? element.content
+      : wrapping.defaultWrapping + "\n" + element.content;
   }
 };
 
@@ -2296,7 +1619,8 @@ ${text}
 var NoActiveCursorError = class extends Error {
   constructor() {
     super();
-    this.message = "Mermaid Tools: Error getting cursor position. Make sure you are in editing mode and have an active cursor in file content.";
+    this.message =
+      "Mermaid Tools: Error getting cursor position. Make sure you are in editing mode and have an active cursor in file content.";
   }
 };
 var TextEditorService = class {
@@ -2304,28 +1628,17 @@ var TextEditorService = class {
     this._elementService = new MermaidElementService();
   }
   insertTextAtCursor(editor, content) {
-    if (!editor)
-      throw new NoActiveCursorError();
+    if (!editor) throw new NoActiveCursorError();
     content = this._elementService.wrapForPastingIntoEditor(content);
     const cursor = editor.getCursor();
     editor.replaceRange(content, cursor);
-<<<<<<< HEAD
     editor.setCursor(content.length);
-=======
-    const lines = content.split("\n");
-    const newCursor = {
-      line: cursor.line + lines.length - 1,
-      ch: lines.length === 1 ? cursor.ch + lines[0].length : lines[lines.length - 1].length
-    };
-    editor.setCursor(newCursor);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     editor.focus();
   }
 };
 
 // src/settings/settings.ts
 var MermaidPluginSettings = class {
-<<<<<<< HEAD
   constructor() {
     this.categories = ElementCategory;
   }
@@ -2333,15 +1646,6 @@ var MermaidPluginSettings = class {
     let settings = new MermaidPluginSettings();
     settings.elements = defaultElements;
     settings.selectedCategory = "Flowchart" /* Flowchart */;
-=======
-  static DefaultSettings() {
-    const settings = new MermaidPluginSettings();
-    settings.elements = defaultElements;
-    settings.customCategories = [];
-    settings.selectedCategoryId = "flowchart";
-    settings.defaultCategorySortOrders = {};
-    settings.categoryModifications = {};
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     return settings;
   }
 };
@@ -2381,32 +1685,25 @@ var tridentIcon = `<svg width="100" height="100" viewBox="0 0 64 64" fill="none"
 </svg>`;
 
 // src/ui/settingsTab.ts
-<<<<<<< HEAD
 var import_obsidian3 = require("obsidian");
-=======
-var import_obsidian4 = require("obsidian");
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 
 // src/ui/editMermaidElementModal.ts
 var import_obsidian2 = require("obsidian");
 var EditMermaidElementModal = class extends import_obsidian2.Modal {
-<<<<<<< HEAD
   constructor(app, _plugin, _mermaid, _element) {
-=======
-  constructor(app, _plugin, _mermaid, _element, _categoryService) {
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     super(app);
     this._plugin = _plugin;
     this._mermaid = _mermaid;
     this._element = _element;
-<<<<<<< HEAD
   }
   async onOpen() {
     let { contentEl } = this;
     contentEl.addClass("mermaid-tools-edit-element-modal");
     contentEl.createEl("h2", { text: "Edit element" });
     let renderContainerEl = contentEl.createDiv();
-    let renderEl = renderContainerEl.createEl("pre", { text: "rendered diagram" });
+    let renderEl = renderContainerEl.createEl("pre", {
+      text: "rendered diagram",
+    });
     if (!this._mermaid)
       this._mermaid = await (0, import_obsidian2.loadMermaid)();
     renderEl.id = "mermaid-edit-element-modal";
@@ -2423,54 +1720,27 @@ var EditMermaidElementModal = class extends import_obsidian2.Modal {
     };
     let elementDescriptionContainerEl = contentEl.createDiv();
     elementDescriptionContainerEl.createEl("label", { text: "Description" });
-    let elementDescriptionEl = elementDescriptionContainerEl.createEl("input", { value: this._element.description, type: "text" });
-=======
-    this._categoryService = _categoryService;
-  }
-  async onOpen() {
-    const { contentEl } = this;
-    contentEl.addClass("mermaid-tools-edit-element-modal");
-    contentEl.createEl("h2", { text: "Edit element" });
-    const renderContainerEl = contentEl.createDiv();
-    const renderEl = renderContainerEl.createEl("pre", { text: "rendered diagram" });
-    if (!this._mermaid)
-      this._mermaid = await (0, import_obsidian2.loadMermaid)();
-    renderEl.id = "mermaid-edit-element-modal";
-    const elementCategoryContainerEl = contentEl.createDiv();
-    elementCategoryContainerEl.createEl("label", { text: "Category" });
-    const elementCategoryEl = elementCategoryContainerEl.createEl("select");
-    const categories = this._categoryService.getCategories();
-    for (const category of categories) {
-      const option = elementCategoryEl.createEl("option", { text: category.name });
-      option.value = category.id;
-    }
-    elementCategoryEl.value = this._element.categoryId;
-    elementCategoryEl.onchange = (e) => {
-      this._element.categoryId = elementCategoryEl.value;
-    };
-    const elementDescriptionContainerEl = contentEl.createDiv();
-    elementDescriptionContainerEl.createEl("label", { text: "Description" });
-    const elementDescriptionEl = elementDescriptionContainerEl.createEl("input", { value: this._element.description, type: "text" });
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+    let elementDescriptionEl = elementDescriptionContainerEl.createEl("input", {
+      value: this._element.description,
+      type: "text",
+    });
     elementDescriptionEl.style.minWidth = "50%";
     elementDescriptionEl.onchange = (e) => {
       this._element.description = elementDescriptionEl.value;
     };
-<<<<<<< HEAD
     let elementContentContainerEl = contentEl.createDiv();
     elementContentContainerEl.createEl("label", { text: "Content" });
-    let elementContentEl = elementContentContainerEl.createEl("textarea", { text: this._element.content });
-=======
-    const elementContentContainerEl = contentEl.createDiv();
-    elementContentContainerEl.createEl("label", { text: "Content" });
-    const elementContentEl = elementContentContainerEl.createEl("textarea", { text: this._element.content });
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+    let elementContentEl = elementContentContainerEl.createEl("textarea", {
+      text: this._element.content,
+    });
     elementContentEl.style.height = "200px";
     elementContentEl.style.width = "100%";
     elementContentEl.onchange = async (e) => {
       this._element.content = elementContentEl.value;
-<<<<<<< HEAD
-      let { svg: svg2 } = await this._mermaid.render(renderEl.id, this._plugin._mermaidElementService.wrapAsCompleteDiagram(this._element));
+      let { svg: svg2 } = await this._mermaid.render(
+        renderEl.id,
+        this._plugin._mermaidElementService.wrapAsCompleteDiagram(this._element)
+      );
       renderEl.innerHTML = svg2;
       renderContainerEl.appendChild(renderEl);
     };
@@ -2478,160 +1748,30 @@ var EditMermaidElementModal = class extends import_obsidian2.Modal {
     saveButtonEl.onclick = (e) => {
       this.save();
     };
-    let { svg } = await this._mermaid.render(renderEl.id, this._plugin._mermaidElementService.wrapAsCompleteDiagram(this._element));
-=======
-      const { svg: svg2 } = await this._mermaid.render(renderEl.id, this._plugin._mermaidElementService.wrapAsCompleteDiagram(this._element));
-      renderEl.innerHTML = svg2;
-      renderContainerEl.appendChild(renderEl);
-    };
-    const saveButtonEl = contentEl.createEl("button", { text: "Save" });
-    saveButtonEl.onclick = (e) => {
-      this.save();
-    };
-    const { svg } = await this._mermaid.render(renderEl.id, this._plugin._mermaidElementService.wrapAsCompleteDiagram(this._element));
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+    let { svg } = await this._mermaid.render(
+      renderEl.id,
+      this._plugin._mermaidElementService.wrapAsCompleteDiagram(this._element)
+    );
     renderEl.innerHTML = svg;
     renderContainerEl.appendChild(renderEl);
   }
   save() {
-    this._plugin._mermaidElementService.saveElement(this._element, this._plugin);
+    this._plugin._mermaidElementService.saveElement(
+      this._element,
+      this._plugin
+    );
     this.close();
   }
 };
 
-<<<<<<< HEAD
 // src/ui/settingsTab.ts
 var MermaidToolsSettingsTab = class extends import_obsidian3.PluginSettingTab {
-=======
-// src/ui/editCategoryModal.ts
-var import_obsidian3 = require("obsidian");
-var EditCategoryModal = class extends import_obsidian3.Modal {
-  constructor(app, plugin, existingCategory, onSave) {
-    super(app);
-    this.plugin = plugin;
-    this.categoryService = CategoryService.getInstance();
-    this.onSave = onSave;
-    this.isNewCategory = !existingCategory;
-    if (existingCategory) {
-      this.category = { ...existingCategory };
-    } else {
-      this.category = {
-        id: "",
-        name: "",
-        defaultWrapping: "",
-        wrappings: null,
-        isCustom: true,
-        sortOrder: this.categoryService.getNextSortOrder()
-      };
-    }
-  }
-  onOpen() {
-    const { contentEl } = this;
-    contentEl.addClass("mermaid-tools-edit-category-modal");
-    contentEl.createEl("h2", {
-      text: this.isNewCategory ? "Create Custom Category" : "Edit Category"
-    });
-    new import_obsidian3.Setting(contentEl).setName("Category ID").setDesc("Unique identifier for this category (lowercase, no spaces)").addText((text) => text.setPlaceholder("my-custom-category").setValue(this.category.id).onChange((value) => {
-      this.category.id = value.toLowerCase().replace(/\s+/g, "-");
-    }));
-    new import_obsidian3.Setting(contentEl).setName("Category Name").setDesc("Display name for this category").addText((text) => text.setPlaceholder("My Custom Category").setValue(this.category.name).onChange((value) => {
-      this.category.name = value;
-    }));
-    new import_obsidian3.Setting(contentEl).setName("Default Wrapping").setDesc('Default mermaid syntax to wrap elements (e.g., "flowchart TD", "sequenceDiagram")').addText((text) => text.setPlaceholder("flowchart TD").setValue(this.category.defaultWrapping).onChange((value) => {
-      this.category.defaultWrapping = value;
-    }));
-    new import_obsidian3.Setting(contentEl).setName("Additional Wrappings (Optional)").setDesc('Comma-separated list of alternative wrappings (e.g., "flowchart LR, flowchart TB")').addText((text) => text.setPlaceholder("flowchart LR, flowchart TB").setValue(this.category.wrappings ? this.category.wrappings.join(", ") : "").onChange((value) => {
-      if (value.trim()) {
-        this.category.wrappings = value.split(",").map((w) => w.trim()).filter((w) => w);
-      } else {
-        this.category.wrappings = null;
-      }
-    }));
-    new import_obsidian3.Setting(contentEl).setName("Sort Order").setDesc("Determines the order in which categories appear").addText((text) => text.setPlaceholder("0").setValue(this.category.sortOrder.toString()).onChange((value) => {
-      const num = parseInt(value);
-      if (!isNaN(num)) {
-        this.category.sortOrder = num;
-      }
-    }));
-    const buttonContainer = contentEl.createDiv("modal-button-container");
-    buttonContainer.style.display = "flex";
-    buttonContainer.style.justifyContent = "flex-end";
-    buttonContainer.style.gap = "10px";
-    buttonContainer.style.marginTop = "20px";
-    const cancelButton = buttonContainer.createEl("button", { text: "Cancel" });
-    cancelButton.onclick = () => this.close();
-    const saveButton = buttonContainer.createEl("button", {
-      text: this.isNewCategory ? "Create" : "Save",
-      cls: "mod-cta"
-    });
-    saveButton.onclick = () => this.save();
-  }
-  save() {
-    if (!this.category.id.trim()) {
-      alert("Category ID is required");
-      return;
-    }
-    if (!this.category.name.trim()) {
-      alert("Category name is required");
-      return;
-    }
-    if (!this.category.defaultWrapping.trim()) {
-      alert("Default wrapping is required");
-      return;
-    }
-    const commonDiagramTypes = [
-      "flowchart",
-      "graph",
-      "sequenceDiagram",
-      "classDiagram",
-      "stateDiagram-v2",
-      "erDiagram",
-      "journey",
-      "gantt",
-      "pie",
-      "requirementDiagram",
-      "gitGraph",
-      "mindmap",
-      "timeline",
-      "quadrantChart",
-      "C4Context",
-      "sankey-beta",
-      "xychart-beta",
-      "packet-beta",
-      "kanban",
-      "block-beta",
-      "architecture-beta"
-    ];
-    const wrapping = this.category.defaultWrapping.trim().split(/\s+/)[0];
-    if (!commonDiagramTypes.includes(wrapping)) {
-      const shouldContinue = confirm(`Warning: "${wrapping}" is not a recognized Mermaid diagram type. This may cause rendering errors. Are you sure you want to continue?`);
-      if (!shouldContinue) {
-        return;
-      }
-    }
-    if (this.isNewCategory && this.categoryService.getCategoryById(this.category.id)) {
-      alert(`A category with ID '${this.category.id}' already exists`);
-      return;
-    }
-    try {
-      this.onSave(this.category);
-      this.close();
-    } catch (error) {
-      alert(`Error saving category: ${error.message}`);
-    }
-  }
-};
-
-// src/ui/settingsTab.ts
-var MermaidToolsSettingsTab = class extends import_obsidian4.PluginSettingTab {
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   constructor(_app, _plugin) {
     super(_app, _plugin);
     this._app = _app;
     this._plugin = _plugin;
   }
   async display() {
-<<<<<<< HEAD
     await renderElements(this.containerEl, this._plugin);
   }
 };
@@ -2644,14 +1784,13 @@ async function renderElements(containerEl, plugin) {
   for (let category in ElementCategory) {
     renderElementCategory(category, plugin, containerEl, mermaid);
   }
-  ;
 }
 function renderElementCategory(category, plugin, parentEl, mermaid) {
   let copy = [...plugin.settings.elements];
   let elements = copy.filter((e) => e.category === category);
   let containerEl = document.getElementById(category + "-container");
   let isFirstRender = !containerEl;
-  containerEl != null ? containerEl : containerEl = parentEl.createDiv();
+  containerEl != null ? containerEl : (containerEl = parentEl.createDiv());
   containerEl.id = category + "-container";
   containerEl.innerHTML = "";
   let header = containerEl.createEl("h3", { text: category });
@@ -2668,381 +1807,94 @@ function renderElementCategory(category, plugin, parentEl, mermaid) {
     header.classList.toggle("collapsed");
     elementsContainerEl.hidden = !elementsContainerEl.hidden;
   });
-  elements.sort((a, b) => a.sortingOrder - b.sortingOrder).forEach(async (element, index) => {
-    let settingContainer = elementsContainerEl.createDiv("mermaid-tools-element-container");
-    const setting = new import_obsidian3.Setting(settingContainer);
-    setting.setName(element.description);
-    setting.addExtraButton((cb) => {
-      cb.setIcon("edit").setTooltip("edit element").onClick(() => {
-        let modal = new EditMermaidElementModal(plugin.app, plugin, mermaid, element);
-        modal.open();
-        modal.onClose = () => {
-          renderElementCategory(category, plugin, parentEl, mermaid);
-=======
-    await renderSettings(this.containerEl, this._plugin);
-  }
-};
-async function renderSettings(containerEl, plugin) {
-  const mermaid = await (0, import_obsidian4.loadMermaid)();
-  const categoryService = CategoryService.getInstance();
-  categoryService.loadCategories(plugin.settings.customCategories, plugin.settings.defaultCategorySortOrders);
-  containerEl.empty();
-  containerEl.createEl("h1", { text: "Mermaid Tools Settings" });
-  containerEl.createEl("h2", { text: "Manage Elements & Categories" });
-  const buttonsContainer = containerEl.createDiv();
-  buttonsContainer.style.marginBottom = "20px";
-  buttonsContainer.style.display = "flex";
-  buttonsContainer.style.gap = "10px";
-  const addElementButton = buttonsContainer.createEl("button", { text: "Add Element" });
-  addElementButton.addClass("mod-cta");
-  addElementButton.onclick = () => {
-    const newElement = {
-      id: crypto.randomUUID(),
-      description: "New element",
-      content: `flowchart TD
-Start --> Stop`,
-      categoryId: "flowchart",
-      sortingOrder: 0,
-      isPinned: false
-    };
-    const modal = new EditMermaidElementModal(plugin.app, plugin, mermaid, newElement, categoryService);
-    modal.open();
-    modal.onClose = () => {
-      renderSettings(containerEl, plugin);
-    };
-  };
-  const addCategoryButton = buttonsContainer.createEl("button", { text: "Add Category" });
-  addCategoryButton.addClass("mod-cta");
-  addCategoryButton.onclick = () => {
-    const modal = new EditCategoryModal(plugin.app, plugin, null, (category) => {
-      try {
-        if (category.sortOrder === void 0 || category.sortOrder === null) {
-          category.sortOrder = categoryService.getNextSortOrder();
-        }
-        categoryService.addCategory(category);
-        saveAllCategoryChanges(plugin, categoryService);
-        renderSettings(containerEl, plugin);
-      } catch (error) {
-        console.error("Error adding category:", error);
-      }
+  elements
+    .sort((a, b) => a.sortingOrder - b.sortingOrder)
+    .forEach(async (element, index) => {
+      let settingContainer = elementsContainerEl.createDiv(
+        "mermaid-tools-element-container"
+      );
+      const setting = new import_obsidian3.Setting(settingContainer);
+      setting.setName(element.description);
+      setting.addExtraButton((cb) => {
+        cb.setIcon("edit")
+          .setTooltip("edit element")
+          .onClick(() => {
+            let modal = new EditMermaidElementModal(
+              plugin.app,
+              plugin,
+              mermaid,
+              element
+            );
+            modal.open();
+            modal.onClose = () => {
+              renderElementCategory(category, plugin, parentEl, mermaid);
+            };
+          });
+      });
+      setting.addExtraButton((cb) => {
+        cb.setIcon("copy")
+          .setTooltip("create a duplicate of this element")
+          .onClick(() => {
+            let duplicate = {
+              id: crypto.randomUUID(),
+              category: element.category,
+              description: element.description + " (copy)",
+              content: element.content,
+              sortingOrder: plugin.settings.elements.filter(
+                (el) => el.category === element.category
+              ).length,
+              isPinned: element.isPinned,
+            };
+            plugin._mermaidElementService.saveElement(duplicate, plugin);
+            plugin.saveSettings();
+            renderElementCategory(category, plugin, parentEl, mermaid);
+          });
+      });
+      setting.addExtraButton((cb) => {
+        cb.setIcon("arrow-up")
+          .setTooltip("move element up in the sidebar")
+          .onClick(() => {
+            if (index > 0) {
+              const temp = elements[index - 1].sortingOrder;
+              elements[index - 1].sortingOrder = element.sortingOrder;
+              element.sortingOrder = temp;
+              plugin.settings.elements = plugin.settings.elements
+                .filter((el) => el.category !== category)
+                .concat(elements);
+              plugin.saveSettings();
+              renderElementCategory(category, plugin, parentEl, mermaid);
+            }
+          });
+      });
+      setting.addExtraButton((cb) => {
+        cb.setIcon("arrow-down")
+          .setTooltip("move element down in the sidebar")
+          .onClick(() => {
+            if (index < elements.length - 1) {
+              const temp = elements[index + 1].sortingOrder;
+              elements[index + 1].sortingOrder = element.sortingOrder;
+              element.sortingOrder = temp;
+              plugin.settings.elements = plugin.settings.elements
+                .filter((el) => el.category !== category)
+                .concat(elements);
+              plugin.saveSettings();
+              renderElementCategory(category, plugin, parentEl, mermaid);
+            }
+          });
+      });
+      setting.addExtraButton((cb) => {
+        cb.setIcon("trash-2")
+          .setTooltip("delete element")
+          .onClick(() => {
+            plugin.settings.elements = plugin.settings.elements.filter(
+              (e) => e.id !== element.id
+            );
+            plugin.saveSettings();
+            renderElementCategory(category, plugin, parentEl, mermaid);
+          });
+      });
     });
-    modal.open();
-  };
-  createIntegratedCategorySection(containerEl, plugin, categoryService, mermaid);
 }
-function saveAllCategoryChanges(plugin, categoryService) {
-  plugin.settings.customCategories = categoryService.getCustomCategories();
-  const defaultCategories = categoryService.getCategories().filter((cat) => !cat.isCustom);
-  defaultCategories.forEach((cat) => {
-    plugin.settings.defaultCategorySortOrders[cat.id] = cat.sortOrder;
-  });
-  plugin.saveSettings();
-}
-function createIntegratedCategorySection(containerEl, plugin, categoryService, mermaid) {
-  const allCategories = categoryService.getCategories().sort((a, b) => a.sortOrder - b.sortOrder);
-  allCategories.forEach((category) => {
-    const categoryContainer = containerEl.createDiv();
-    categoryContainer.addClass("mermaid-tools-category-section");
-    categoryContainer.style.marginBottom = "20px";
-    categoryContainer.style.border = "1px solid var(--background-modifier-border)";
-    categoryContainer.style.borderRadius = "8px";
-    categoryContainer.style.padding = "15px";
-    const categoryHeader = categoryContainer.createDiv();
-    categoryHeader.style.display = "flex";
-    categoryHeader.style.alignItems = "center";
-    categoryHeader.style.justifyContent = "space-between";
-    categoryHeader.style.marginBottom = "10px";
-    categoryHeader.style.cursor = "pointer";
-    const categoryTitle = categoryHeader.createDiv();
-    categoryTitle.style.display = "flex";
-    categoryTitle.style.alignItems = "center";
-    categoryTitle.style.gap = "10px";
-    const expandIcon = categoryTitle.createSpan();
-    expandIcon.innerHTML = "\u25BC";
-    expandIcon.style.fontSize = "12px";
-    expandIcon.style.transition = "transform 0.2s";
-    const categoryName = categoryTitle.createEl("h3", { text: category.name });
-    categoryName.style.margin = "0";
-    categoryName.style.fontSize = "16px";
-    const categoryInfo = categoryTitle.createSpan();
-    const elementCount = plugin.settings.elements.filter((el) => el.categoryId === category.id).length;
-    categoryInfo.textContent = `(${elementCount} elements)`;
-    categoryInfo.style.color = "var(--text-muted)";
-    categoryInfo.style.fontSize = "12px";
-    const categoryControls = categoryHeader.createDiv();
-    categoryControls.style.display = "flex";
-    categoryControls.style.gap = "2px";
-    const addElementButton = categoryControls.createEl("button");
-    addElementButton.title = "Add element to this category";
-    addElementButton.style.background = "none";
-    addElementButton.style.border = "none";
-    addElementButton.style.cursor = "pointer";
-    addElementButton.style.padding = "4px";
-    addElementButton.style.display = "flex";
-    addElementButton.style.alignItems = "center";
-    addElementButton.style.borderRadius = "3px";
-    addElementButton.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-7-7h14"></path></svg>`;
-    addElementButton.onmouseenter = () => addElementButton.style.backgroundColor = "var(--background-modifier-hover)";
-    addElementButton.onmouseleave = () => addElementButton.style.backgroundColor = "transparent";
-    addElementButton.onclick = (e) => {
-      e.stopPropagation();
-      const newElement = {
-        id: crypto.randomUUID(),
-        description: "New element",
-        content: `flowchart TD
-Start --> Stop`,
-        categoryId: category.id,
-        sortingOrder: plugin.settings.elements.filter((el) => el.categoryId === category.id).length,
-        isPinned: false
-      };
-      const modal = new EditMermaidElementModal(plugin.app, plugin, mermaid, newElement, categoryService);
-      modal.open();
-      modal.onClose = () => {
-        renderSettings(containerEl, plugin);
-      };
-    };
-    const moveUpButton = categoryControls.createEl("button");
-    moveUpButton.title = "Move category up";
-    moveUpButton.style.background = "none";
-    moveUpButton.style.border = "none";
-    moveUpButton.style.cursor = "pointer";
-    moveUpButton.style.padding = "4px";
-    moveUpButton.style.display = "flex";
-    moveUpButton.style.alignItems = "center";
-    moveUpButton.style.borderRadius = "3px";
-    moveUpButton.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18,15 12,9 6,15"></polyline></svg>`;
-    moveUpButton.onmouseenter = () => moveUpButton.style.backgroundColor = "var(--background-modifier-hover)";
-    moveUpButton.onmouseleave = () => moveUpButton.style.backgroundColor = "transparent";
-    moveUpButton.onclick = (e) => {
-      e.stopPropagation();
-      const categories = categoryService.getCategories().sort((a, b) => a.sortOrder - b.sortOrder);
-      const currentIndex = categories.findIndex((cat) => cat.id === category.id);
-      if (currentIndex > 0) {
-        const temp = categories[currentIndex - 1].sortOrder;
-        categories[currentIndex - 1].sortOrder = category.sortOrder;
-        category.sortOrder = temp;
-        categoryService.updateCategory(categories[currentIndex - 1]);
-        categoryService.updateCategory(category);
-        saveAllCategoryChanges(plugin, categoryService);
-        renderSettings(containerEl, plugin);
-      }
-    };
-    const moveDownButton = categoryControls.createEl("button");
-    moveDownButton.title = "Move category down";
-    moveDownButton.style.background = "none";
-    moveDownButton.style.border = "none";
-    moveDownButton.style.cursor = "pointer";
-    moveDownButton.style.padding = "4px";
-    moveDownButton.style.display = "flex";
-    moveDownButton.style.alignItems = "center";
-    moveDownButton.style.borderRadius = "3px";
-    moveDownButton.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>`;
-    moveDownButton.onmouseenter = () => moveDownButton.style.backgroundColor = "var(--background-modifier-hover)";
-    moveDownButton.onmouseleave = () => moveDownButton.style.backgroundColor = "transparent";
-    moveDownButton.onclick = (e) => {
-      e.stopPropagation();
-      const categories = categoryService.getCategories().sort((a, b) => a.sortOrder - b.sortOrder);
-      const currentIndex = categories.findIndex((cat) => cat.id === category.id);
-      if (currentIndex < categories.length - 1) {
-        const temp = categories[currentIndex + 1].sortOrder;
-        categories[currentIndex + 1].sortOrder = category.sortOrder;
-        category.sortOrder = temp;
-        categoryService.updateCategory(categories[currentIndex + 1]);
-        categoryService.updateCategory(category);
-        saveAllCategoryChanges(plugin, categoryService);
-        renderSettings(containerEl, plugin);
-      }
-    };
-    const editButton = categoryControls.createEl("button");
-    editButton.title = "Edit category";
-    editButton.style.background = "none";
-    editButton.style.border = "none";
-    editButton.style.cursor = "pointer";
-    editButton.style.padding = "4px";
-    editButton.style.display = "flex";
-    editButton.style.alignItems = "center";
-    editButton.style.borderRadius = "3px";
-    editButton.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="m18.5 2.5 a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`;
-    editButton.onmouseenter = () => editButton.style.backgroundColor = "var(--background-modifier-hover)";
-    editButton.onmouseleave = () => editButton.style.backgroundColor = "transparent";
-    editButton.onclick = (e) => {
-      e.stopPropagation();
-      const modal = new EditCategoryModal(plugin.app, plugin, category, (updatedCategory) => {
-        try {
-          categoryService.updateCategory(updatedCategory);
-          saveAllCategoryChanges(plugin, categoryService);
-          renderSettings(containerEl, plugin);
-        } catch (error) {
-          console.error("Error updating category:", error);
-        }
-      });
-      modal.open();
-    };
-    const deleteButton = categoryControls.createEl("button");
-    deleteButton.title = "Delete category";
-    deleteButton.style.background = "none";
-    deleteButton.style.border = "none";
-    deleteButton.style.cursor = "pointer";
-    deleteButton.style.padding = "4px";
-    deleteButton.style.display = "flex";
-    deleteButton.style.alignItems = "center";
-    deleteButton.style.borderRadius = "3px";
-    deleteButton.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,6 5,6 21,6"></polyline><path d="m19,6v14a2,2 0 0,1 -2,2H7a2,2 0 0,1 -2,-2V6m3,0V4a2,2 0 0,1 2,-2h4a2,2 0 0,1 2,2v2"></path></svg>`;
-    deleteButton.onmouseenter = () => deleteButton.style.backgroundColor = "var(--background-modifier-hover)";
-    deleteButton.onmouseleave = () => deleteButton.style.backgroundColor = "transparent";
-    deleteButton.onclick = (e) => {
-      e.stopPropagation();
-      const elementsInCategory = plugin.settings.elements.filter((el) => el.categoryId === category.id);
-      if (elementsInCategory.length > 0) {
-        alert(`Cannot delete category '${category.name}' because it contains ${elementsInCategory.length} element(s). Please move or delete these elements first.`);
-        return;
-      }
-      const confirmMessage = category.isCustom ? `Are you sure you want to delete the category '${category.name}'?` : `Are you sure you want to delete the default category '${category.name}'? This action cannot be undone.`;
-      if (confirm(confirmMessage)) {
-        try {
-          categoryService.deleteCategory(category.id);
-          if (category.isCustom) {
-            plugin.settings.customCategories = categoryService.getCustomCategories();
-          }
-          plugin.saveSettings();
-          renderSettings(containerEl, plugin);
-        } catch (error) {
-          console.error("Error deleting category:", error);
-          if (!category.isCustom) {
-            alert(`Cannot delete default category: ${error.message}`);
-          }
-        }
-      }
-    };
-    const elementsContainer = categoryContainer.createDiv();
-    elementsContainer.addClass("mermaid-tools-elements-container");
-    elementsContainer.style.display = "none";
-    let isCollapsed = true;
-    categoryHeader.onclick = () => {
-      isCollapsed = !isCollapsed;
-      elementsContainer.style.display = isCollapsed ? "none" : "block";
-      expandIcon.style.transform = isCollapsed ? "rotate(-90deg)" : "rotate(0deg)";
-    };
-    expandIcon.style.transform = "rotate(-90deg)";
-    renderCategoryElements(category, plugin, elementsContainer, mermaid, categoryService);
-  });
-}
-function renderCategoryElements(category, plugin, parentEl, mermaid, categoryService) {
-  const elements = plugin.settings.elements.filter((e) => e.categoryId === category.id).sort((a, b) => a.sortingOrder - b.sortingOrder);
-  if (elements.length === 0) {
-    const emptyMessage = parentEl.createDiv();
-    emptyMessage.textContent = "No elements in this category";
-    emptyMessage.style.color = "var(--text-muted)";
-    emptyMessage.style.fontStyle = "italic";
-    emptyMessage.style.padding = "10px";
-    return;
-  }
-  elements.forEach((element, index) => {
-    const settingContainer = parentEl.createDiv("mermaid-tools-element-container");
-    settingContainer.style.marginBottom = "10px";
-    settingContainer.style.padding = "10px";
-    settingContainer.style.backgroundColor = "var(--background-secondary)";
-    settingContainer.style.borderRadius = "5px";
-    const setting = new import_obsidian4.Setting(settingContainer);
-    setting.setName(element.description);
-    setting.addExtraButton((cb) => {
-      cb.setIcon("edit").setTooltip("edit element").onClick(() => {
-        const modal = new EditMermaidElementModal(plugin.app, plugin, mermaid, element, categoryService);
-        modal.open();
-        modal.onClose = () => {
-          const settingsContainer = parentEl.closest(".vertical-tab-content");
-          if (settingsContainer)
-            renderSettings(settingsContainer, plugin);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-        };
-      });
-    });
-    setting.addExtraButton((cb) => {
-      cb.setIcon("copy").setTooltip("create a duplicate of this element").onClick(() => {
-<<<<<<< HEAD
-        let duplicate = {
-          id: crypto.randomUUID(),
-          category: element.category,
-          description: element.description + " (copy)",
-          content: element.content,
-          sortingOrder: plugin.settings.elements.filter((el) => el.category === element.category).length,
-=======
-        const duplicate = {
-          id: crypto.randomUUID(),
-          categoryId: element.categoryId,
-          description: element.description + " (copy)",
-          content: element.content,
-          sortingOrder: plugin.settings.elements.filter((el) => el.categoryId === element.categoryId).length,
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-          isPinned: element.isPinned
-        };
-        plugin._mermaidElementService.saveElement(duplicate, plugin);
-        plugin.saveSettings();
-<<<<<<< HEAD
-        renderElementCategory(category, plugin, parentEl, mermaid);
-=======
-        const settingsContainer = parentEl.closest(".vertical-tab-content");
-        if (settingsContainer)
-          renderSettings(settingsContainer, plugin);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-      });
-    });
-    setting.addExtraButton((cb) => {
-      cb.setIcon("arrow-up").setTooltip("move element up in the sidebar").onClick(() => {
-        if (index > 0) {
-          const temp = elements[index - 1].sortingOrder;
-          elements[index - 1].sortingOrder = element.sortingOrder;
-          element.sortingOrder = temp;
-<<<<<<< HEAD
-          plugin.settings.elements = plugin.settings.elements.filter((el) => el.category !== category).concat(elements);
-          plugin.saveSettings();
-          renderElementCategory(category, plugin, parentEl, mermaid);
-=======
-          plugin.settings.elements = plugin.settings.elements.filter((el) => el.categoryId !== category.id).concat(elements);
-          plugin.saveSettings();
-          const settingsContainer = parentEl.closest(".vertical-tab-content");
-          if (settingsContainer)
-            renderSettings(settingsContainer, plugin);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-        }
-      });
-    });
-    setting.addExtraButton((cb) => {
-      cb.setIcon("arrow-down").setTooltip("move element down in the sidebar").onClick(() => {
-        if (index < elements.length - 1) {
-          const temp = elements[index + 1].sortingOrder;
-          elements[index + 1].sortingOrder = element.sortingOrder;
-          element.sortingOrder = temp;
-<<<<<<< HEAD
-          plugin.settings.elements = plugin.settings.elements.filter((el) => el.category !== category).concat(elements);
-          plugin.saveSettings();
-          renderElementCategory(category, plugin, parentEl, mermaid);
-=======
-          plugin.settings.elements = plugin.settings.elements.filter((el) => el.categoryId !== category.id).concat(elements);
-          plugin.saveSettings();
-          const settingsContainer = parentEl.closest(".vertical-tab-content");
-          if (settingsContainer)
-            renderSettings(settingsContainer, plugin);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-        }
-      });
-    });
-    setting.addExtraButton((cb) => {
-      cb.setIcon("trash-2").setTooltip("delete element").onClick(() => {
-        plugin.settings.elements = plugin.settings.elements.filter((e) => e.id !== element.id);
-        plugin.saveSettings();
-<<<<<<< HEAD
-        renderElementCategory(category, plugin, parentEl, mermaid);
-=======
-        const settingsContainer = parentEl.closest(".vertical-tab-content");
-        if (settingsContainer)
-          renderSettings(settingsContainer, plugin);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-      });
-    });
-  });
-}
-<<<<<<< HEAD
 function createAddButton(parentEl, plugin) {
   const addButton = parentEl.createEl("button", { text: "Add" });
   addButton.innerHTML = "Add an element";
@@ -3054,9 +1906,14 @@ function createAddButton(parentEl, plugin) {
 Start --> Stop`,
       category: "Flowchart" /* Flowchart */,
       sortingOrder: 0,
-      isPinned: false
+      isPinned: false,
     };
-    let modal = new EditMermaidElementModal(plugin.app, plugin, null, newElement);
+    let modal = new EditMermaidElementModal(
+      plugin.app,
+      plugin,
+      null,
+      newElement
+    );
     modal.open();
     modal.onClose = () => {
       renderElementCategory(modal._element.category, plugin, parentEl, null);
@@ -3070,45 +1927,56 @@ var import_obsidian5 = require("obsidian");
 // src/ui/toolbarView/viewHelpers.ts
 var import_obsidian4 = require("obsidian");
 var TOOLBAR_ELEMENT_CLASS_NAME = "mermaid-toolbar-element";
-var TOOLBAR_ELEMENTS_CONTAINER_CLASS_NAME = "mermaid-toolbar-elements-container";
+var TOOLBAR_ELEMENTS_CONTAINER_CLASS_NAME =
+  "mermaid-toolbar-elements-container";
 var TOOLBAR_ELEMENTS_CONTAINER_ID = "mermaid-toolbar-elements-container-id";
-async function createMermaidToolbar(topRowButtons, items, selectedCategory, onCategoryChanged, onElementClick) {
-=======
-
-// src/ui/toolbarView/mermaidToolbarView.ts
-var import_obsidian6 = require("obsidian");
-
-// src/ui/toolbarView/viewHelpers.ts
-var import_obsidian5 = require("obsidian");
-var TOOLBAR_ELEMENT_CLASS_NAME = "mermaid-toolbar-element";
-var TOOLBAR_ELEMENTS_CONTAINER_CLASS_NAME = "mermaid-toolbar-elements-container";
-var TOOLBAR_ELEMENTS_CONTAINER_ID = "mermaid-toolbar-elements-container-id";
-async function createMermaidToolbar(topRowButtons, items, selectedCategoryId, onCategoryChanged, onElementClick, categoryService) {
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+async function createMermaidToolbar(
+  topRowButtons,
+  items,
+  selectedCategory,
+  onCategoryChanged,
+  onElementClick
+) {
   const container = document.createElement("div");
   const topRow = container.createDiv();
   topRow.addClass("mermaid-toolbar-top-row");
   const elementsContainer = container.createDiv();
   elementsContainer.addClass(TOOLBAR_ELEMENTS_CONTAINER_CLASS_NAME);
   elementsContainer.setAttr("id", TOOLBAR_ELEMENTS_CONTAINER_ID);
-<<<<<<< HEAD
-  createDropdown(topRow, elementsContainer, items, selectedCategory, onCategoryChanged, onElementClick);
+  createDropdown(
+    topRow,
+    elementsContainer,
+    items,
+    selectedCategory,
+    onCategoryChanged,
+    onElementClick
+  );
   createTopRowBtns(topRow, topRowButtons);
-  await recreateElementsSection(elementsContainer, selectedCategory, items, onElementClick);
-=======
-  createDropdown(topRow, elementsContainer, items, selectedCategoryId, onCategoryChanged, onElementClick, categoryService);
-  createTopRowBtns(topRow, topRowButtons);
-  await recreateElementsSection(elementsContainer, selectedCategoryId, items, onElementClick, categoryService);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+  await recreateElementsSection(
+    elementsContainer,
+    selectedCategory,
+    items,
+    onElementClick
+  );
   return container;
 }
 function createTopRowBtns(parentEl, buttons) {
   buttons.forEach((btn) => {
-<<<<<<< HEAD
-    const b = new import_obsidian4.ButtonComponent(parentEl).setClass("clickable-icon").setIcon(btn.iconName).setTooltip(btn.tooltip).onClick(btn.callback);
+    const b = new import_obsidian4.ButtonComponent(parentEl)
+      .setClass("clickable-icon")
+      .setIcon(btn.iconName)
+      .setTooltip(btn.tooltip)
+      .onClick(btn.callback);
   });
 }
-function createDropdown(parentEl, elementsContainer, items, selectedCategory, onSelectionChanged, onElClick) {
+function createDropdown(
+  parentEl,
+  elementsContainer,
+  items,
+  selectedCategory,
+  onSelectionChanged,
+  onElClick
+) {
   const categories = Object.keys(ElementCategory);
   const dropdown = new import_obsidian4.DropdownComponent(parentEl);
   categories.forEach((c) => {
@@ -3120,39 +1988,21 @@ function createDropdown(parentEl, elementsContainer, items, selectedCategory, on
     recreateElementsSection(elementsContainer, val, items, onElClick);
   });
 }
-async function recreateElementsSection(sectionContainer, category, items, onElClick) {
+async function recreateElementsSection(
+  sectionContainer,
+  category,
+  items,
+  onElClick
+) {
   sectionContainer.innerHTML = "";
   const elemService = new MermaidElementService();
   const mermaid = await (0, import_obsidian4.loadMermaid)();
-  const filteredSortedItems = items.filter((i) => i.category == category).sort((a, b) => a.sortingOrder - b.sortingOrder);
+  const filteredSortedItems = items
+    .filter((i) => i.category == category)
+    .sort((a, b) => a.sortingOrder - b.sortingOrder);
   filteredSortedItems.forEach(async (elem, index) => {
     const el = createToolbarElement(sectionContainer);
     el.id = `mermaid-toolbar-element-${elem.category}-${index}`;
-=======
-    const b = new import_obsidian5.ButtonComponent(parentEl).setClass("clickable-icon").setIcon(btn.iconName).setTooltip(btn.tooltip).onClick(btn.callback);
-  });
-}
-function createDropdown(parentEl, elementsContainer, items, selectedCategoryId, onSelectionChanged, onElClick, categoryService) {
-  const categories = categoryService.getCategories();
-  const dropdown = new import_obsidian5.DropdownComponent(parentEl);
-  categories.forEach((category) => {
-    dropdown.addOption(category.id, category.name);
-  });
-  dropdown.setValue(selectedCategoryId);
-  dropdown.onChange((val) => {
-    onSelectionChanged(val);
-    recreateElementsSection(elementsContainer, val, items, onElClick, categoryService);
-  });
-}
-async function recreateElementsSection(sectionContainer, categoryId, items, onElClick, categoryService) {
-  sectionContainer.innerHTML = "";
-  const elemService = new MermaidElementService();
-  const mermaid = await (0, import_obsidian5.loadMermaid)();
-  const filteredSortedItems = items.filter((i) => i.categoryId === categoryId).sort((a, b) => a.sortingOrder - b.sortingOrder);
-  filteredSortedItems.forEach(async (elem, index) => {
-    const el = createToolbarElement(sectionContainer);
-    el.id = `mermaid-toolbar-element-${elem.categoryId}-${index}`;
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     const diagram = elemService.wrapAsCompleteDiagram(elem);
     console.log(mermaid.detectType(diagram));
     const { svg } = await mermaid.render(el.id, diagram);
@@ -3178,62 +2028,52 @@ var MermaidToolbarButton = class {
 };
 
 // src/ui/toolbarView/mermaidToolbarView.ts
-<<<<<<< HEAD
 var _MermaidToolbarView = class extends import_obsidian5.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.topRowButtons = [
-      new MermaidToolbarButton("insert Mermaid code block with sample diagram", "code-2", () => this.insertTextAtCursor(this._plugin._mermaidElementService.getSampleDiagram(this._plugin.settings.selectedCategory))),
-=======
-var _MermaidToolbarView = class extends import_obsidian6.ItemView {
-  constructor(leaf, plugin) {
-    super(leaf);
-    this.topRowButtons = [
-      new MermaidToolbarButton("insert Mermaid code block with sample diagram", "code-2", () => this.insertTextAtCursor(this._plugin._mermaidElementService.getSampleDiagram(this._plugin.settings.selectedCategoryId))),
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
-      new MermaidToolbarButton("open Mermaid.js documentation web page", "external-link", () => window.open("https://mermaid.js.org/intro/")),
+      new MermaidToolbarButton(
+        "insert Mermaid code block with sample diagram",
+        "code-2",
+        () =>
+          this.insertTextAtCursor(
+            this._plugin._mermaidElementService.getSampleDiagram(
+              this._plugin.settings.selectedCategory
+            )
+          )
+      ),
+      new MermaidToolbarButton(
+        "open Mermaid.js documentation web page",
+        "external-link",
+        () => window.open("https://mermaid.js.org/intro/")
+      ),
       new MermaidToolbarButton("open settings", "settings", () => {
         this.app.setting.open();
         this.app.setting.openTabById("mermaid-tools");
-      })
+      }),
     ];
     this._plugin = plugin;
     this.items = plugin.settings.elements;
-<<<<<<< HEAD
     this.containerEl.children[1].addClass("mermaid-toolbar-container");
   }
   async onOpen() {
     await this.recreateToolbar(this._plugin.settings.selectedCategory);
   }
-  async onClose() {
-  }
+  async onClose() {}
   async recreateToolbar(selectedCategory) {
     const container = this.containerEl.children[1];
     container.empty();
-    let toolbarElement = await createMermaidToolbar(this.topRowButtons, this.items, selectedCategory, async (newCat) => {
-      this._plugin.settings.selectedCategory = newCat;
-      this._plugin.saveSettings();
-      await this.recreateToolbar(this._plugin.settings.selectedCategory);
-    }, (text) => this.insertTextAtCursor(text));
-=======
-    this.categoryService = CategoryService.getInstance();
-    this.categoryService.loadCategories(plugin.settings.customCategories, plugin.settings.defaultCategorySortOrders);
-    this.containerEl.children[1].addClass("mermaid-toolbar-container");
-  }
-  async onOpen() {
-    await this.recreateToolbar(this._plugin.settings.selectedCategoryId);
-  }
-  async onClose() {
-  }
-  async recreateToolbar(selectedCategoryId) {
-    const container = this.containerEl.children[1];
-    container.empty();
-    const toolbarElement = await createMermaidToolbar(this.topRowButtons, this.items, selectedCategoryId, async (newCategoryId) => {
-      this._plugin.settings.selectedCategoryId = newCategoryId;
-      this._plugin.saveSettings();
-      await this.recreateToolbar(this._plugin.settings.selectedCategoryId);
-    }, (text) => this.insertTextAtCursor(text), this.categoryService);
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+    let toolbarElement = await createMermaidToolbar(
+      this.topRowButtons,
+      this.items,
+      selectedCategory,
+      async (newCat) => {
+        this._plugin.settings.selectedCategory = newCat;
+        this._plugin.saveSettings();
+        await this.recreateToolbar(this._plugin.settings.selectedCategory);
+      },
+      (text) => this.insertTextAtCursor(text)
+    );
     container.appendChild(toolbarElement);
   }
   insertTextAtCursor(text) {
@@ -3255,11 +2095,7 @@ MermaidToolbarView.VIEW_DESCRIPTION = "Mermaid Toolbar";
 
 // main.ts
 var TRIDENT_ICON_NAME = "trident-custom";
-<<<<<<< HEAD
 var MermaidPlugin = class extends import_obsidian6.Plugin {
-=======
-var MermaidPlugin = class extends import_obsidian7.Plugin {
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   constructor() {
     super(...arguments);
     this._mermaidElementService = new MermaidElementService();
@@ -3268,10 +2104,19 @@ var MermaidPlugin = class extends import_obsidian7.Plugin {
   async onload() {
     await this.loadSettings();
     addTridentIcon();
-    this.registerView(MermaidToolbarView.VIEW_TYPE, (leaf) => new MermaidToolbarView(leaf, this));
+    this.registerView(
+      MermaidToolbarView.VIEW_TYPE,
+      (leaf) => new MermaidToolbarView(leaf, this)
+    );
     this.app.workspace.on("active-leaf-change", (leaf) => {
       var _a, _b;
-      this.activeEditor = (_b = (_a = this.app.workspace.activeEditor) == null ? void 0 : _a.editor) != null ? _b : this.activeEditor;
+      this.activeEditor =
+        (_b =
+          (_a = this.app.workspace.activeEditor) == null
+            ? void 0
+            : _a.editor) != null
+          ? _b
+          : this.activeEditor;
     });
     this.addRibbonIcon(TRIDENT_ICON_NAME, "Open Mermaid Toolbar", () => {
       this.activateView();
@@ -3281,7 +2126,7 @@ var MermaidPlugin = class extends import_obsidian7.Plugin {
       name: "Open Toolbar View",
       callback: () => {
         this.activateView();
-      }
+      },
     });
     this.addSettingTab(new MermaidToolsSettingsTab(this.app, this));
   }
@@ -3289,71 +2134,69 @@ var MermaidPlugin = class extends import_obsidian7.Plugin {
     this.app.workspace.detachLeavesOfType(MermaidToolbarView.VIEW_TYPE);
   }
   async loadSettings() {
-    this.settings = Object.assign({}, MermaidPluginSettings.DefaultSettings(), await this.loadData());
+    this.settings = Object.assign(
+      {},
+      MermaidPluginSettings.DefaultSettings(),
+      await this.loadData()
+    );
     this.addNewCategories();
   }
   addNewCategories() {
-<<<<<<< HEAD
-    if (!this.settings.elements.some((x) => x.category === "Mindmap" /* Mindmap */)) {
+    if (
+      !this.settings.elements.some(
+        (x) => x.category === "Mindmap" /* Mindmap */
+      )
+    ) {
       this.settings.elements.push(...mindMapElements);
       console.log("[Mermaid Tools] added Mindmap elements");
     }
-    if (!this.settings.elements.some((x) => x.category === "Timeline" /* Timeline */)) {
+    if (
+      !this.settings.elements.some(
+        (x) => x.category === "Timeline" /* Timeline */
+      )
+    ) {
       this.settings.elements.push(...timelineElements);
       console.log("[Mermaid Tools] added Timeline elements");
     }
-    if (!this.settings.elements.some((x) => x.category === "QuadrantChart" /* QuadrantChart */)) {
+    if (
+      !this.settings.elements.some(
+        (x) => x.category === "QuadrantChart" /* QuadrantChart */
+      )
+    ) {
       this.settings.elements.push(...quadrantElements);
       console.log("[Mermaid Tools] added QuadrantChart elements");
     }
-    if (!this.settings.elements.some((x) => x.category === "C4Diagram" /* C4Diagram */)) {
+    if (
+      !this.settings.elements.some(
+        (x) => x.category === "C4Diagram" /* C4Diagram */
+      )
+    ) {
       this.settings.elements.push(...c4DiagramElements);
       console.log("[Mermaid Tools] added C4 diagram elements");
     }
-    if (!this.settings.elements.some((x) => x.category === "Packet" /* Packet */)) {
+    if (
+      !this.settings.elements.some((x) => x.category === "Packet" /* Packet */)
+    ) {
       this.settings.elements.push(...packetElements);
       console.log("[Mermaid Tools] added Packet elements");
     }
-    if (!this.settings.elements.some((x) => x.category === "Kanban" /* Kanban */)) {
+    if (
+      !this.settings.elements.some((x) => x.category === "Kanban" /* Kanban */)
+    ) {
       this.settings.elements.push(...kanbanElements);
       console.log("[Mermaid Tools] added Kanban elements");
     }
-    if (!this.settings.elements.some((x) => x.category === "Block" /* Block */)) {
+    if (
+      !this.settings.elements.some((x) => x.category === "Block" /* Block */)
+    ) {
       this.settings.elements.push(...blockDiagramElements);
       console.log("[Mermaid Tools] added Block elements");
     }
-    if (!this.settings.elements.some((x) => x.category === "Architecture" /* Architecture */)) {
-=======
-    if (!this.settings.elements.some((x) => x.categoryId === "mindmap")) {
-      this.settings.elements.push(...mindMapElements);
-      console.log("[Mermaid Tools] added Mindmap elements");
-    }
-    if (!this.settings.elements.some((x) => x.categoryId === "timeline")) {
-      this.settings.elements.push(...timelineElements);
-      console.log("[Mermaid Tools] added Timeline elements");
-    }
-    if (!this.settings.elements.some((x) => x.categoryId === "quadrantChart")) {
-      this.settings.elements.push(...quadrantElements);
-      console.log("[Mermaid Tools] added QuadrantChart elements");
-    }
-    if (!this.settings.elements.some((x) => x.categoryId === "c4Diagram")) {
-      this.settings.elements.push(...c4DiagramElements);
-      console.log("[Mermaid Tools] added C4 diagram elements");
-    }
-    if (!this.settings.elements.some((x) => x.categoryId === "packet")) {
-      this.settings.elements.push(...packetElements);
-      console.log("[Mermaid Tools] added Packet elements");
-    }
-    if (!this.settings.elements.some((x) => x.categoryId === "kanban")) {
-      this.settings.elements.push(...kanbanElements);
-      console.log("[Mermaid Tools] added Kanban elements");
-    }
-    if (!this.settings.elements.some((x) => x.categoryId === "block")) {
-      this.settings.elements.push(...blockDiagramElements);
-      console.log("[Mermaid Tools] added Block elements");
-    }
-    if (!this.settings.elements.some((x) => x.categoryId === "architecture")) {
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+    if (
+      !this.settings.elements.some(
+        (x) => x.category === "Architecture" /* Architecture */
+      )
+    ) {
       this.settings.elements.push(...architectureElements);
       console.log("[Mermaid Tools] added Architecture diagram elements");
     }
@@ -3365,13 +2208,16 @@ var MermaidPlugin = class extends import_obsidian7.Plugin {
   async activateView() {
     var _a;
     this.app.workspace.detachLeavesOfType(MermaidToolbarView.VIEW_TYPE);
-    if (this.app.workspace === null)
-      return;
-    await ((_a = this.app.workspace.getRightLeaf(false)) == null ? void 0 : _a.setViewState({
-      type: MermaidToolbarView.VIEW_TYPE,
-      active: true
-    }));
-    this.app.workspace.revealLeaf(this.app.workspace.getLeavesOfType(MermaidToolbarView.VIEW_TYPE)[0]);
+    if (this.app.workspace === null) return;
+    await ((_a = this.app.workspace.getRightLeaf(false)) == null
+      ? void 0
+      : _a.setViewState({
+          type: MermaidToolbarView.VIEW_TYPE,
+          active: true,
+        }));
+    this.app.workspace.revealLeaf(
+      this.app.workspace.getLeavesOfType(MermaidToolbarView.VIEW_TYPE)[0]
+    );
   }
   insertTextAtCursor(text) {
     this._textEditorService.insertTextAtCursor(this.activeEditor, text);

@@ -4,14 +4,10 @@
   "obsidian-tasks-plugin",
   "better-search-views",
   "obsidian-copy-block-link",
-  "periodic-para",
   "obsidian-excalidraw-plugin",
   "obsidian-reveal-active-file",
   "mermaid-tools",
-<<<<<<< HEAD
-  "obsidian-git"
-=======
   "obsidian-git",
-  "obsidian-enhancing-mindmap"
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+  "obsidian-enhancing-mindmap",
+  "periodic-para"
 ]

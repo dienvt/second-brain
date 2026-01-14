@@ -1,11 +1,7 @@
 {
   "id": "periodic-para",
   "name": "LifeOS",
-<<<<<<< HEAD
-  "version": "1.21.6",
-=======
-  "version": "1.23.0",
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
+  "version": "1.23.6",
   "minAppVersion": "0.15.0",
   "description": "Life management system(Assist in practicing the PARA method with periodic notes and usememos).",
   "author": "YiBing Lin",

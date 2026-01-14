@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/andpadvn/Interview/20206-01-14 Nguyen Van Tuan.md",
+                "file": "0. PeriodicNotes/Templates/Daily.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "20206-01-14 Nguyen Van Tuan"
+              "title": "Daily"
             }
           },
           {
@@ -127,8 +127,7 @@
               "title": "2025-12-02"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -138,12 +137,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b454898db4c8f945",
+        "id": "3070f48490cbf060",
         "type": "tabs",
-        "dimension": 51.53933865450399,
         "children": [
           {
-            "id": "84f717612dca405e",
+            "id": "8dd9af798bf25786",
             "type": "leaf",
             "state": {
               "type": "periodic-para",
@@ -157,7 +155,6 @@
       {
         "id": "84e30e37024d9f2a",
         "type": "tabs",
-        "dimension": 48.46066134549601,
         "children": [
           {
             "id": "318abbbcd7749f6f",
@@ -309,6 +306,11 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "periodic-para:LifeOS Creation": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-git:Open Git source control": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -316,16 +318,14 @@
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
       "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
-      "templater-obsidian:Templater": false,
-      "periodic-para:LifeOS Creation": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-git:Open Git source control": false
+      "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "3024607e7159c1e4",
+  "active": "318abbbcd7749f6f",
   "lastOpenFiles": [
+    "2. Areas/andpadvn/Interview/20206-01-14 Nguyen Van Tuan.md",
+    "Untitled 1",
+    "Untitled",
     "2. Areas/react/Best Practies/6 mistakes.md",
     "2. Areas/comvex/projects/webapp/My Opinions.md",
     "2. Areas/comvex/projects/webapp/Add new page with graphql.md",
@@ -359,10 +359,6 @@
     "2. Areas/comvex/meetings/Product Backlog",
     "2. Areas/comvex/meetings/Empower/README.md",
     "2. Areas/comvex/meetings/Empower",
-    "2. Areas/comvex/meetings/Daily Standup/README.md",
-    "2. Areas/comvex/meetings/Daily Standup",
-    "2. Areas/comvex/meetings/Backlog Meeting/Backlog meetings.md",
-    "2. Areas/comvex/meetings/Backlog Meeting",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",
     "HOME.canvas",
