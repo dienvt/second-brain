@@ -47,6 +47,10 @@
   "penModeDoubleTapEraser": true,
   "penModeSingleFingerPanning": true,
   "penModeCrosshairVisible": true,
+<<<<<<< HEAD
+=======
+  "panWithRightMouseButton": false,
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   "renderImageInMarkdownReadingMode": false,
   "renderImageInHoverPreviewForMDNotes": false,
   "renderImageInMarkdownToPDF": false,
@@ -55,6 +59,12 @@
   "zoomToFitOnOpen": true,
   "zoomToFitOnResize": true,
   "zoomToFitMaxLevel": 2,
+<<<<<<< HEAD
+=======
+  "zoomStep": 0.05,
+  "zoomMin": 0.1,
+  "zoomMax": 30,
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   "linkPrefix": "📍",
   "urlPrefix": "🌐",
   "parseTODO": false,
@@ -103,7 +113,11 @@
   "library2": {
     "type": "excalidrawlib",
     "version": 2,
+<<<<<<< HEAD
     "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.14.0",
+=======
+    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.16.1",
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     "libraryItems": [
       {
         "id": "R56HVcinwLxI8pOMCavv3",
@@ -27235,8 +27249,15 @@
   "mdCSS": "",
   "scriptEngineSettings": {},
   "defaultTrayMode": true,
+<<<<<<< HEAD
   "previousRelease": "2.14.0",
   "showReleaseNotes": true,
+=======
+  "compactModeOnTablets": true,
+  "previousRelease": "2.16.1",
+  "showReleaseNotes": true,
+  "compareManifestToPluginVersion": true,
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   "showNewVersionNotification": true,
   "latexBoilerplate": "\\color{blue}",
   "latexPreambleLocation": "preamble.sty",

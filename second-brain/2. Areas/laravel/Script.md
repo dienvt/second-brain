@@ -1,6 +1,10 @@
 ## Check sync
 ```
 mutagen sync list
+<<<<<<< HEAD
+=======
+
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 ```
 ## Test
 `php artisan test`

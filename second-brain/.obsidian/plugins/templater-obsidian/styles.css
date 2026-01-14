@@ -54,7 +54,12 @@
     justify-content: center;
 }
 
+<<<<<<< HEAD
 .templater-prompt-div {
+=======
+.templater-prompt-div,
+.templater-multisuggester-div {
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     display: flex;
 }
 
@@ -63,7 +68,12 @@
     flex-grow: 1;
 }
 
+<<<<<<< HEAD
 .templater-prompt-input {
+=======
+.templater-prompt-input,
+.templater-multisuggester-input {
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     flex-grow: 1;
 }
 
@@ -82,6 +92,13 @@ textarea.templater-prompt-input:focus {
     border-color: var(--interactive-accent);
 }
 
+<<<<<<< HEAD
+=======
+.templater-multisuggester-list {
+    margin: 1.5em 0;
+}
+
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 .cm-s-obsidian .templater-command-bg {
     left: 0px;
     right: 0px;

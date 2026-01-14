@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0cb0a35356e015d1",
+            "id": "3024607e7159c1e4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/aws/AWS Lambda.md",
+                "file": "2. Areas/react/react.README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AWS Lambda"
+              "title": "react.README"
             }
           },
           {
-            "id": "42ac23e0997b0476",
+            "id": "914a695148b83bcf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/mongodb/Connect.md",
+                "file": "2. Areas/comvex/meetings/Release Prepairation/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,79 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Connect"
+              "title": "README"
+            }
+          },
+          {
+            "id": "033ce57e1daecca3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0. PeriodicNotes/2025/Daily/12/2025-12-13.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-12-13"
+            }
+          },
+          {
+            "id": "bf334ea56a6a5f45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Areas/comvex/meetings/Backlog Meeting/Backlog meetings.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Backlog meetings"
+            }
+          },
+          {
+            "id": "2641562a067a86ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-12-02"
             }
           }
         ]
@@ -105,7 +177,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "select for update",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -175,13 +247,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
+                "file": "2. Areas/andpadvn/Interview/20206-01-14 Nguyen Van Tuan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Upgrade Go-Framework to v8"
+              "title": "Outline of 20206-01-14 Nguyen Van Tuan"
             }
           },
           {
@@ -226,16 +298,6 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "43383e91489c8733",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
-            }
           }
         ],
         "currentTab": 4
@@ -261,44 +323,47 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2990fe6c1bc92d36",
+  "active": "3024607e7159c1e4",
   "lastOpenFiles": [
-    "2. Areas/comvex/projects/framework/Worker.md",
-    "2. Areas/comvex/projects/framework/README.md",
-    "2. Areas/comvex/Architecture/Overview 2025-08-03 12.22.37.excalidraw.md",
-    "2. Areas/comvex/Architecture/Overview.md",
-    "2. Areas/comvex/comvex.README.md",
-    "2. Areas/comvex/Introduction.md",
-    "2. Areas/comvex/Lead-acquiration.excalidraw.md",
-    "2. Areas/comvex/meetings/1on1/2025-07-25 Yoshi.md",
-    "2. Areas/laravel/Script.md",
-    "2. Areas/laravel/laravel.README.md",
-    "2. Areas/comvex/projects/billing/Invoice flow.md",
-    "2. Areas/comvex/projects/billing/Test generate bill local.md",
-    "2. Areas/mongodb/Connect.md",
-    "2. Areas/comvex/projects/billing/Todo.md",
-    "2. Areas/mongodb/README.md",
-    "0. PeriodicNotes/2025/Daily/09/2025-09-15.md",
-    "Excalidraw/Drawing 2025-10-01 15.51.59.excalidraw.md",
-    "2. Areas/comvex/infra/mongodb/Connect to the STG.md",
-    "2. Areas/comvex/infra/mongodb/Untitled.md",
-    "2. Areas/mongodb",
-    "2. Areas/comvex/Untitled.md",
-    "2. Areas/comvex/projects/framework",
-    "2. Areas/comvex/projects/billing/README.md",
-    "2. Areas/comvex/projects/billing/worker.md",
-    "2. Areas/aws/AWS Lambda.md",
-    "2. Areas/aws/Profiles.md",
-    "2. Areas/aws/Untitled.md",
-    "2. Areas/aws/AWS IAM.md",
-    "2. Areas/comvex/projects/scheduler",
-    "0. PeriodicNotes/2025/Daily/09",
-    "1. Projects/ha_giang_2025",
-    "1. Projects/kitoc/teckstack",
-    "1. Projects/kitoc",
-    "2. Areas/comvex/projects/sms",
-    "1. Projects/corellian_sprint_143",
-    "3. Resources/corellian_sp143",
+    "2. Areas/react/Best Practies/6 mistakes.md",
+    "2. Areas/comvex/projects/webapp/My Opinions.md",
+    "2. Areas/comvex/projects/webapp/Add new page with graphql.md",
+    "2. Areas/comvex/projects/sms/Note.md",
+    "2. Areas/comvex/projects/framework/Worker-infra.md",
+    "2. Areas/comvex/projects/framework/Untitled.base",
+    "2. Areas/comvex/projects/framework/Untitled mindmap.md",
+    "2. Areas/comvex/projects/billing/Test 1-1.md",
+    "2. Areas/comvex/projects/backend-app/Readme.md",
+    "2. Areas/comvex/projects/backend-app/Migrate billing_properties.md",
+    "2. Areas/comvex/projects/backend-app",
+    "2. Areas/comvex/projects/auth/Models Relationship.md",
+    "2. Areas/comvex/projects/adminweb/New feature.md",
+    "2. Areas/comvex/projects/adminweb",
+    "2. Areas/comvex/projects/Untitled.md",
+    "2. Areas/comvex/projects/Untitled 1.md",
+    "2. Areas/comvex/meetings/Sprint Review/README.md",
+    "2. Areas/comvex/meetings/Sprint Review/2025-12-08 (Sprint 150).md",
+    "2. Areas/comvex/meetings/Sprint Review",
+    "2. Areas/comvex/meetings/Sprint Retrorespective/README.md",
+    "2. Areas/comvex/meetings/Sprint Retrorespective/2025-12-08.md",
+    "2. Areas/comvex/meetings/Sprint Retrorespective",
+    "2. Areas/comvex/meetings/Sprint Planning/README.md",
+    "2. Areas/comvex/meetings/Sprint Planning",
+    "2. Areas/comvex/meetings/Release Prepairation/Untitled.md",
+    "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
+    "2. Areas/comvex/meetings/Release Prepairation/2025-12-09.md",
+    "2. Areas/comvex/meetings/Product Backlog/Untitled.md",
+    "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
+    "2. Areas/comvex/meetings/Product Backlog/2025-11-17.md",
+    "2. Areas/comvex/meetings/Product Backlog",
+    "2. Areas/comvex/meetings/Empower/README.md",
+    "2. Areas/comvex/meetings/Empower",
+    "2. Areas/comvex/meetings/Daily Standup/README.md",
+    "2. Areas/comvex/meetings/Daily Standup",
+    "2. Areas/comvex/meetings/Backlog Meeting/Backlog meetings.md",
+    "2. Areas/comvex/meetings/Backlog Meeting",
+    "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
+    "Untitled.canvas",
     "HOME.canvas",
     "4. Archives/personal-brand-wot-sharing-meeting/architecture diagram/Monorepo.svg",
     "4. Archives/personal-brand-wot-sharing-meeting/architecture diagram/Polyrepo.svg",
@@ -308,8 +373,6 @@
     "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/warning.png",
     "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/rollup-logo.svg",
     "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/repo-hero-logo-light.svg",
-    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/monitor.svg",
-    "1. Projects/personal-brand-wot-sharing-meeting/Attachments/PPT 素材/monitor.png",
     "主页.canvas",
     "Templates/HOME.canvas",
     "hello/HOME.canvas",

@@ -14,11 +14,27 @@
 }
 
 .workspace-leaf-content[data-type="git-view"] .view-content {
+<<<<<<< HEAD
     padding: 0;
 }
 
 .workspace-leaf-content[data-type="git-history-view"] .view-content {
     padding: 0;
+=======
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.workspace-leaf-content[data-type="git-history-view"] .view-content {
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.loading {
+    overflow: hidden;
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 }
 
 .loading > svg {

@@ -38275,6 +38275,12 @@ var EN = {
   [`${MESSAGE}START_SYNC_USEMEMOS`]: "Start sync usememos",
   [`${MESSAGE}END_SYNC_USEMEMOS`]: "End sync usememos",
   [`${ERROR_MESSAGE}FAILED_GET_USEMEMOS_VERSION`]: "Failed to fetch usememos workspace profile",
+<<<<<<< HEAD
+=======
+  [`${ERROR_MESSAGE}AUTH_ENDPOINTS_FAILED`]: "All auth endpoints failed, will continue sync with limited filtering capability",
+  [`${ERROR_MESSAGE}VERSION_DETECTION_FAILED`]: "Version detection failed, will use default settings",
+  [`${ERROR_MESSAGE}USER_INFO_FAILED`]: "Failed to get user info, will use generic filtering",
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   [`${ERROR_MESSAGE}NO_FRONT_MATTER_TAG`]: "Please add the tags field for properties !",
   [`${ERROR_MESSAGE}NO_DATAVIEW_INSTALL`]: "You need to install dataview first!",
   [`${ERROR_MESSAGE}NO_VIEW_PROVIDED`]: "Please provide the name of the view you want to query!",
@@ -38315,6 +38321,11 @@ var EN = {
   SETTING_DAILY_RECORD_API_HELP: "The usememos service URL, < 0.22.0 or >= 0.22.3",
   SETTING_DAILY_RECORD_TOKEN: "Token:",
   SETTING_DAILY_RECORD_TOKEN_HELP: "The token of your API ",
+<<<<<<< HEAD
+=======
+  SETTING_DAILY_RECORD_TAG: "Tag:",
+  SETTING_DAILY_RECORD_TAG_HELP: "Tag to add to daily records (input blank space for no tag)",
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   SETTING_DAILY_RECORD_CREATING: "Auto Creating:",
   SETTING_DAILY_RECORD_CREATING_HELP: "Auto creating while daily note not exist",
   SETTING_DAILY_RECORD_WARNING: "Warning:",
@@ -38354,7 +38365,13 @@ var EN = {
   TOPBANNER_SOCIAL: "Twitter",
   TOPBANNER_SOCIAL_HREF: "https://x.com/quan_ru",
   TOPBANNER_LIFEOS_PRO: "LifeOS Pro",
+<<<<<<< HEAD
   TOPBANNER_LIFEOS_PRO_HREF: "https://lifeos.vip/plugin/life-os-pro.html"
+=======
+  TOPBANNER_LIFEOS_PRO_HREF: "https://lifeos.vip/plugin/life-os-pro.html",
+  TOP_BANNER_DEEPASK_AD: "Inject AI Intelligence into LifeOS",
+  TOP_BANNER_DEEPASK_HREF: "https://lifeos.vip/plugin/deepask/deepask.html"
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 };
 var ZH = {
   HELP: "\u6253\u5F00\u5B98\u7F51\uFF0C\u5BFB\u6C42\u5E2E\u52A9",
@@ -38384,6 +38401,12 @@ var ZH = {
   [`${MESSAGE}START_SYNC_USEMEMOS`]: "\u5F00\u59CB\u540C\u6B65 usememos",
   [`${MESSAGE}END_SYNC_USEMEMOS`]: "\u7ED3\u675F\u540C\u6B65 usememos",
   [`${ERROR_MESSAGE}FAILED_GET_USEMEMOS_VERSION`]: "\u83B7\u53D6 usememos workspace profile \u5931\u8D25",
+<<<<<<< HEAD
+=======
+  [`${ERROR_MESSAGE}AUTH_ENDPOINTS_FAILED`]: "\u8BA4\u8BC1\u7AEF\u70B9\u90FD\u5931\u8D25\u4E86\uFF0C\u5C06\u7EE7\u7EED\u540C\u6B65\u4F46\u8FC7\u6EE4\u80FD\u529B\u6709\u9650",
+  [`${ERROR_MESSAGE}VERSION_DETECTION_FAILED`]: "\u7248\u672C\u68C0\u6D4B\u5931\u8D25\uFF0C\u5C06\u4F7F\u7528\u9ED8\u8BA4\u8BBE\u7F6E",
+  [`${ERROR_MESSAGE}USER_INFO_FAILED`]: "\u7528\u6237\u4FE1\u606F\u83B7\u53D6\u5931\u8D25\uFF0C\u5C06\u4F7F\u7528\u901A\u7528\u8FC7\u6EE4",
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   [`${ERROR_MESSAGE}NO_FRONT_MATTER_TAG`]: "\u8BF7\u4E3A Properties \u52A0 tags \u5B57\u6BB5\uFF01",
   [`${ERROR_MESSAGE}NO_DATAVIEW_INSTALL`]: "\u8BF7\u5148\u5B89\u88C5 dataview\uFF01",
   [`${ERROR_MESSAGE}NO_VIEW_PROVIDED`]: "\u8BF7\u63D0\u4F9B\u6240\u9700\u8981\u67E5\u8BE2\u7684\u89C6\u56FE\u540D\uFF01",
@@ -38424,6 +38447,11 @@ var ZH = {
   SETTING_DAILY_RECORD_API_HELP: "usememos \u670D\u52A1 URL, < 0.22.0 \u6216 >= 0.22.3",
   SETTING_DAILY_RECORD_TOKEN: "Token\uFF1A",
   SETTING_DAILY_RECORD_TOKEN_HELP: "\u60A8\u7684 API \u5BF9\u5E94\u7684 Access Token",
+<<<<<<< HEAD
+=======
+  SETTING_DAILY_RECORD_TAG: "\u6807\u7B7E\uFF1A",
+  SETTING_DAILY_RECORD_TAG_HELP: "\u6DFB\u52A0\u5230\u6BCF\u65E5\u8BB0\u5F55\u7684\u6807\u7B7E\uFF08\u8F93\u5165\u7A7A\u683C\u8868\u793A\u4E0D\u6DFB\u52A0\u6807\u7B7E\uFF09",
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   SETTING_DAILY_RECORD_CREATING: "\u81EA\u52A8\u521B\u5EFA\uFF1A",
   SETTING_DAILY_RECORD_CREATING_HELP: "\u5F53\u65E5\u8BB0\u4E0D\u5B58\u5728\u65F6\u81EA\u52A8\u521B\u5EFA",
   SETTING_DAILY_RECORD_WARNING: "\u8B66\u544A\uFF1A",
@@ -38463,7 +38491,13 @@ var ZH = {
   TOPBANNER_SOCIAL: "\u5C0F\u7EA2\u4E66",
   TOPBANNER_SOCIAL_HREF: "https://www.xiaohongshu.com/user/profile/5b06db60f7e8b974ec6ff7fc",
   TOPBANNER_LIFEOS_PRO: "LifeOS Pro",
+<<<<<<< HEAD
   TOPBANNER_LIFEOS_PRO_HREF: "https://lifeos.vip/zh/plugin/life-os-pro.html"
+=======
+  TOPBANNER_LIFEOS_PRO_HREF: "https://lifeos.vip/zh/plugin/life-os-pro.html",
+  TOP_BANNER_DEEPASK_AD: "\u4E3A LifeOS \u6CE8\u5165 AI \u667A\u80FD",
+  TOP_BANNER_DEEPASK_HREF: "https://lifeos.vip/zh/plugin/deepask/deepask.html"
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 };
 var I18N_MAP = {
   "en-us": EN,
@@ -38476,7 +38510,11 @@ function getI18n(lang) {
 }
 
 // src/util.ts
+<<<<<<< HEAD
 function sleep2(milliseconds) {
+=======
+function sleep(milliseconds) {
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 function renderError(app, msg, containerEl, sourcePath) {
@@ -38514,7 +38552,11 @@ async function createFile(app, options) {
       frontMatter.tags.push(tag.replace(/^#/, ""));
       frontMatter.aliases = tag;
     });
+<<<<<<< HEAD
     await sleep2(30);
+=======
+    await sleep(30);
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     await app.workspace.getLeaf(newLeaf).openFile(fileCreated);
   }
 }
@@ -38526,7 +38568,11 @@ function isDarkTheme() {
 function isBulletList(content) {
   return /^([-*\u2022]|\d+\.) .*/.test(content);
 }
+<<<<<<< HEAD
 function formatDailyRecord(record) {
+=======
+function formatDailyRecord(record, dailyRecordTag) {
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   const { createdTs, createdAt, content, resourceList } = record;
   const timeStamp = createdAt ? (0, import_obsidian2.moment)(createdAt).unix() : createdTs;
   const [date4, time] = (0, import_obsidian2.moment)(timeStamp * 1e3).format("YYYY-MM-DD HH:mm").split(" ");
@@ -38542,7 +38588,17 @@ function formatDailyRecord(record) {
   } else {
     targetFirstLine = `- ${time} ${firstLine.replace(/^- /, "").trim()}`;
   }
+<<<<<<< HEAD
   targetFirstLine += `${firstLine ? " " : ""}#daily-record ^${timeStamp}`;
+=======
+  const tag = dailyRecordTag == null ? void 0 : dailyRecordTag.trim();
+  if (tag) {
+    const formattedTag = tag.startsWith("#") ? tag : `#${tag}`;
+    targetFirstLine += `${firstLine ? " " : ""}${formattedTag} ^${timeStamp}`;
+  } else {
+    targetFirstLine += ` ^${timeStamp}`;
+  }
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   const targetOtherLine = (otherLine == null ? void 0 : otherLine.length) ? `
 ${otherLine.filter((line2) => line2.trim()).map((line2) => `	${isBulletList(line2) ? line2 : `- ${line2}`}`).join("\n").trimEnd()}` : "";
   const targetResourceLine = (resourceList == null ? void 0 : resourceList.length) ? `
@@ -38551,6 +38607,17 @@ ${resourceList == null ? void 0 : resourceList.map((resource) => `	- ${generateF
   return [date4, timeStamp, finalTargetContent].map(String);
 }
 function transformV2Record(record) {
+<<<<<<< HEAD
+=======
+  const resourceList = record.resources || (record.attachments ? record.attachments.map((attachment) => ({
+    id: attachment.name,
+    name: attachment.name,
+    filename: attachment.filename,
+    externalLink: attachment.external_link || attachment.externalLink,
+    type: attachment.type,
+    uid: attachment.name
+  })) : void 0);
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   return {
     updatedTs: new Date(record.updateTime).getTime() / 1e3,
     createdTs: new Date(record.createTime).getTime() / 1e3,
@@ -38558,7 +38625,11 @@ function transformV2Record(record) {
     updatedAt: new Date(record.updateTime).toISOString(),
     content: record.content,
     rowStatus: record.rowStatus,
+<<<<<<< HEAD
     resourceList: record.resources
+=======
+    resourceList
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   };
 }
 function generateFileLink(resource) {
@@ -38570,8 +38641,26 @@ function generateFileLink(resource) {
   return `${prefix}[${resource.name || resource.filename}](${resource.externalLink})`;
 }
 function generateFileName(resource) {
+<<<<<<< HEAD
   var _a;
   return `${resource.id || ((_a = resource.name) == null ? void 0 : _a.split("/")[1])}-${resource.filename.replace(/[/\\?%*:|"<>]/g, "-")}`;
+=======
+  let resourceId = resource.id;
+  if (!resourceId) {
+    const name = resource.name;
+    if (name == null ? void 0 : name.includes("/")) {
+      if (name.startsWith("attachments/")) {
+        resourceId = name.replace("attachments/", "");
+      } else {
+        resourceId = name.split("/")[1] || name.split("/").pop() || name;
+      }
+    } else {
+      resourceId = name || "";
+    }
+  }
+  const fileName = `${resourceId}-${resource.filename.replace(/[/\\?%*:|"<>]/g, "-")}`;
+  return fileName;
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 }
 function logMessage(message, level = 0 /* info */) {
   new import_obsidian2.Notice(message, 5e3);
@@ -39079,7 +39168,11 @@ var File = class {
       dataview.table(
         ["File", "Date"],
         dataview.pages(from2).filter(
+<<<<<<< HEAD
           (b) => !isInPeriodicNote(b.file.path, this.settings) && !isInTemplateNote(filepath, this.settings) && b.file.path !== filepath
+=======
+          (b) => !isInPeriodicNote(b.file.path, this.settings) && !isInTemplateNote(b.file.path, this.settings) && b.file.path !== filepath
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
         ).sort((b) => b.file.ctime.ts, "desc").map((b) => [
           b.file.link,
           `[[${(0, import_dayjs2.default)(b.file.ctime.ts).format("YYYY-MM-DD")}]]`
@@ -39266,7 +39359,23 @@ var DailyRecord = class {
       logMessage(getI18n(this.locale)[`${MESSAGE}START_SYNC_USEMEMOS`]);
       this.pageOffset = 0;
       this.pageToken = "";
+<<<<<<< HEAD
       await Promise.all([this.getMemosVersion(), this.getMemosUserName()]);
+=======
+      try {
+        await this.getMemosVersion();
+      } catch (error) {
+        logMessage(
+          `${getI18n(this.locale)[`${ERROR_MESSAGE}VERSION_DETECTION_FAILED`]}: ${error.message}`,
+          1 /* warn */
+        );
+      }
+      try {
+        await this.getMemosUserName();
+      } catch (error) {
+        logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}USER_INFO_FAILED`]}: ${error.message}`, 1 /* warn */);
+      }
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
       await Promise.all([this.insertDailyRecord(), this.downloadResource()]);
     };
     this.insertDailyRecord = async () => {
@@ -39284,7 +39393,11 @@ var DailyRecord = class {
         if (!record.content && !((_d = record.resourceList) == null ? void 0 : _d.length)) {
           continue;
         }
+<<<<<<< HEAD
         const [date4, timeStamp, formattedRecord] = formatDailyRecord(record);
+=======
+        const [date4, timeStamp, formattedRecord] = await formatDailyRecord(record, this.settings.dailyRecordTag);
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
         if (dailyRecordByDay[date4]) {
           dailyRecordByDay[date4][timeStamp] = formattedRecord;
         } else {
@@ -39310,7 +39423,11 @@ var DailyRecord = class {
               await sleep(1e3);
               targetFile = this.file.get(link, "", this.settings.periodicNotesPath);
             } else if (this.settings.dailyRecordWarning) {
+<<<<<<< HEAD
               logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}NO_DAILY_FILE_EXIST`]} ${today}`, 2 /* error */);
+=======
+              logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}NO_DAILY_FILE_EXIST`]} ${today}`, 1 /* warn */);
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
             }
           }
           const reg = generateHeaderRegExp(header);
@@ -39412,6 +39529,7 @@ ${suffix.trim()}
     this.hasCreatedNewFile = false;
   }
   async getMemosUserName() {
+<<<<<<< HEAD
     const { json: data } = await customRequest({
       url: `${this.baseURL}/api/v1/auth/status`,
       method: "POST",
@@ -39420,6 +39538,31 @@ ${suffix.trim()}
       }
     });
     this.memosUserName = data.name || "";
+=======
+    const endpoints = [
+      { url: "/api/v1/auth/sessions/current", method: "GET" },
+      // v0.25.0+
+      { url: "/api/v1/auth/status", method: "POST" }
+      // Legacy
+    ];
+    for (const endpoint of endpoints) {
+      try {
+        const { json: data } = await customRequest({
+          url: `${this.baseURL}${endpoint.url}`,
+          method: endpoint.method,
+          headers: {
+            Authorization: `Bearer ${this.settings.dailyRecordToken}`
+          }
+        });
+        const user = data && typeof data === "object" && "user" in data ? data.user : data;
+        this.memosUserName = (user == null ? void 0 : user.name) || "";
+        return;
+      } catch (error) {
+        logMessage(`Failed to get user from ${endpoint.url}: ${error.message}`, 1 /* warn */);
+      }
+    }
+    logMessage(getI18n(this.locale)[`${ERROR_MESSAGE}AUTH_ENDPOINTS_FAILED`], 0 /* info */);
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   }
   async getMemosVersion() {
     const urls = ["/api/v1/workspace/profile", "/api/v2/workspace/profile"];
@@ -39432,6 +39575,7 @@ ${suffix.trim()}
           }
         });
         this.memosProfile = data.workspaceProfile || data;
+<<<<<<< HEAD
         this.memosVersion = import_semver.default.lt(this.memosProfile.version, "0.22.0") ? "v1" : "v2";
         return;
       } catch (error) {
@@ -39440,6 +39584,22 @@ ${suffix.trim()}
     }
     if (!this.memosVersion) {
       logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}FAILED_GET_USEMEMOS_VERSION`]}`, 2 /* error */);
+=======
+        if (import_semver.default.lt(this.memosProfile.version, "0.22.0")) {
+          this.memosVersion = "v1";
+        } else if (import_semver.default.lt(this.memosProfile.version, "0.25.0")) {
+          this.memosVersion = "v2";
+        } else {
+          this.memosVersion = "v2.5";
+        }
+        return;
+      } catch (error) {
+        logMessage(`Failed to fetch from ${url2}: ${error.message}`, 1 /* warn */);
+      }
+    }
+    if (!this.memosVersion) {
+      logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}FAILED_GET_USEMEMOS_VERSION`]}`, 1 /* warn */);
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     }
   }
   async fetchMemosList() {
@@ -39465,6 +39625,7 @@ ${suffix.trim()}
       let filterParams = {};
       if (import_semver.default.gte(this.memosProfile.version, "0.24.0")) {
         filterParams = {
+<<<<<<< HEAD
           parent: this.memosUserName,
           state: "NORMAL"
         };
@@ -39473,6 +39634,24 @@ ${suffix.trim()}
           view: "MEMO_VIEW_FULL",
           filter: `creator == '${this.memosUserName}' && visibilities == ['PRIVATE', 'PUBLIC', 'PROTECTED']`
         };
+=======
+          parent: this.memosUserName || void 0,
+          // Will fetch all users' memos if username is unavailable
+          state: "NORMAL"
+        };
+      } else if (import_semver.default.gte(this.memosProfile.version, "0.23.0")) {
+        if (this.memosUserName) {
+          filterParams = {
+            view: "MEMO_VIEW_FULL",
+            filter: `creator == '${this.memosUserName}' && visibilities == ['PRIVATE', 'PUBLIC', 'PROTECTED']`
+          };
+        } else {
+          filterParams = {
+            view: "MEMO_VIEW_FULL",
+            filter: `visibilities == ['PRIVATE', 'PUBLIC', 'PROTECTED']`
+          };
+        }
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
       } else {
         filterParams = {
           filter: 'row_status=="NORMAL"'
@@ -39495,10 +39674,18 @@ ${suffix.trim()}
       this.pageToken = data.nextPageToken;
       return (_a = data.memos) == null ? void 0 : _a.map(transformV2Record);
     } catch (error) {
+<<<<<<< HEAD
       logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}DAILY_RECORD_FETCH_FAILED`]}: ${error}`, 2 /* error */);
     }
   }
   async fetchResourceList() {
+=======
+      logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}DAILY_RECORD_FETCH_FAILED`]}: ${error}`, 1 /* warn */);
+    }
+  }
+  async fetchResourceList() {
+    var _a, _b;
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     try {
       if (this.memosVersion === "v1") {
         const { json: data2 } = await customRequest({
@@ -39512,6 +39699,41 @@ ${suffix.trim()}
         }
         throw new Error(data2.message || data2.msg || data2.error || JSON.stringify(data2));
       }
+<<<<<<< HEAD
+=======
+      if (this.memosVersion === "v2.5") {
+        try {
+          const { json: data2 } = await customRequest({
+            url: `${this.baseURL}/api/v1/attachments`,
+            headers: {
+              Authorization: `Bearer ${this.settings.dailyRecordToken}`
+            }
+          });
+          return (_a = data2 == null ? void 0 : data2.attachments) == null ? void 0 : _a.map((attachment) => {
+            const resourceId = attachment.name.replace(/^attachments\//, "");
+            const resource = {
+              id: resourceId,
+              name: resourceId,
+              // Use just the ID part to avoid duplicate "attachments/" in path
+              filename: attachment.filename,
+              externalLink: attachment.external_link || attachment.externalLink,
+              type: attachment.type,
+              size: attachment.size,
+              uid: resourceId,
+              // for v1 compatibility
+              // Store original name for download URL
+              originalName: attachment.name
+            };
+            return resource;
+          });
+        } catch (attachmentError) {
+          logMessage(
+            `Attachments API failed, falling back to resources API: ${attachmentError.message}`,
+            1 /* warn */
+          );
+        }
+      }
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
       const { json: data } = await customRequest({
         url: `${this.baseURL}/api/v1/resources`,
         headers: {
@@ -39523,10 +39745,17 @@ ${suffix.trim()}
       }
       return data == null ? void 0 : data.resources;
     } catch (error) {
+<<<<<<< HEAD
       if (error.response.status === 404) {
         return;
       }
       logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}RESOURCE_FETCH_FAILED`]}: ${error}`, 2 /* error */);
+=======
+      if (((_b = error.response) == null ? void 0 : _b.status) === 404) {
+        return;
+      }
+      logMessage(`${getI18n(this.locale)[`${ERROR_MESSAGE}RESOURCE_FETCH_FAILED`]}: ${error}`, 1 /* warn */);
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     }
   }
   async downloadResource() {
@@ -39542,8 +39771,22 @@ ${suffix.trim()}
         if (isResourceExists) {
           return;
         }
+<<<<<<< HEAD
         const { arrayBuffer: data } = await customRequest({
           url: `${this.baseURL}${this.memosVersion === "v1" ? `/o/r/${resource.uid || resource.name || resource.id}` : `/file/${resource.name}/${resource.filename}`}`,
+=======
+        let downloadUrl;
+        if (this.memosVersion === "v1") {
+          downloadUrl = `/o/r/${resource.uid || resource.name || resource.id}`;
+        } else if (this.memosVersion === "v2.5") {
+          const attachmentName = resource.originalName || resource.name;
+          downloadUrl = `/file/${attachmentName}/${resource.filename}`;
+        } else {
+          downloadUrl = `/file/${resource.name}/${resource.filename}`;
+        }
+        const { arrayBuffer: data } = await customRequest({
+          url: `${this.baseURL}${downloadUrl}`,
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
           headers: {
             Authorization: `Bearer ${this.settings.dailyRecordToken}`
           }
@@ -88919,7 +89162,11 @@ var TopBanner = ({ locale: locale6 }) => {
       text: i18n.TOPBANNER_SOCIAL
     }
   ];
+<<<<<<< HEAD
   return /* @__PURE__ */ import_react99.default.createElement(ConfigProvider2, null, /* @__PURE__ */ import_react99.default.createElement("div", { className: "m-top-banner" }, /* @__PURE__ */ import_react99.default.createElement("div", { className: "pro-link" }, /* @__PURE__ */ import_react99.default.createElement("a", { href: i18n.TOPBANNER_LIFEOS_PRO_HREF, target: "_blank", rel: "noopener noreferrer" }, /* @__PURE__ */ import_react99.default.createElement(space_default, { align: "center" }, /* @__PURE__ */ import_react99.default.createElement(DollarOutlined_default2, null), /* @__PURE__ */ import_react99.default.createElement("span", null, i18n.TOPBANNER_LIFEOS_PRO)))), /* @__PURE__ */ import_react99.default.createElement("div", { className: "icon-links" }, /* @__PURE__ */ import_react99.default.createElement(space_default, { align: "center", size: "large" }, iconLinks.map(({ icon, href, text }) => /* @__PURE__ */ import_react99.default.createElement("a", { key: href, href, target: "_blank", rel: "noopener noreferrer", "aria-label": text }, /* @__PURE__ */ import_react99.default.createElement(space_default, { align: "center" }, icon, /* @__PURE__ */ import_react99.default.createElement("span", null, text))))))));
+=======
+  return /* @__PURE__ */ import_react99.default.createElement(ConfigProvider2, null, /* @__PURE__ */ import_react99.default.createElement("div", { className: "m-top-banner" }, /* @__PURE__ */ import_react99.default.createElement("div", { className: "banner-content" }, /* @__PURE__ */ import_react99.default.createElement("div", { className: "pro-link" }, /* @__PURE__ */ import_react99.default.createElement("a", { href: i18n.TOPBANNER_LIFEOS_PRO_HREF, target: "_blank", rel: "noopener noreferrer" }, /* @__PURE__ */ import_react99.default.createElement(space_default, { align: "center" }, /* @__PURE__ */ import_react99.default.createElement(DollarOutlined_default2, null), /* @__PURE__ */ import_react99.default.createElement("span", null, i18n.TOPBANNER_LIFEOS_PRO)))), /* @__PURE__ */ import_react99.default.createElement("div", { className: "deepask-ad" }, /* @__PURE__ */ import_react99.default.createElement("a", { href: i18n.TOP_BANNER_DEEPASK_HREF, target: "_blank", rel: "noopener noreferrer" }, /* @__PURE__ */ import_react99.default.createElement(space_default, { align: "center" }, "\u{1F525}", /* @__PURE__ */ import_react99.default.createElement("span", null, i18n.TOP_BANNER_DEEPASK_AD), "\u{1F916}")))), /* @__PURE__ */ import_react99.default.createElement("div", { className: "icon-links" }, /* @__PURE__ */ import_react99.default.createElement(space_default, { align: "center", size: "large" }, iconLinks.map(({ icon, href, text }) => /* @__PURE__ */ import_react99.default.createElement("a", { key: href, href, target: "_blank", rel: "noopener noreferrer", "aria-label": text }, /* @__PURE__ */ import_react99.default.createElement(space_default, { align: "center" }, icon, /* @__PURE__ */ import_react99.default.createElement("span", null, text))))))));
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 };
 
 // src/component/SettingTab/index.tsx
@@ -89097,6 +89344,17 @@ var SettingTab = (props) => {
             ), /* @__PURE__ */ import_react100.default.createElement(
               form_default.Item,
               {
+<<<<<<< HEAD
+=======
+                help: localeMap3.SETTING_DAILY_RECORD_TAG_HELP,
+                name: "dailyRecordTag",
+                label: localeMap3.SETTING_DAILY_RECORD_TAG
+              },
+              /* @__PURE__ */ import_react100.default.createElement(input_default, { placeholder: DEFAULT_SETTINGS.dailyRecordTag })
+            ), /* @__PURE__ */ import_react100.default.createElement(
+              form_default.Item,
+              {
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
                 help: localeMap3.SETTING_DAILY_RECORD_CREATING_HELP,
                 name: "dailyRecordCreating",
                 label: localeMap3.SETTING_DAILY_RECORD_CREATING
@@ -89183,6 +89441,10 @@ var DEFAULT_SETTINGS = {
   dailyRecordHeader: "Daily Record",
   dailyRecordAPI: "",
   dailyRecordToken: "",
+<<<<<<< HEAD
+=======
+  dailyRecordTag: "#daily-record",
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   dailyRecordWarning: true,
   dailyRecordCreating: false,
   useDailyRecord: false,
@@ -89255,6 +89517,31 @@ var LifeOS = class extends import_obsidian15.Plugin {
   constructor(app, manifest) {
     var _a;
     super(app, manifest);
+<<<<<<< HEAD
+=======
+    this.markdownCodeBlockProcessor = (source, el, ctx) => {
+      const view = source.trim();
+      const legacyView = `${view}ByTime`;
+      if (!view) {
+        return renderError(
+          this.app,
+          getI18n(locale5)[`${ERROR_MESSAGE}NO_VIEW_PROVIDED`],
+          el.createEl("div"),
+          ctx.sourcePath
+        );
+      }
+      if (!Object.keys(this.views).includes(view) && !Object.keys(this.views).includes(legacyView)) {
+        return renderError(
+          this.app,
+          `${getI18n(locale5)[`${ERROR_MESSAGE}NO_VIEW_EXISTED`]}: ${view}`,
+          el.createEl("div"),
+          ctx.sourcePath
+        );
+      }
+      const callback = this.views[view] || this.views[legacyView];
+      return callback(view, el, ctx);
+    };
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
     this.initCreateNoteView = async () => {
       const leafs = this.app.workspace.getLeavesOfType(CREATE_NOTE);
       if (leafs.length > 0) {
@@ -89324,6 +89611,7 @@ var LifeOS = class extends import_obsidian15.Plugin {
       callback: () => openOfficialSite(locale5)
     });
     this.loadHelpers();
+<<<<<<< HEAD
     this.loadDailyRecord();
     this.loadGlobalHelpers();
     this.loadViews();
@@ -89352,6 +89640,19 @@ var LifeOS = class extends import_obsidian15.Plugin {
     };
     this.registerMarkdownCodeBlockProcessor("LifeOS", handler);
     this.registerMarkdownCodeBlockProcessor("PeriodicPARA", handler);
+=======
+    this.loadGlobalHelpers();
+    this.loadViews();
+    try {
+      this.registerMarkdownCodeBlockProcessor("LifeOS", this.markdownCodeBlockProcessor);
+      this.registerMarkdownCodeBlockProcessor("PeriodicPARA", this.markdownCodeBlockProcessor);
+    } catch (error) {
+      logMessage(error, 2 /* error */);
+      return;
+    }
+    this.loadDailyRecord();
+    this.addSettingTab(new SettingTabView(this.app, this.settings, this, localeMap2[locale5]));
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
   }
   loadDailyRecord() {
     if (this.settings.usePeriodicNotes && this.settings.useDailyRecord) {

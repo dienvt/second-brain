@@ -36,7 +36,11 @@ https://github.com/comvex-jp/digima-backend-app/blob/develop/database/seeders/ac
 `brew install hashicorp/tap/vault`
 
 
+<<<<<<< HEAD
 Stuck when execute
+=======
+## Stuck when execute
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 Auth-API
 1. Run the Migrate Command `db:migrate all` to create the database schema.
 2. Run the Bootstrap Command `db:bootstrap` to create the initial data.
@@ -46,3 +50,29 @@ $ git config --global url."git@github-comvexcojp:comvex-jp/backend-service-go-fr
 ````
 
 Cachs run bash
+<<<<<<< HEAD
+=======
+
+
+### Start Digima
+
+```bash
+Start those services
+digiform apply -y app
+digiform apply -y auth
+digiform apply -y userweb
+cd digima-webapp && yarn start
+```
+
+* [ ] Migrate digima backend app
+```bash
+php artisan digima:db-core-migrate [[--force] [--pretend]]
+
+php artisan digima:db-core-seed [[--force] [--dev]]
+
+php artisan digima:db-account-migrate 1 [[--force] [--pretend]]
+
+php artisan digima:db-account-seed 1 [[--force] [--dev]]
+```
+* [ ] 
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)

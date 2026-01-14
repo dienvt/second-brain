@@ -1,0 +1,5 @@
+
+```
+// show routes 
+rails routes
+```

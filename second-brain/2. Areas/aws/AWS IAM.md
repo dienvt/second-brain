@@ -56,4 +56,33 @@ You saw how to:
 
 ---
 
+<<<<<<< HEAD
 Let me know if you'd like a diagram, follow-up with Lambda, or want to build this into a module!
+=======
+Let me know if you'd like a diagram, follow-up with Lambda, or want to build this into a module!
+
+## Group and Role
+
+An **IAM Group** is a **collection of users** that share the same permissions.
+
+- Groups **cannot have credentials** — only users can sign in.
+    
+- You **attach policies** (permissions) to a group.
+    
+- All users in that group inherit the group’s permissions.
+    
+
+Think of a group as a **permission template**.
+
+### Example:
+
+Let’s say you have:
+
+- Group: `Developers`
+    
+- Policy: “Can manage EC2 instances but not delete production resources”
+    
+
+If you add `developer01` and `developer02` to the `Developers` group →  
+both automatically get those permissions.
+>>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
