@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/react/react.README.md",
+                "file": "2. Areas/andpadvn/Interview/20206-01-14 Nguyen Van Tuan.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "react.README"
+              "title": "20206-01-14 Nguyen Van Tuan"
             }
           },
           {
@@ -127,7 +127,8 @@
               "title": "2025-12-02"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"

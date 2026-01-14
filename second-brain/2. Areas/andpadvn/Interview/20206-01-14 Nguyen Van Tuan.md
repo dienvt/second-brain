@@ -3,10 +3,22 @@ Infra
     - [ ] Greeting and ask for the introduction.
     - [ ]  Hỏi về kinh nghiệm làm việc (15’)
         - [ ] Khó khăn vào thách thức
+        - [ ] 4 năm kinh nghiệm.
+	    - [ ] Apply, ko vì công việc?
+	    - [ ] IC grow lên 
+	    - [ ] Tìm hiểu về stack
+	    - [ ] Communication team
+	    - [ ] MVP pipeline
+	    - [ ] Nx 
+	    - [ ] Golang dùng mono repo
+	    - [ ] Proposal for temporal
+	    - [ ] 
     - [ ] Verifify wide then narrow the scope
     - [ ] _Mr. Dien_
 	    - [ ] How you archive the high unit test coverage? How much percentage you think we should archived
-	    - [ ] 
+	    - [ ] OKR: Test
+		    - [ ] Method
+			- [ ] mockery
     - [ ] _Mr. Vu Huynh_
         - [ ] OAuth
         - [ ] How your unit test coverage
