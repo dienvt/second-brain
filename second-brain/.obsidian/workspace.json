@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. PeriodicNotes/Templates/Daily.md",
+                "file": "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -23,12 +23,12 @@
                   "sortOrder": "alphabetical",
                   "showSearch": false,
                   "searchQuery": "",
-                  "backlinkCollapsed": false,
+                  "backlinkCollapsed": true,
                   "unlinkedCollapsed": true
                 }
               },
               "icon": "lucide-file",
-              "title": "Daily"
+              "title": "2026-01-16 Vo Minh Duc"
             }
           },
           {
@@ -53,54 +53,6 @@
               },
               "icon": "lucide-file",
               "title": "README"
-            }
-          },
-          {
-            "id": "033ce57e1daecca3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0. PeriodicNotes/2025/Daily/12/2025-12-13.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-12-13"
-            }
-          },
-          {
-            "id": "bf334ea56a6a5f45",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Areas/comvex/meetings/Backlog Meeting/Backlog meetings.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Backlog meetings"
             }
           },
           {
@@ -321,9 +273,27 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "2990fe6c1bc92d36",
+  "active": "3024607e7159c1e4",
   "lastOpenFiles": [
-    "2. Areas/andpadvn/Interview/20206-01-14 Nguyen Van Tuan.md",
+    "2. Areas/andpadvn/Interview/Readme.md.md",
+    "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
+    "2. Areas/andpadvn/Interview/2026-01-14 Nguyen Van Tuan.md",
+    "2. Areas/andpadvn/Interview/2026-MM-YY Template.md",
+    "2. Areas/comvex/projects/secure/Oauth Flow.md",
+    "2. Areas/comvex/meetings/Release Prepairation/README.md",
+    "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
+    "2. Areas/comvex/meetings/Backlog Meeting/Backlog meetings.md",
+    "0. PeriodicNotes/2025/Daily/12/2025-12-13.md",
+    "2. Areas/comvex/projects/secure/Permission Denied.md",
+    "2. Areas/comvex/projects/adminweb/Download Reports.md",
+    "2. Areas/comvex/projects/secure",
+    "2. Areas/comvex/projects/billing/Todo.md",
+    "0. PeriodicNotes/2026/Daily/01/2026-01-16.md",
+    "0. PeriodicNotes/2026/Daily/01/2026-01-15.md",
+    "2. Areas/laravel/Script.md",
+    "2. Areas/comvex/Architecture/Request Lifecycle Diagram - Digima Backend UserWeb BFF.md",
+    "2. Areas/comvex/comvex.README.md",
+    "0. PeriodicNotes/Templates/Daily.md",
     "Untitled 1",
     "Untitled",
     "2. Areas/react/Best Practies/6 mistakes.md",
@@ -335,30 +305,13 @@
     "2. Areas/comvex/projects/framework/Untitled mindmap.md",
     "2. Areas/comvex/projects/billing/Test 1-1.md",
     "2. Areas/comvex/projects/backend-app/Readme.md",
-    "2. Areas/comvex/projects/backend-app/Migrate billing_properties.md",
     "2. Areas/comvex/projects/backend-app",
-    "2. Areas/comvex/projects/auth/Models Relationship.md",
-    "2. Areas/comvex/projects/adminweb/New feature.md",
     "2. Areas/comvex/projects/adminweb",
-    "2. Areas/comvex/projects/Untitled.md",
-    "2. Areas/comvex/projects/Untitled 1.md",
-    "2. Areas/comvex/meetings/Sprint Review/README.md",
-    "2. Areas/comvex/meetings/Sprint Review/2025-12-08 (Sprint 150).md",
     "2. Areas/comvex/meetings/Sprint Review",
-    "2. Areas/comvex/meetings/Sprint Retrorespective/README.md",
-    "2. Areas/comvex/meetings/Sprint Retrorespective/2025-12-08.md",
     "2. Areas/comvex/meetings/Sprint Retrorespective",
-    "2. Areas/comvex/meetings/Sprint Planning/README.md",
     "2. Areas/comvex/meetings/Sprint Planning",
-    "2. Areas/comvex/meetings/Release Prepairation/Untitled.md",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
-    "2. Areas/comvex/meetings/Release Prepairation/2025-12-09.md",
-    "2. Areas/comvex/meetings/Product Backlog/Untitled.md",
-    "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
-    "2. Areas/comvex/meetings/Product Backlog/2025-11-17.md",
     "2. Areas/comvex/meetings/Product Backlog",
-    "2. Areas/comvex/meetings/Empower/README.md",
-    "2. Areas/comvex/meetings/Empower",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",
     "HOME.canvas",

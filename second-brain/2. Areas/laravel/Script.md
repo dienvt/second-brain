@@ -1,18 +1,14 @@
 ## Check sync
 ```
 mutagen sync list
-<<<<<<< HEAD
-=======
-
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 ```
+
 ## Test
 `php artisan test`
 
 ## Test specifice package
 ```
 php artisan test tests/Integration/Listeners/Lead/Inbox/Message/ProduceLeadEmailMessageConvertedEventSubscriberTest.php
-
 ```
 
 ## Install package
@@ -58,4 +54,9 @@ docker exec -it app-api composer dump-autoload
 -- then run 
 > use Digima\Services\UidGenerator;
 > UidGenerator::make(12)
+```
+
+## List router
+```
+php artisan route:list
 ```
