@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. Projects/macbook_pro/macbook_pro.README.md",
+                "file": "0. PeriodicNotes/2026/Daily/01/2026-01-18.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "macbook_pro.README"
+              "title": "2026-01-18"
             }
           }
         ]
@@ -207,8 +207,8 @@
             "state": {
               "type": "excalidraw-sidepanel",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "excalidraw-sidepanel"
+              "icon": "excalidraw-icon",
+              "title": "Excalidraw Sidepanel"
             }
           }
         ],
@@ -235,10 +235,12 @@
       "periodic-para:LifeOS Creation": false
     }
   },
-  "active": "318abbbcd7749f6f",
+  "active": "2990fe6c1bc92d36",
   "lastOpenFiles": [
-    "1. Projects/administraton_correct/administraton_correct.README.md",
+    "0. PeriodicNotes/2026/Daily/01/2026-01-16.md",
+    "0. PeriodicNotes/2026/Daily/01/2026-01-18.md",
     "1. Projects/macbook_pro/macbook_pro.README.md",
+    "1. Projects/administraton_correct/administraton_correct.README.md",
     "2. Areas/comvex/Architecture/Overview.md",
     "1. Projects/macbook_pro",
     "Excalidraw/Drawing 2026-01-17 20.43.50.excalidraw.md",
@@ -255,7 +257,6 @@
     "2. Areas/comvex/projects/adminweb/Download Reports.md",
     "2. Areas/comvex/projects/secure",
     "2. Areas/comvex/projects/billing/Todo.md",
-    "0. PeriodicNotes/2026/Daily/01/2026-01-16.md",
     "0. PeriodicNotes/2026/Daily/01/2026-01-15.md",
     "2. Areas/laravel/Script.md",
     "2. Areas/comvex/Architecture/Request Lifecycle Diagram - Digima Backend UserWeb BFF.md",
@@ -266,7 +267,6 @@
     "2. Areas/react/Best Practies/6 mistakes.md",
     "2. Areas/comvex/projects/webapp/My Opinions.md",
     "2. Areas/comvex/projects/webapp/Add new page with graphql.md",
-    "2. Areas/comvex/projects/sms/Note.md",
     "2. Areas/comvex/projects/framework/Untitled.base",
     "2. Areas/comvex/projects/backend-app",
     "2. Areas/comvex/projects/adminweb",
