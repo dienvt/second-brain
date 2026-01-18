@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/comvex/Architecture/Overview.md",
+                "file": "1. Projects/macbook_pro/macbook_pro.README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,83 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Overview"
-            }
-          },
-          {
-            "id": "ab4fd7929ba24861",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-01-16 Vo Minh Duc"
-            }
-          },
-          {
-            "id": "914a695148b83bcf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Areas/comvex/meetings/Release Prepairation/README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "2641562a067a86ec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-12-02"
+              "title": "macbook_pro.README"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -280,8 +207,8 @@
             "state": {
               "type": "excalidraw-sidepanel",
               "state": {},
-              "icon": "excalidraw-icon",
-              "title": "Excalidraw Sidepanel"
+              "icon": "lucide-ghost",
+              "title": "excalidraw-sidepanel"
             }
           }
         ],
@@ -293,11 +220,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "periodic-para:LifeOS Creation": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-git:Open Git source control": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -305,13 +227,21 @@
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
       "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false
+      "workspaces:Manage workspace layouts": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-git:Open Git source control": false,
+      "periodic-para:LifeOS Creation": false
     }
   },
-  "active": "2990fe6c1bc92d36",
+  "active": "318abbbcd7749f6f",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-01-17 20.43.50.excalidraw.md",
+    "1. Projects/administraton_correct/administraton_correct.README.md",
+    "1. Projects/macbook_pro/macbook_pro.README.md",
     "2. Areas/comvex/Architecture/Overview.md",
+    "1. Projects/macbook_pro",
+    "Excalidraw/Drawing 2026-01-17 20.43.50.excalidraw.md",
     "2. Areas/andpadvn/Interview/2026-MM-YY Template.md",
     "2. Areas/andpadvn/Interview/2026-01-14 Nguyen Van Tuan.md",
     "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
@@ -337,16 +267,13 @@
     "2. Areas/comvex/projects/webapp/My Opinions.md",
     "2. Areas/comvex/projects/webapp/Add new page with graphql.md",
     "2. Areas/comvex/projects/sms/Note.md",
-    "2. Areas/comvex/projects/framework/Worker-infra.md",
     "2. Areas/comvex/projects/framework/Untitled.base",
-    "2. Areas/comvex/projects/framework/Untitled mindmap.md",
     "2. Areas/comvex/projects/backend-app",
     "2. Areas/comvex/projects/adminweb",
     "2. Areas/comvex/meetings/Sprint Review",
     "2. Areas/comvex/meetings/Sprint Retrorespective",
     "2. Areas/comvex/meetings/Sprint Planning",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
-    "2. Areas/comvex/meetings/Product Backlog",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",
     "HOME.canvas",
