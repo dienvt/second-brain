@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
+                "file": "2. Areas/comvex/Architecture/Overview.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -24,6 +24,30 @@
                   "showSearch": false,
                   "searchQuery": "",
                   "backlinkCollapsed": true,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Overview"
+            }
+          },
+          {
+            "id": "ab4fd7929ba24861",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
                   "unlinkedCollapsed": true
                 }
               },
@@ -79,7 +103,8 @@
               "title": "2025-12-02"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -248,6 +273,16 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "bf79c5505f8cf520",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw-sidepanel",
+              "state": {},
+              "icon": "excalidraw-icon",
+              "title": "Excalidraw Sidepanel"
+            }
           }
         ],
         "currentTab": 4
@@ -273,12 +308,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "3024607e7159c1e4",
+  "active": "2990fe6c1bc92d36",
   "lastOpenFiles": [
-    "2. Areas/andpadvn/Interview/Readme.md.md",
-    "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
-    "2. Areas/andpadvn/Interview/2026-01-14 Nguyen Van Tuan.md",
+    "Excalidraw/Drawing 2026-01-17 20.43.50.excalidraw.md",
+    "2. Areas/comvex/Architecture/Overview.md",
     "2. Areas/andpadvn/Interview/2026-MM-YY Template.md",
+    "2. Areas/andpadvn/Interview/2026-01-14 Nguyen Van Tuan.md",
+    "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
+    "2. Areas/andpadvn/Interview/Readme.md.md",
     "2. Areas/comvex/projects/secure/Oauth Flow.md",
     "2. Areas/comvex/meetings/Release Prepairation/README.md",
     "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
@@ -303,8 +340,6 @@
     "2. Areas/comvex/projects/framework/Worker-infra.md",
     "2. Areas/comvex/projects/framework/Untitled.base",
     "2. Areas/comvex/projects/framework/Untitled mindmap.md",
-    "2. Areas/comvex/projects/billing/Test 1-1.md",
-    "2. Areas/comvex/projects/backend-app/Readme.md",
     "2. Areas/comvex/projects/backend-app",
     "2. Areas/comvex/projects/adminweb",
     "2. Areas/comvex/meetings/Sprint Review",

@@ -4,14 +4,14 @@ Infra
     - [ ]  Hỏi về kinh nghiệm làm việc (15’)
         - [ ] Khó khăn vào thách thức
     - [ ] Verifify wide then narrow the scope
-    - [ ] _Mr. Vu Huynh_
-        - [ ] OAuth
-        - [ ] How your unit test coverage
-        - [ ] Which one your code need unit test and what is the perfect percent of coverage
-        - [ ] Ask do I familiar with CI/CD
-        - [ ] Ask do I familiar with k8s
-    - [ ] _Mr. Long Nguyen_
-	    - [ ] System design, Design pattern
-        - [ ] Ask about SA: how service talking with each other
-        - [ ] Draw about current project structure
-        - [ ] What is goroutines
+	- [ ] OAuth
+	- [ ] What is the protocol use to communicate between 
+	- [ ] How your unit test coverage
+	- [ ] Which one your code need unit test and what is the perfect percent of coverage
+	- [ ] Ask do I familiar with CI/CD
+	- [ ] Ask do I familiar with k8s
+	- [ ] System design, Design pattern
+	- [ ] Ask about SA: How service talking with each other
+	- [ ] Draw about current project structure
+	- [ ] What is goroutines
+	- [ ] 
