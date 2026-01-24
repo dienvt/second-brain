@@ -1,0 +1,39 @@
+- [ ] 1st technical interview (60m) 1 anh Leader _, Mr. Vu Huynh_ và 1 anh Senior _Mr. Long Nguyen_
+    - [ ] Greeting and ask for the introduction.
+	    - [ ] 
+    - [ ] Hỏi về định hướng khi chọn andpad
+	    - [ ] More ownership
+	    - [ ] Scopes 
+	    - [ ] Phats trien ve mang backend
+	    - [ ] 
+    - [ ]  Hỏi về kinh nghiệm làm việc (15’)
+        - [ ] Khó khăn vào thách thức
+        - [ ] Nhận Task từ senior, sau đó deliver và deploy
+	- [ ] Hệ  thống đang làm là hệ thống trung gian thanh toán
+		- [ ] Golang, MySQL, 
+		- [ ] Docker, kunernetes
+		- [ ] gilab, Gitlab action
+		- [ ] Go, test coverage.
+		- [ ] Thanh toán thẻ. Từ giao diện UI, app của khách, 
+			- [ ] Tạo order
+			- [ ] Thanh toán cung cấp thông tin thẻ: 
+			- [ ] Return back cho user.
+			- [ ] Event driven
+			- [ ] Timeout.
+				- [ ] Đang xử lý.
+			- [ ] Scheduler khi 1 phút, quét database. 
+			- [ ] Settlement Rà soát.
+	- [ ] Hỏi về SOLID:
+		- [ ] 
+    - [ ] Verifify wide then narrow the scope
+	- [ ] OAuth
+	- [ ] What is the protocol use to communicate between 
+	- [ ] How your unit test coverage
+	- [ ] Which one your code need unit test and what is the perfect percent of coverage
+	- [ ] Ask do I familiar with CI/CD
+	- [ ] Ask do I familiar with k8s
+	- [ ] System design, Design pattern
+	- [ ] Ask about SA: How service talking with each other
+	- [ ] Draw about current project structure
+	- [ ] What is goroutines
+	- [ ] 

@@ -1,0 +1,49 @@
+- [ ] 1st technical interview (60m).
+    - [ ] Greeting and ask for the introduction.
+	    - [ ] Introduce interviewee
+    - [ ] Hỏi về định hướng khi chọn andpad
+    - [ ]  Hỏi về kinh nghiệm làm việc (15’)
+	    - [ ] Daily tasks
+        - [ ] Khó khăn vào thách thức
+        - [ ] có họp
+        - [ ] 
+    - [ ] Verifify wide then narrow the scope
+	    - [ ] What is the protocol use to communicate between your services
+		    - [ ] be 5-6 member
+		    - [ ] squad 20 người
+		    - [ ] on call là gì?
+		    - [ ] Chia sẻ về cache
+		    - [ ] 
+	    - [ ] How do you deploy your service, to mange deplyment state?
+			- [ ] Ask do I familiar with CI/CD
+				- [ ] master và nhánh release.
+				- [ ] Gitlab ci, gitlab runner.
+				- [ ] 
+			- [ ] Ask do I familiar with k8s
+				- [ ] git
+				- [ ] ci
+				- [ ] registry trigger next action
+				- [ ] Build docker file.
+	    - [ ] How do you observer or telemety your services? Do you apply tracing
+		    - [ ] restApi: dùng cho public API
+		    - [ ] grpc: internal, không nắm rõ
+		    - [ ] pub/sub không có kiến thức
+		    - [ ] grafana. prometheus, open telemetry
+		    - [ ] job background.
+		    - [ ]  
+	    - [ ] How to you write test and manage test coverage.
+		    - [ ] 
+	    - [ ] Which one your code need unit test and what is the perfect percent of coverage
+	    - [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+	- [ ] OAuth
+	- [ ] OOP
+		- [ ] What is OOP ?
+		- [ ] What is SOLID
+	- [ ] Golang
+		- [ ] What is goroutines
+		- [ ] How to avoid rate condition
+		- [ ] How you resolve consensure problem indo
+	- [ ] Ask about SA: How service talking with each other
+	- [ ] Draw about current project structure
+	- [ ] 
+	- [ ] 
