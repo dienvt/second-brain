@@ -4,103 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ce454b88721f34cc",
+        "id": "55ef9d1562b58b1b",
         "type": "tabs",
         "children": [
           {
-            "id": "3024607e7159c1e4",
+            "id": "feb62a4d98fd6f26",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "2. Areas/andpadvn/Interview/2026-01-23 Tran Hoang Nam.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": true,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "second-brain/.obsidian/workspace.json",
+                "bFile": "second-brain/.obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "2026-01-23 Tran Hoang Nam"
-            }
-          },
-          {
-            "id": "ab4fd7929ba24861",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Areas/andpadvn/Interview/Readme.md.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Readme.md"
-            }
-          },
-          {
-            "id": "914a695148b83bcf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Areas/comvex/meetings/Release Prepairation/README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "2641562a067a86ec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-12-02"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -151,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Võ Thành",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -292,11 +210,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "periodic-para:LifeOS Creation": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-git:Open Git source control": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -304,47 +217,52 @@
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
       "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false
+      "workspaces:Manage workspace layouts": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-git:Open Git source control": false,
+      "periodic-para:LifeOS Creation": false
     }
   },
-  "active": "2990fe6c1bc92d36",
+  "active": "feb62a4d98fd6f26",
   "lastOpenFiles": [
-    "4. Archives/vms/technical/Resources.md",
-    "4. Archives/vms/mettings/2025-07-22.md",
-    "4. Archives/vms/technical/Drawing 2025-07-24 21.48.50.excalidraw.md",
-    "4. Archives/vms/mettings",
-    "4. Archives/vms/technical",
-    "4. Archives/vms/vms.README.md",
-    "4. Archives/vms/resources.md",
-    "4. Archives/vms",
-    "4. Archives/kitoc/teckstack/README.md",
-    "4. Archives/kitoc/teckstack",
-    "4. Archives/kitoc/kitoc.README.md",
-    "4. Archives/kitoc",
-    "4. Archives/ha_giang_2025/ha_giang_2025.README.md",
-    "4. Archives/ha_giang_2025",
-    "4. Archives/cursor-trial/cursor-trial.README.md",
-    "4. Archives/cursor-trial/Cursor three mode.md",
-    "4. Archives/cursor-trial/Overview project.md",
-    "4. Archives/cursor-trial",
-    "4. Archives/corellian_sprint_143/corellian_sprint_143.README.md",
-    "4. Archives/corellian_sprint_143",
-    "1. Projects/macbook_pro/macbook_pro.README.md",
-    "1. Projects/macbook_pro",
-    "0. PeriodicNotes/2026/Daily/01/2026-01-18.md",
-    "2. Areas/comvex/meetings/Release Prepairation/README.md",
-    "2. Areas/andpadvn/Interview/Readme.md.md",
+    "3. Resources/go-lang/Docker sample.md",
     "2. Areas/andpadvn/Interview/2026-01-23 Tran Hoang Nam.md",
     "2. Areas/andpadvn/Interview/2026-01-19 Minh Nguyen.md",
+    "2. Areas/andpadvn/Interview/2026-01-19 Dam Van Tuan.md",
     "0. PeriodicNotes/2026/Daily/01/2026-01-23.md",
-    "0. PeriodicNotes/2025/Daily/12/2025-12-13.md",
     "0. PeriodicNotes/2026/Daily/01/2026-01-22.md",
     "0. PeriodicNotes/2026/Daily/01/2026-01-21.md",
     "0. PeriodicNotes/2026/Daily/01/2026-01-19.md",
+    "0. PeriodicNotes/2026/Daily/01/2026-01-18.md",
+    "0. PeriodicNotes/2026/Daily/01/2026-01-16.md",
+    "1. Projects/macbook_pro/macbook_pro.README.md",
+    "1. Projects/administraton_correct/administraton_correct.README.md",
     "2. Areas/comvex/Architecture/Overview.md",
-    "2. Areas/comvex/meetings/Sprint planning Agenda.md",
-    "2. Areas/comvex/Onboarding/Teams.md",
+    "1. Projects/macbook_pro",
+    "Excalidraw/Drawing 2026-01-17 20.43.50.excalidraw.md",
+    "2. Areas/andpadvn/Interview/2026-MM-YY Template.md",
+    "2. Areas/andpadvn/Interview/2026-01-14 Nguyen Van Tuan.md",
+    "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
+    "2. Areas/andpadvn/Interview/Readme.md.md",
+    "2. Areas/comvex/projects/secure/Oauth Flow.md",
+    "2. Areas/comvex/meetings/Release Prepairation/README.md",
+    "2. Areas/comvex/meetings/Product Backlog/2025-12-02.md",
+    "2. Areas/comvex/meetings/Backlog Meeting/Backlog meetings.md",
+    "0. PeriodicNotes/2025/Daily/12/2025-12-13.md",
+    "2. Areas/comvex/projects/secure/Permission Denied.md",
+    "2. Areas/comvex/projects/adminweb/Download Reports.md",
     "2. Areas/comvex/projects/secure",
+    "2. Areas/comvex/projects/billing/Todo.md",
+    "Untitled 1",
+    "Untitled",
+    "2. Areas/comvex/projects/framework/Untitled.base",
+    "2. Areas/comvex/projects/backend-app",
+    "2. Areas/comvex/projects/adminweb",
+    "2. Areas/comvex/meetings/Sprint Review",
+    "2. Areas/comvex/meetings/Sprint Retrorespective",
+    "2. Areas/comvex/meetings/Sprint Planning",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",

@@ -15,7 +15,7 @@ RUN go mod download
 COPY . .
 RUN go build -o source .
 
-FROM gcr.io/distroless/static-debian10 AS runner
+FROM gcr.io/distroless/static-debian12 AS runner
 WORKDIR /root/
 COPY --from=builder /main/source ./
 COPY --from=builder /main/infra/database/migrations ./database/migrations
