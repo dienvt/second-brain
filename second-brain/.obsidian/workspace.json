@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b129d67f456827b1",
+        "id": "3d0d3c44726b2a7e",
         "type": "tabs",
         "children": [
           {
-            "id": "114ff063026b36b1",
+            "id": "1003a1a462f8f267",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "second-brain/.obsidian/workspace.json",
+                "bFile": "second-brain/.obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -235,10 +225,10 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "114ff063026b36b1",
+  "active": "1003a1a462f8f267",
   "lastOpenFiles": [
-    "0. PeriodicNotes/2026/Daily/01/2026-01-30.md",
     "conflict-files-obsidian-git.md",
+    "0. PeriodicNotes/2026/Daily/01/2026-01-30.md",
     "0. PeriodicNotes/2026/Daily/01/2026-01-29.md",
     "2. Areas/laravel/Script.md",
     "2. Areas/laravel/laravel.README.md",
