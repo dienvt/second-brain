@@ -12,12 +12,22 @@ php artisan test tests/Integration/Listeners/Lead/Inbox/Message/ProduceLeadEmail
 ```
 
 ## Install package
+### Install package
 ```
 composer require comvex-jp/digima-backend-app-proto:1.4.0
 composer update comvex-jp/digima-backend-app-proto:1.4.0
 composer install
 ```
+### Install dev package
+* change the `composoer.json` with `dev-` prefix to "comvex-jp/digima-backend-billing-proto": "dev-feat/account-pricing-plan-workflow-name"
+```
+!composer.json
+"comvex-jp/digima-backend-billing-proto": "dev-feat/account-pricing-plan-workflow-name",
 
+
+composor update
+composor install
+```
 ## Turn on feature flag
 ```
 php artisan digima:feature-flag-create USERWEB_ACTIVITY  \\\"Userweb Activity\\\"
