@@ -11,10 +11,15 @@
             "id": "86fdca82a29b91a9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": "HEAD",
+                "bRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Index)"
             }
           }
         ]
@@ -221,7 +226,7 @@
       "periodic-para:LifeOS Creation": false
     }
   },
-  "active": "2990fe6c1bc92d36",
+  "active": "86fdca82a29b91a9",
   "lastOpenFiles": [
     "2. Areas/comvex/meetings/Product Backlog/2026-01-27.md",
     "2. Areas/andpadvn/Interview/2026-xx-xxTemplate.md",
