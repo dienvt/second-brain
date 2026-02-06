@@ -1,4 +1,4 @@
 * Automation: Stefan, Yohei, Nino
-- Platform: Taisuke, Dien, 
+- Platform: Dien, 
 - CRM Core: Fred, Jodoi, Tatsumi, Ichiyanagai, Ozawa
-- Communication: Nino, Yohei
+- Communication: Nino, Yohei, Yugo Nakamura

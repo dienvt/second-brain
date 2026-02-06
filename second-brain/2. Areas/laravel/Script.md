@@ -70,3 +70,57 @@ docker exec -it app-api composer dump-autoload
 ```
 php artisan route:list
 ```
+
+## Debug log
+ravel, you can write debug logs using:
+
+**1. Log facade:**
+
+\Log::debug('Debug message', ['context' => $variable]);
+
+**2. logger() helper:**
+
+logger()->debug('Debug message', ['context' => $variable]);
+- 
+- 
+- 
+- 
+
+**3. Other log levels:**
+```
+<?php
+\Log::info('Info message');
+\Log::warning('Warning message');
+\Log::error('Error message', ['exception' => $e]);
+```
+- 
+- 
+- 
+- 
+
+**Example in your current file:**
+```
+<?php
+public static function findByFeatureAt(string $feature, Carbon $date): ?self
+{
+    [$from, $to] = get_month_bounds($date, 'UTC');
+    
+    \Log::debug('Finding usage by feature', [
+        'feature' => $feature,
+        'from' => $from,
+        'to' => $to,
+    ]);
+    
+    return self::query()
+               ->where('feature', $feature)
+               ->where('from', $from)
+               ->where('to', $to)
+               ->first();
+}
+```
+- 
+- 
+- 
+- 
+
+Logs are written to `storage/logs/laravel.log` by default. The log channel configuration is in
