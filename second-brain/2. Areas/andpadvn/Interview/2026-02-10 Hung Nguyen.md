@@ -1,44 +1,36 @@
 - [ ] 1st technical interview (60m).
     - [ ] Greeting and ask for the introduction.
 	    - [ ] Introduce interviewee.
-	    - [ ] 9 năm
-	    - [ ] 
-    - [ ] Hỏi về định hướng khi chọn andpad.
-	    - [ ] Backend lead,
-	    - [ ] Tech lead,
-	    - [ ] 1-2 năm tiếp grow lên được tech lead.
+    - [ ] Hỏi về định hướng khi chọn andpad
     - [ ]  Hỏi về kinh nghiệm làm việc (15’)
 	    - [ ] Daily tasks
-        - [ ] Khó khăn vào thách thức.
-        - [ ] Design, taoj task phân task.
-        - [ ] Payment, token pay wallet.
-    - [ ] Verifify wide then narrow the scope.
-	    - [ ] 100k/s
-		    - [ ] (Không áp dụng) redis general with lua script. update batch
-		    - [ ] .in memory cache. Public transction. 
-		    - [ ] Google pub/sub: scale consumer. subsciption.
-		    - [ ] Good understand about technology.
-		    - [ ] EventID strong db.
-		- [ ] Redis
-			- [ ] Cache.
-			- [ ] Distributed lock.
-			- [ ] redis stream.
-			- [ ] Single node. 
+	    - [ ] Platform tạo form để nộp thuế
+	    - [ ] Form 40 session 
+		    - [ ] INP giảm từ 20s về 0.2s
+		    - [ ] Có backend lưu stage
+		    - [ ] Có websocket để lưu trạng thái của aws. 
+		    - [ ] Allow 2 người  cũng edit một form.
+		    - [ ] Navigation...
+		    - [ ] Metric, P.999
+        - [ ] Khó khăn vào thách thức
+	- [ ] Project logistic
+		- [ ] Kho muốn nhập hàng: số lượng, khối lượng, inventory, lưu trữ metrics lại.
+		- [ ] lưu unit theo gram, lit. Lưu theo tree direct.
+		- [ ] Tại sao lại phải lưu theo tree
+			- [ ] User có thể Customize unit và tạo relation tới 
+			- [ ] Kg
+		- [ ] 
+    - [ ] Verifify wide then narrow the scope
 	    - [ ] What is the protocol use to communicate between your services
-		    - [ ] Nhiều service
-		    - [ ] 6 services: Grpc
-		    - [ ] Kong, DragonD.
+		    - [ ] 
 	    - [ ] How do you deploy your service, to mange deplyment state?
 			- [ ] Ask do I familiar with CI/CD
-				- [ ] Devops Nắm concept.
-				- [ ] Biết viết yam file và argo cd.
 				- [ ] Gitlab ci, gitlab runner.
+				- [ ] 
 			- [ ] Ask do I familiar with k8s.
 				- [ ] Build docker file.
 	    - [ ] How do you observer or telemety your services? Do you apply tracing
-		    - [ ] Span, dùng, trace_id
-		    - [ ] Hơi yếu phần tracing. nhưng mà ok ko sao?
-		    - [ ] SDK 
+		    - [ ]  
 	    - [ ] How to you write test and manage test coverage.
 		    - [ ] 
 	    - [ ] Which one your code need unit test and what is the perfect percent of coverage
@@ -50,9 +42,10 @@
 	- [ ] Golang
 		- [ ] What is goroutines
 		- [ ] How to avoid rate condition
-		- [ ] How you resolve consensure problem indo.
+		- [ ] How you resolve consensure problem indo
 	- [ ] Ask about SA: How service talking with each other
 	- [ ] Draw about current project structure
+	- [ ] 
 	- [ ] 
 # Interview Preparation Summary
 
@@ -61,7 +54,7 @@
   - **Question:** "Can you tell me about how you typically handle concurrency in Go?"
   - **Answer:** Discussed using goroutines and channels, best practices like `sync.Mutex`, `sync.WaitGroup`, and avoiding race conditions.
 - **Context**:
-	- How you use context in your.
+	- How you use context in your 
 
 ## 2. **Database Integration**
 - **Query Optimization:** Techniques like indexing, avoiding `SELECT *`, using proper joins, and analyzing query execution plans.
@@ -74,6 +67,7 @@
 The two main approaches are:
 
 1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails.
+    
 2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.
 
 * Two phase commit:
@@ -86,6 +80,7 @@ The two main approaches are:
 |Scalability|Poor|Poor|Excellent|
 |Complexity|Medium|High|High (business logic)|
 |Real-world usage|Legacy systems|Rare|Very common|
+
 
 ## 4. **Web Architecture**
 - **Communication:** Using GraphQL for public APIs and gRPC for internal service communication.

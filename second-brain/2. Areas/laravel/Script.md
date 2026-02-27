@@ -19,14 +19,14 @@ composer update comvex-jp/digima-backend-app-proto:1.4.0
 composer install
 ```
 ### Install dev package
-* change the `composoer.json` with `dev-` prefix to "comvex-jp/digima-backend-billing-proto": "dev-feat/account-pricing-plan-workflow-name"
+* change the `composer.json` with `dev-` prefix to "comvex-jp/digima-backend-billing-proto": "dev-feat/account-pricing-plan-workflow-name"
 ```
 !composer.json
 "comvex-jp/digima-backend-billing-proto": "dev-feat/account-pricing-plan-workflow-name",
 
 
-composor update
-composor install
+composer update
+composer install
 ```
 ## Turn on feature flag
 ```

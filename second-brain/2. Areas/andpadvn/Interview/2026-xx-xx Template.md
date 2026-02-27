@@ -1,5 +1,6 @@
 - [ ] 1st technical interview (60m).
 - [ ] 1st technical interview (60m).
+- [ ] 1st technical interview (60m).
     - [ ] Greeting and ask for the introduction.
 	    - [ ] Introduce interviewee.
     - [ ] Hỏi về định hướng khi chọn andpad
@@ -13,7 +14,6 @@
 	    - [ ] How do you deploy your service, to mange deplyment state?
 			- [ ] Ask do I familiar with CI/CD
 				- [ ] Gitlab ci, gitlab runner.
-				- [ ] 
 			- [ ] Ask do I familiar with k8s.
 				- [ ] Build docker file.
 	    - [ ] How do you observer or telemety your services? Do you apply tracing
@@ -58,7 +58,7 @@ The two main approaches are:
 2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.
 
 * Two phase commit:
-	* 
+
 |Aspect|2PC|3PC|Saga|
 |---|---|---|---|
 |Consistency|Strong (ACID)|Strong|Eventual|

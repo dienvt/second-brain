@@ -12,7 +12,9 @@ https://comvex.atlassian.net/wiki/spaces/SE/pages/2421227545/Meeting+Schedules#S
 ## Preparation
 1. Switch to [PdM Sprint Management](https://comvex.myjetbrains.com/youtrack/agiles/107-133/current?query=%23Platform%20) - Where all story was listed.
 	- Add new Swim lane and named it "[Effort Spent Total] This card summarize all effort spent on Sprint 137 that cards are moved to next Sprint". Refs: DGM2-23389
+		- Type Engineer Story
 		- Content: `## Cards under these efforts`
+		- 
 	- Put our effor which we spent to that card
 	- Spend 5 minutes for everyone put remaining effort to the comments section
 ## In the Meetings

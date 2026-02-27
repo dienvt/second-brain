@@ -1,58 +1,61 @@
 - [ ] 1st technical interview (60m).
     - [ ] Greeting and ask for the introduction.
 	    - [ ] Introduce interviewee.
-	    - [ ] 9 năm
-	    - [ ] 
-    - [ ] Hỏi về định hướng khi chọn andpad.
-	    - [ ] Backend lead,
-	    - [ ] Tech lead,
-	    - [ ] 1-2 năm tiếp grow lên được tech lead.
+	    - [ ] Backend, được 
+	    - [ ] 6-7 năm code golang
+    - [ ] Hỏi về định hướng khi chọn andpad
+	    - [ ] Định hướng:
+		    - [ ] Code cải thiện chiều sau về technical
+		    - [ ] Có kinh nghiệm quản lý
+			    - [ ] Quản lý 4-5 
+			    - [ ] Core member: 15 người
     - [ ]  Hỏi về kinh nghiệm làm việc (15’)
 	    - [ ] Daily tasks
-        - [ ] Khó khăn vào thách thức.
-        - [ ] Design, taoj task phân task.
-        - [ ] Payment, token pay wallet.
-    - [ ] Verifify wide then narrow the scope.
-	    - [ ] 100k/s
-		    - [ ] (Không áp dụng) redis general with lua script. update batch
-		    - [ ] .in memory cache. Public transction. 
-		    - [ ] Google pub/sub: scale consumer. subsciption.
-		    - [ ] Good understand about technology.
-		    - [ ] EventID strong db.
-		- [ ] Redis
-			- [ ] Cache.
-			- [ ] Distributed lock.
-			- [ ] redis stream.
-			- [ ] Single node. 
+        - [ ] Khó khăn vào thách thức
+		- [ ] Hỏi về kinh nghiệm quản lý
+			- [ ] Thêm vấn đề về con người: Không trả lời rõ ràng được.
+			- [ ] Cty startup có rót vốn.
+			- [ ] Host daily meetings
+			- [ ] Lý do rời đi:
+				- [ ] Doanh thu có vấn đề nên bán
+		- [ ] Làm về smart contract
+		- [ ] Làm về trading và làm sàn
+		- [ ] Bạn làm về BE
+			- [ ] Có team devops
+				- [ ] K8s tự động scale, ci/cd đều có. ArgoCD
+				- [ ] Grafana:
+					- [ ] Error log
+					- [ ] Test
+					- [ ] Metrics ram, database.
+			- [ ] verify requirement
+		- [ ] Trả lời khá chán, Không đi vào ví dụ cụ thể
+		- [ ] Dùng worker pool để giải quyết 
+    - [ ] Verifify wide then narrow the scope
 	    - [ ] What is the protocol use to communicate between your services
-		    - [ ] Nhiều service
-		    - [ ] 6 services: Grpc
-		    - [ ] Kong, DragonD.
+		    - [ ] 
 	    - [ ] How do you deploy your service, to mange deplyment state?
 			- [ ] Ask do I familiar with CI/CD
-				- [ ] Devops Nắm concept.
-				- [ ] Biết viết yam file và argo cd.
 				- [ ] Gitlab ci, gitlab runner.
 			- [ ] Ask do I familiar with k8s.
-				- [ ] Build docker file.
+				- [ ] Build dockerfile.
 	    - [ ] How do you observer or telemety your services? Do you apply tracing
-		    - [ ] Span, dùng, trace_id
-		    - [ ] Hơi yếu phần tracing. nhưng mà ok ko sao?
-		    - [ ] SDK 
+		    - [ ]  Yếu 
 	    - [ ] How to you write test and manage test coverage.
 		    - [ ] 
 	    - [ ] Which one your code need unit test and what is the perfect percent of coverage
 	    - [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
 	- [ ] OAuth
+		- [ ] 
 	- [ ] OOP
 		- [ ] What is OOP ?
 		- [ ] What is SOLID
 	- [ ] Golang
 		- [ ] What is goroutines
 		- [ ] How to avoid rate condition
-		- [ ] How you resolve consensure problem indo.
+		- [ ] How you resolve consensure problem indo
 	- [ ] Ask about SA: How service talking with each other
 	- [ ] Draw about current project structure
+	- [ ] 
 	- [ ] 
 # Interview Preparation Summary
 
@@ -61,10 +64,17 @@
   - **Question:** "Can you tell me about how you typically handle concurrency in Go?"
   - **Answer:** Discussed using goroutines and channels, best practices like `sync.Mutex`, `sync.WaitGroup`, and avoiding race conditions.
 - **Context**:
-	- How you use context in your.
-
+	- How you use context in your 
 ## 2. **Database Integration**
 - **Query Optimization:** Techniques like indexing, avoiding `SELECT *`, using proper joins, and analyzing query execution plans.
+
+[Optimistic Locking](http://en.wikipedia.org/wiki/Optimistic_locking) is a strategy where you read a record, take note of a version number (other methods to do this involve dates, timestamps or checksums/hashes) and check that the version hasn't changed before you write the record back. When you write the record back you filter the update on the version to make sure it's atomic. (i.e. hasn't been updated between when you check the version and write the record to the disk) and update the version in one hit.
+
+If the record is dirty (i.e. different version to yours) you abort the transaction and the user can re-start it.
+
+This strategy is most applicable to high-volume systems and three-tier architectures where you do not necessarily maintain a connection to the database for your session. In this situation the client cannot actually maintain database locks as the connections are taken from a pool and you may not be using the same connection from one access to the next.
+
+[Pessimistic Locking](http://en.wikipedia.org/wiki/Lock_\(database\)) is when you lock the record for your exclusive use until you have finished with it. It has much better integrity than optimistic locking but requires you to be careful with your application design to avoid [Deadlocks](https://en.wikipedia.org/wiki/Deadlock_\(computer_science\)). To use pessimistic locking you need either a direct connection to the database (as would typically be the case in a [two tier client server](http://en.wikipedia.org/wiki/Client-server) application) or an externally available transaction ID that can be used independently of the connection.
 
 ## 3. **Distributed Transactions**
 - **Saga Pattern:**
@@ -73,19 +83,20 @@
 
 The two main approaches are:
 
-1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails.
+1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails. 
 2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.
 
 * Two phase commit:
 
-|Aspect|2PC|3PC|Saga|
-|---|---|---|---|
-|Consistency|Strong (ACID)|Strong|Eventual|
-|Blocking|Yes|No (theoretical)|No|
-|Availability|Low|Medium|High|
-|Scalability|Poor|Poor|Excellent|
-|Complexity|Medium|High|High (business logic)|
-|Real-world usage|Legacy systems|Rare|Very common|
+| Aspect           | 2PC            | 3PC              | Saga                  |
+| ---------------- | -------------- | ---------------- | --------------------- |
+| Consistency      | Strong (ACID)  | Strong           | Eventual              |
+| Blocking         | Yes            | No (theoretical) | No                    |
+| Availability     | Low            | Medium           | High                  |
+| Scalability      | Poor           | Poor             | Excellent             |
+| Complexity       | Medium         | High             | High (business logic) |
+| Real-world usage | Legacy systems | Rare             | Very common           |
+
 
 ## 4. **Web Architecture**
 - **Communication:** Using GraphQL for public APIs and gRPC for internal service communication.
