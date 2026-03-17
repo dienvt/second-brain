@@ -64,9 +64,9 @@ Frontend have another way, we have to push to master for the production release.
 ### Backend App
 
 **We don't need to build the digima-backend-app image, After release please**
-* Get the commit from the pull request which merge. For ex: https://github.com/comvex-jp/digima-backend-app/pull/5656
+* Get the commit from the pull request which merge. For ex: https://github.com/comvex-jp/digima-backend-app/releases/tag/v1.146.0
 * Run the promotion: https://jenkins.mgmt.digima.com/view/App%20-%20Backend/job/Digima%20Staging%20Backend%20Promotion/339/
-Backend_commit: `9e8c58c15`
+Backend_commit: `5275e09`
 Infra_commit: `develop`
 [ ] Rebase
 
@@ -80,12 +80,19 @@ https://github.com/comvex-jp/digima-backend-app/blob/develop/composer.json
 
 
 #### Web App
+
 For Frontend Deployment Preparation:
 1st - Staging Promote: `master` 
 - Store the build tag like `v0.1.0.3-frontend-secure`
 2nd - Production Build `master`
-	
+
 3rd - Production Deploy (9PM)
 	Using the build tag `v0.1.0-frontend-secure`
 
+
+For update version we have to alter the `package.json`. Ex: https://github.com/comvex-jp/digima-web-app/blob/develop/package.json
+
+### Short link:
+Production Prontend Build:
+https://jenkins.mgmt.digima.com/view/App%20-%20Frontend/job/Digima%20Production%20Frontend%20Build/
 # Post Meeting

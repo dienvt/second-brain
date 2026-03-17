@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/comvex/Onboarding/digima-local.md",
+                "file": "2. Areas/comvex/meetings/Release Prepairation/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "digima-local"
+              "title": "README"
             }
           }
         ],
@@ -286,10 +286,17 @@
   },
   "active": "744ce092cbd6ab03",
   "lastOpenFiles": [
+    "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
+    "2. Areas/comvex/meetings/Release Prepairation/2026-03-17.md",
+    "2. Areas/comvex/meetings/Release Prepairation/2025-09-16.md",
+    "2. Areas/comvex/meetings/Release Prepairation/2025-08-19.md",
+    "2. Areas/comvex/meetings/Release Prepairation/2025-08-05.md",
+    "2. Areas/comvex/meetings/Release Prepairation/README.md",
+    "2. Areas/comvex/Onboarding/digima-local.md",
+    "2. Areas/comvex/projects/billing/Migration.md",
     "2. Areas/comvex/Onboarding/Ehancement.md",
     "2. Areas/comvex/Onboarding/Teams.md",
     "2. Areas/comvex/Onboarding/Untitled.md",
-    "2. Areas/comvex/Onboarding/digima-local.md",
     "2. Areas/comvex/Onboarding/Migrate DB with ridgepole.md",
     "2. Areas/comvex/Onboarding/Digima digest 2025-06-17 13.43.24.excalidraw.md",
     "2. Areas/comvex/Onboarding/Digima digest.md",
@@ -299,19 +306,12 @@
     "2. Areas/comvex/meetings/Sprint Planning/README.md",
     "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
     "0. PeriodicNotes/2026/Daily/03/2026-03-16.md",
-    "2. Areas/comvex/projects/billing/Migration.md",
     "2. Areas/comvex/projects/billing/Feature Usage.md",
     "2. Areas/comvex/projects/billing/Invoice flow.md",
     "2. Areas/comvex/projects/billing/Trigger Invoice Calculation.md",
     "2. Areas/comvex/projects/billing/Todo.md",
     "2. Areas/comvex/projects/billing/Test generate bill local.md",
     "2. Areas/comvex/projects/billing/README.md",
-    "2. Areas/comvex/meetings/Sprint Retrorespective/README.md",
-    "2. Areas/comvex/meetings/Sprint retro.md",
-    "2. Areas/comvex/meetings/Sprint review.md",
-    "0. PeriodicNotes/2026/Daily/03/2026-03-13.md",
-    "1. Projects/claude_code/claude_code.README.md",
-    "0. PeriodicNotes/2026/Daily/03/2026-03-12.md",
     "1. Projects/comvex_rule",
     "0. PeriodicNotes/2026/Daily/03",
     "2. Areas/comvex/projects/LLM explore",
@@ -322,7 +322,6 @@
     "1. Projects/claude_code",
     "0. PeriodicNotes/2026/Daily/02",
     "2. Areas/comvex/Note/AWS Cloudwatch",
-    "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",
     "HOME.canvas",

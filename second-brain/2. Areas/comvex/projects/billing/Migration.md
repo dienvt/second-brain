@@ -25,9 +25,13 @@ docker exec app-api php artisan digima-tmp:usage-migrate 2 --daily --to=2021-02-
 Trigger daily segment
 - Send rabbitmq
 - routing key: `v1.segments.upsert_daily_trigger`
-- payload
+- payload 
 ```
-{"accounts":{"all":true},"from":"2021-02-01T00:00:00+09:00","to":"2021-02-28T14:59:59.99999999+09:00"}
+{"accounts":{"all":false,"ids":["2"]},"from":"2021-01-01T00:00:00+09:00","to":"2021-01-31T23:59:59.99999999+09:00"}
+```
+
+```
+{"accounts":{"all":true},"from":"2021-02-01T00:00:00+09:00","to":"2021-02-28T23:59:59.99999999+09:00"}
 ```
 Trigger monthly invoice
 routing key
@@ -36,5 +40,5 @@ v1.account_pricing_plans.calculate
 ```
 payload
 ```
-{"accounts":{"all":false,"ids":["499"]},"from":"2025-12-01T00:00:00+09:00","to":"2025-12-31T23:59:59.99999999+09:00"}
+{"accounts":{"all":false,"ids":["2"]},"from":"2021-02-01T00:00:00+09:00","to":"2021-02-28T23:59:59.99999999+09:00"}
 ```
