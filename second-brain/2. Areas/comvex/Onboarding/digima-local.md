@@ -67,3 +67,9 @@ php artisan digima:db-account-migrate 1 [[--force] [--pretend]]
 php artisan digima:db-account-seed 1 [[--force] [--dev]]
 ```
 * [ ] 
+
+## Common Errors
+
+### Can not start web app
+- Error: Port in use even thought there is no running program on that pod
+	- Solution: Check the hosts
