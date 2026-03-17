@@ -1,21 +1,11 @@
 ---
 tags:
-  - claude_code
-aliases: "#claude_code"
+  - comvex_rule
+aliases: "#comvex_rule"
 ---
 %%Set the project deadline and its result description%%
 - [ ] deadline 📅 2025-06-22
 - key result
-	- What is `context window`
-	- What is projects
-
-
-## Tool I Used
-* https://github.com/affaan-m/everything-claude-code
-- https://github.com/googleworkspace/cli
-- GSD
-- https://github.com/Fission-AI/OpenSpec
-- I use skill creator to create skill
 
 ## Task
 %%Query tasks based on the tags field of the [Properties](https://help.obsidian.md/Editing+and+formatting/Properties) of the current file, extracted from all the notes%%

@@ -1,12 +1,33 @@
 - [ ] 1st technical interview (60m).
-- [ ] 1st technical interview (60m).
     - [ ] Greeting and ask for the introduction.
 	    - [ ] Introduce interviewee.
     - [ ] Hỏi về định hướng khi chọn andpad
+	    - [ ] 
     - [ ]  Hỏi về kinh nghiệm làm việc (15’)
 	    - [ ] Daily tasks
         - [ ] Khó khăn vào thách thức
-        - [ ] 
+        - [ ] directus
+	        - [ ] Matching core Nami exchange
+		        - [ ] Bai toan ntn?
+		        - [ ] Order booking.
+		        - [ ] Skip list.
+			- [ ] team 2-3 member.
+			- [ ] Dung redis adapter socket server
+			- [ ] sharding ve token
+				- [ ] 
+			- [ ] database 
+			- [ ] race condition redis
+			- [ ] pipeline
+			- [ ] check cac thu thi dung lua script
+			- [ ] dung redis lock
+				- [ ] 
+			- [ ] lock table o database
+				- [ ] s
+			- [ ] Dung Kafka
+				- [ ] s
+				- [ ] Khong tra loi dc 
+				- [ ] Consume message cu
+				- [ ] 
     - [ ] Verifify wide then narrow the scope
 	    - [ ] What is the protocol use to communicate between your services
 		    - [ ] 

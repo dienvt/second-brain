@@ -1,14 +1,57 @@
 - [ ] 1st technical interview (60m).
-- [ ] 1st technical interview (60m).
     - [ ] Greeting and ask for the introduction.
 	    - [ ] Introduce interviewee.
-    - [ ] Hỏi về định hướng khi chọn andpad
+	- [ ] Hỏi về định hướng khi chọn andpad
+		- [ ] sadlfkj
+		- [ ] sldfjsdalkj
+		- [ ] Lam ve blockchain la chinh
+		- [ ] Platform
+		- [ ] 
     - [ ]  Hỏi về kinh nghiệm làm việc (15’)
 	    - [ ] Daily tasks
-        - [ ] Khó khăn vào thách thức
-        - [ ] 
+        - [ ] Khó khăn vào thách thức trong manage member
+        - [ ] Kho khan khi chuyen tu quan ly sang code
+	        - [ ] Viec chuyen qua leader khong van de gi
+	        - [ ] team size gan 20
+		        - [ ] Nhieu products khac nhau nhung phu thuoc vao 1 product chung
+		- [ ] Good manage skills
+		- [ ] Sky Mavis
+		- [ ] Platform
+			- [ ] Oauth
+			- [ ] ben ngoai connect vao
+			- [ ] Nhieu user
+			- [ ] service bi ddos
+			- [ ] Traffic cao
+			- [ ] Co co hoi pprof service luon
+			- [ ] Load test truoc khi chay production
+		- [ ] Kinh nghiem
+			- [ ] Monitor va turning tu code toi db 
+			- [ ] ORM thi it nhung ma  tu viet 
+			- [ ] Caching 
+			- [ ] CDN cache static la chinh
+			- [ ] 100K request
+			- [ ] Dung qua Kong gateway
+		- [ ] Concurency trong go
+			- [ ] WaitGroup Mutex
+			- [ ] Channel: Dung de truyen du lieu la chi
+			- [ ] Khong tu tin lam ve 
+		- [ ] presenter
+		- [ ] Hoi ve cach to chuc metric va tracing:
+			- [ ] Record metric nao, naming va tag ntn
+			- [ ] Naming follow chuan api
+			- [ ] 
+			- [ ] Co 
+		- [ ] Hoi ve cach dung Kafka? Co pattern nao khong
+			- [ ] Commit
+			- [ ] Consumer phai lam sao
+			- [ ] Xu ly 
+		- [ ] Cach dung context?
+		- [ ] Have strong AWS knowdlege and practices.
+		- [ ] 
+		- [ ] 
     - [ ] Verifify wide then narrow the scope
 	    - [ ] What is the protocol use to communicate between your services
+		    - [ ] Build EKS
 		    - [ ] 
 	    - [ ] How do you deploy your service, to mange deplyment state?
 			- [ ] Ask do I familiar with CI/CD
@@ -16,7 +59,7 @@
 			- [ ] Ask do I familiar with k8s.
 				- [ ] Build docker file.
 	    - [ ] How do you observer or telemety your services? Do you apply tracing
-		    - [ ]  
+		    - [ ] 
 	    - [ ] How to you write test and manage test coverage.
 		    - [ ] 
 	    - [ ] Which one your code need unit test and what is the perfect percent of coverage

@@ -13,7 +13,8 @@ Define Sprint Goal (Get from the grant chart)
 The Overview will be filled in the last
 
 ## Update the sprint facillity the meetings
-
+* Goal is the product image
+* Priorities is the engineering tasks
 
 ## Create subtask and assess whether it task possible
 

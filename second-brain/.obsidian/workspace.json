@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d49dcceeb2aeeb7a",
+        "id": "46aa2358e766c640",
         "type": "tabs",
         "children": [
           {
-            "id": "f2765eb46438a799",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/daily-usage.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "daily-usage.excalidraw"
-            }
-          },
-          {
-            "id": "41e0691db62c9e54",
+            "id": "afcac82ed0f7d296",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. PeriodicNotes/2026/Daily/02/2026-02-27.md",
+                "file": "2. Areas/comvex/projects/billing/Migration.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,21 +28,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-27"
+              "title": "Migration"
             }
           },
           {
-            "id": "1318a815babd89c2",
+            "id": "f2b1de048076dfb4",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "second-brain/.obsidian/workspace.json",
-                "bFile": "second-brain/.obsidian/workspace.json",
-                "aRef": ""
+                "file": "0. PeriodicNotes/2026/Daily/03/2026-03-16.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "2026-03-16"
+            }
+          },
+          {
+            "id": "744ce092cbd6ab03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Areas/comvex/Onboarding/digima-local.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "digima-local"
             }
           }
         ],
@@ -106,7 +128,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "@time",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -262,44 +284,44 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "1318a815babd89c2",
+  "active": "744ce092cbd6ab03",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "0. PeriodicNotes/2026/Daily/02/2026-02-27.md",
-    "3. Resources/docker/docker.README.md",
-    "3. Resources/docker/Distroless.md",
-    "3. Resources/docker",
-    "2. Areas/enjoy-sport/architecture/architect.md",
-    "2. Areas/enjoy-sport/architecture",
-    "2. Areas/laravel/Script.md",
+    "2. Areas/comvex/Onboarding/Ehancement.md",
+    "2. Areas/comvex/Onboarding/Teams.md",
+    "2. Areas/comvex/Onboarding/Untitled.md",
+    "2. Areas/comvex/Onboarding/digima-local.md",
+    "2. Areas/comvex/Onboarding/Migrate DB with ridgepole.md",
+    "2. Areas/comvex/Onboarding/Digima digest 2025-06-17 13.43.24.excalidraw.md",
+    "2. Areas/comvex/Onboarding/Digima digest.md",
+    "2. Areas/comvex/Onboarding/Billing.md",
+    "2. Areas/comvex/Onboarding/bff-handling-flow.excalidraw.md",
+    "2. Areas/comvex/Onboarding/Comvex Corp.md",
+    "2. Areas/comvex/meetings/Sprint Planning/README.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-16.md",
+    "2. Areas/comvex/projects/billing/Migration.md",
     "2. Areas/comvex/projects/billing/Feature Usage.md",
-    "2. Areas/andpadvn/Interview/2026-02-25 Son Nguyen.md",
-    "2. Areas/andpadvn/Interview/2026-xx-xx Template.md",
-    "2. Areas/andpadvn/Interview/2026-01-19 Minh Nguyen.md",
-    "2. Areas/andpadvn/Interview/2026-01-19 Dam Van Tuan.md",
-    "2. Areas/andpadvn/Interview/2026-01-16 Vo Minh Duc.md",
-    "2. Areas/andpadvn/Interview/2026-01-14 Nguyen Van Tuan.md",
-    "2. Areas/andpadvn/Interview/Readme.md.md",
-    "Excalidraw/daily-usage.excalidraw.md",
-    "Excalidraw/Drawing 2025-07-08 15.53.13.excalidraw.md",
-    "Excalidraw/Drawing 2025-07-24 21.47.51.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-01 15.51.59.excalidraw.md",
-    "Excalidraw/Drawing 2025-12-04 09.21.27.excalidraw.md",
-    "Excalidraw/Drawing 2026-01-17 20.43.50.excalidraw.md",
-    "2. Areas/andpadvn/Interview/2026-02-25 Chi Thuc.md",
-    "0. PeriodicNotes/2026/Daily/02/2026-02-24.md",
-    "2. Areas/comvex/projects/billing/Test 1-1.md",
-    "2. Areas/comvex/projects/billing/Test generate bill local.md",
-    "2. Areas/comvex/projects/billing/Todo.md",
+    "2. Areas/comvex/projects/billing/Invoice flow.md",
     "2. Areas/comvex/projects/billing/Trigger Invoice Calculation.md",
+    "2. Areas/comvex/projects/billing/Todo.md",
+    "2. Areas/comvex/projects/billing/Test generate bill local.md",
+    "2. Areas/comvex/projects/billing/README.md",
+    "2. Areas/comvex/meetings/Sprint Retrorespective/README.md",
+    "2. Areas/comvex/meetings/Sprint retro.md",
+    "2. Areas/comvex/meetings/Sprint review.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-13.md",
+    "1. Projects/claude_code/claude_code.README.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-12.md",
+    "1. Projects/comvex_rule",
+    "0. PeriodicNotes/2026/Daily/03",
+    "2. Areas/comvex/projects/LLM explore",
+    "3. Resources/docker",
+    "2. Areas/enjoy-sport/architecture",
     "2. Areas/andpadvn/Interview/Untitled.base",
     "0. PeriodicNotes/2026/Weekly",
     "1. Projects/claude_code",
     "0. PeriodicNotes/2026/Daily/02",
     "2. Areas/comvex/Note/AWS Cloudwatch",
-    "4. Archives/vms/mettings",
-    "4. Archives/vms/technical",
-    "4. Archives/vms",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",

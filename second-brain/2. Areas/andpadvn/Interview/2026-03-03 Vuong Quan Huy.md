@@ -1,12 +1,52 @@
 - [ ] 1st technical interview (60m).
-- [ ] 1st technical interview (60m).
     - [ ] Greeting and ask for the introduction.
 	    - [ ] Introduce interviewee.
+	    - [ ] 5 nam lam sf be
+	    - [ ] Golang, mysql, redis 
+	    - [ ] 3 nam lam tai be group
+	    - [ ] tree house
+	    - [ ] Gap year, nua nam
     - [ ] Hỏi về định hướng khi chọn andpad
     - [ ]  Hỏi về kinh nghiệm làm việc (15’)
 	    - [ ] Daily tasks
         - [ ] Khó khăn vào thách thức
-        - [ ] 
+        - [ ] Software circle
+        - [ ] Business, duong SDLC scrum master
+        - [ ] Inter o be sau do doi sang tree house
+	        - [ ] Distributed system ben Be
+	        - [ ] Push vao redis sau do co worker pull
+		        - [ ] Nhuoc diem: implement nhieu
+		        - [ ] Uu diem: dung 
+			- [ ] Redis single thread. 
+				- [ ] Dung list trong redis.
+				- [ ] Redis lock
+					- [ ] Cluster
+					- [ ] Single
+				- [ ] Idempotency Lay dc key
+				- [ ] Fail.
+			- [ ] Cach dung worker pool
+				- [ ] worker pool = so core cua system
+				- [ ] so luong core cua he thong
+					- [ ] dang 
+				- [ ] Signal call: 
+				- [ ] Wait: 15s magic number 
+			- [ ] 
+		- [ ] Quan ly dc so luong thresh.
+		- [ ] Kinh nghiem lam viec voi kafka lam viec dc 3 thang.
+		- [ ] 
+        - [ ] Optimize cellphonse S
+	        - [ ] Limit 200RPM
+		        - [ ] 
+	        - [ ] Dung The redis the cache 
+		        - [ ] TTL 30s.
+		        - [ ] Cluster.
+		        - [ ] Cache page hay cache data.
+		        - [ ] CDN lam sao?
+	        - [ ] DB Worker pull.
+		        - [ ] 
+	        - [ ] Log vector database
+		        - [ ] Verify voi anh Na thu
+	        - [ ] 
     - [ ] Verifify wide then narrow the scope
 	    - [ ] What is the protocol use to communicate between your services
 		    - [ ] 
@@ -15,8 +55,15 @@
 				- [ ] Gitlab ci, gitlab runner.
 			- [ ] Ask do I familiar with k8s.
 				- [ ] Build docker file.
+				- [ ] 
+			- [ ] Infra
+				- [ ] Request resource 
+				- [ ] Marketing 
 	    - [ ] How do you observer or telemety your services? Do you apply tracing
-		    - [ ]  
+		    - [ ] Grafana metrics
+		    - [ ] Datadog slow API
+		    - [ ] Span: dung treager.
+		    - [ ] 
 	    - [ ] How to you write test and manage test coverage.
 		    - [ ] 
 	    - [ ] Which one your code need unit test and what is the perfect percent of coverage
