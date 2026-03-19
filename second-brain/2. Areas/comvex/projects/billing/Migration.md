@@ -31,6 +31,10 @@ Trigger daily segment
 ```
 
 ```
+{"accounts":{"all":true},"from":"2021-01-01T00:00:00+09:00","to":"2021-01-31T23:59:59.99999999+09:00"}
+```
+
+```
 {"accounts":{"all":true},"from":"2021-02-01T00:00:00+09:00","to":"2021-02-28T23:59:59.99999999+09:00"}
 ```
 Trigger monthly invoice
@@ -40,5 +44,5 @@ v1.account_pricing_plans.calculate
 ```
 payload
 ```
-{"accounts":{"all":false,"ids":["2"]},"from":"2021-02-01T00:00:00+09:00","to":"2021-02-28T23:59:59.99999999+09:00"}
+{"accounts":{"all":true},"from":"2026-02-01T00:00:00+09:00","to":"2026-02-28T23:59:59.99999999+09:00"}
 ```

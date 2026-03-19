@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/comvex/projects/billing/Migration.md",
+                "file": "2. Areas/andpadvn/Interview/2026-03-19 Tan Phat.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Migration"
+              "title": "2026-03-19 Tan Phat"
             }
           },
           {
@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/comvex/meetings/Release Prepairation/README.md",
+                "file": "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "2026-03-17"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -284,16 +283,21 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "744ce092cbd6ab03",
+  "active": "afcac82ed0f7d296",
   "lastOpenFiles": [
+    "2. Areas/andpadvn/Interview/2026-xx-xx Template.md",
+    "2. Areas/andpadvn/Interview/2026-03-19 Tan Phat.md",
+    "2. Areas/andpadvn/Interview/2026-xx-xx tran hung.md",
+    "2. Areas/andpadvn/Interview/Readme.md.md",
+    "2. Areas/comvex/projects/billing/Migration.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
+    "2. Areas/comvex/meetings/Release Prepairation/README.md",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
     "2. Areas/comvex/meetings/Release Prepairation/2026-03-17.md",
     "2. Areas/comvex/meetings/Release Prepairation/2025-09-16.md",
     "2. Areas/comvex/meetings/Release Prepairation/2025-08-19.md",
     "2. Areas/comvex/meetings/Release Prepairation/2025-08-05.md",
-    "2. Areas/comvex/meetings/Release Prepairation/README.md",
     "2. Areas/comvex/Onboarding/digima-local.md",
-    "2. Areas/comvex/projects/billing/Migration.md",
     "2. Areas/comvex/Onboarding/Ehancement.md",
     "2. Areas/comvex/Onboarding/Teams.md",
     "2. Areas/comvex/Onboarding/Untitled.md",
@@ -304,14 +308,10 @@
     "2. Areas/comvex/Onboarding/bff-handling-flow.excalidraw.md",
     "2. Areas/comvex/Onboarding/Comvex Corp.md",
     "2. Areas/comvex/meetings/Sprint Planning/README.md",
-    "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
     "0. PeriodicNotes/2026/Daily/03/2026-03-16.md",
     "2. Areas/comvex/projects/billing/Feature Usage.md",
     "2. Areas/comvex/projects/billing/Invoice flow.md",
     "2. Areas/comvex/projects/billing/Trigger Invoice Calculation.md",
-    "2. Areas/comvex/projects/billing/Todo.md",
-    "2. Areas/comvex/projects/billing/Test generate bill local.md",
-    "2. Areas/comvex/projects/billing/README.md",
     "1. Projects/comvex_rule",
     "0. PeriodicNotes/2026/Daily/03",
     "2. Areas/comvex/projects/LLM explore",

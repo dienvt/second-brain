@@ -49,6 +49,8 @@ Now in the releasing project
 chore: Bump app version to x.x.x
 ```
 
+#### Release
+To release we just need to use the release tag
 ### Hotfix 
 * Create hotfix branch `hotfix/vx.x.1`
 * Then create PR to master. Waiting approve and merge this PR
