@@ -56,9 +56,6 @@ You saw how to:
 
 ---
 
-<<<<<<< HEAD
-Let me know if you'd like a diagram, follow-up with Lambda, or want to build this into a module!
-=======
 Let me know if you'd like a diagram, follow-up with Lambda, or want to build this into a module!
 
 ## Group and Role
@@ -85,4 +82,3 @@ Let’s say you have:
 
 If you add `developer01` and `developer02` to the `Developers` group →  
 both automatically get those permissions.
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)

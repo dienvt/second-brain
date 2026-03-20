@@ -60,8 +60,4 @@ ProccessorMap using routing key so that if the queue don't have that routing key
 
 
 
-<<<<<<< HEAD
-
-=======
 When there is an error in consumer, only one consummer effect.
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)

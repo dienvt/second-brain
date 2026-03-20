@@ -10,10 +10,6 @@ https://gqlgen.com/getting-started/
 `Chema` with the prefix keyword will define your API, like `query` or `mutation`
 
 [for more types](https://graphql.org/learn/schema/#the-query-and-mutation-types)
-<<<<<<< HEAD
-=======
-
->>>>>>> 41ec96b (vault backup: 2026-01-14 09:58:32)
 type define 
 ```
 type Post {
