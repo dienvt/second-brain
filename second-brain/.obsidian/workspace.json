@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. Projects/visa_taiwan/visa_taiwan.README.md",
+                "file": "2. Areas/comvex/projects/LLM explore/Note.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,25 +52,25 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "visa_taiwan.README"
+              "title": "Note"
             }
           },
           {
-            "id": "55c0095bd5258817",
+            "id": "0a4c2aa6a53f627d",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
+                "aFile": "second-brain/3. Resources/books/DDD (quickly).md",
+                "bFile": "second-brain/3. Resources/books/DDD (quickly).md",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "title": "Diff: DDD (quickly)  (Working Tree)"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -174,12 +174,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
+                "file": "3. Resources/books/DDD (quickly).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Upgrade Go-Framework to v8"
+              "title": "Outgoing links from DDD (quickly)"
             }
           },
           {
@@ -188,13 +188,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2. Areas/andpadvn/Interview/20206-01-14 Nguyen Van Tuan.md",
+                "file": "3. Resources/books/DDD (quickly).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 20206-01-14 Nguyen Van Tuan"
+              "title": "Outline of DDD (quickly)"
             }
           },
           {
@@ -203,7 +203,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
+                "file": "3. Resources/books/DDD (quickly).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,7 +213,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Upgrade Go-Framework to v8"
+              "title": "Backlinks for DDD (quickly)"
             }
           },
           {
@@ -231,16 +231,6 @@
             }
           },
           {
-            "id": "2990fe6c1bc92d36",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "bf79c5505f8cf520",
             "type": "leaf",
             "state": {
@@ -249,9 +239,19 @@
               "icon": "excalidraw-icon",
               "title": "Excalidraw Sidepanel"
             }
+          },
+          {
+            "id": "348fa9e8e206d024",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -274,8 +274,20 @@
       "periodic-para:LifeOS Creation": false
     }
   },
-  "active": "2990fe6c1bc92d36",
+  "active": "f2a830cdf6a92e84",
   "lastOpenFiles": [
+    "2. Areas/comvex/projects/LLM explore/Workflow.md",
+    "2. Areas/comvex/projects/LLM explore/Note.md",
+    "1. Projects/visa_taiwan/visa_taiwan.README.md",
+    "1. Projects/README.md",
+    "2. Areas/enjoy-sport/Contribute.md.md",
+    "2. Areas/enjoy-sport/Design/README.md",
+    "3. Resources/books/DDD (quickly).md",
+    "3. Resources/go-lang/Docker sample.md",
+    "3. Resources/books/books.README.md",
+    "3. Resources/book/book.README.md",
+    "3. Resources/books",
+    "3. Resources/book",
     "Excalidraw/daily-usage.excalidraw.md",
     "2. Areas/comvex/projects/billing/Trigger Invoice Calculation.md",
     "2. Areas/comvex/projects/billing/Migration.md",
@@ -284,7 +296,6 @@
     "2. Areas/comvex/projects/backend-app/Start worker.md",
     "2. Areas/comvex/projects/backend-app/Migrate user_references.md",
     "2. Areas/comvex/projects/backend-app/Local incident.md",
-    "2. Areas/comvex/projects/LLM explore/Workflow.md",
     "2. Areas/comvex/projects/LLM explore/Claude Code Extend.md",
     "2. Areas/comvex/projects/LLM explore",
     "2. Areas/comvex/meetings/Release Prepairation/2026-03-17.md",
@@ -294,24 +305,13 @@
     "2. Areas/andpadvn/Interview/2026-xx-xx Template.md",
     "2. Areas/andpadvn/Interview/2026-03-19 Tan Phat.md",
     "2. Areas/andpadvn/Interview/2026-03-06 Nguyen Xuan Quang.md",
-    "2. Areas/andpadvn/Interview/2026-03-03 Vuong Quan Huy.md",
-    "2. Areas/andpadvn/Interview/2026-02-25 Son Nguyen.md",
-    "2. Areas/andpadvn/Interview/2026-02-25 Chi Thuc.md",
-    "2. Areas/andpadvn/Interview/2026-02-12 - XXXX.md",
-    "2. Areas/andpadvn/Interview/2026-02-10 Hung Nguyen.md",
-    "2. Areas/andpadvn/Interview/2026-02-09 - Le Ha.md",
-    "1. Projects/comvex_rule/comvex_rule.README.md",
-    "1. Projects/comvex_rule/Test with docker.md",
     "1. Projects/comvex_rule",
-    "1. Projects/claude_code/claude_code.README.md",
     "1. Projects/claude_code",
     "0. PeriodicNotes/2026/Weekly",
     "0. PeriodicNotes/2026/Daily/03",
     "0. PeriodicNotes/2026/Monthly",
     "1. Projects/visa_taiwan",
     "2. Areas/comvex/Note/AWS Cloudwatch",
-    "2. Areas/andpadvn/Interview/Untitled.base",
-    "0. PeriodicNotes/2026/Daily/02",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",
