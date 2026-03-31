@@ -1,0 +1,148 @@
+- [ ] 1st technical interview (60m).
+    - [ ] Greeting and ask for the introduction.
+	    - [ ] Introduce interviewee.
+	    - [ ] HCL
+	    - [ ] Golang kafka cdc 
+	    - [ ] Consumer
+	    - [ ] Click house
+	    - [ ] Elastic
+	    - [ ] Hoc cao dang sau do len lai dai hoc
+	    - [ ] Di lam tu 2019 toi gio
+	    - [ ] dang Hoc Rust va Typescript
+	    - [ ] Nghi ANZ roi
+	    - [ ] Di tu thang 12 toi thang 2
+	    - [ ] NAB, One trading
+	    - [ ] 
+    - [ ] Hỏi về định hướng khi chọn andpad
+    - [ ]  Hỏi về kinh nghiệm làm việc (15’)
+	    - [ ] Daily tasks
+        - [ ] Khó khăn vào thách thức
+        - [ ] Microservice voi database rieng
+        - [ ] Gslkadfjl: 4 week sang 4 days
+        - [ ] Broker goi sang customer validate sau do varigy gia nha
+	        - [ ] 3rd party loi
+	        - [ ] PII dam bao bao mat
+	        - [ ] Build gitub de sua thong tin tren production
+        - [ ] Sau do lay dc rate.
+        - [ ] Gui thong tin toi cho user xem xet.
+        - [ ] User dong y thi disbursment user
+        - [ ] OCA???
+        - [ ] AI evaluation build tu scraft. Platform terraform dung ai cho evaluating
+        - [ ] MVP: Brain trust. 
+        - [ ] ANZ: co thu vien chung, message + procedure : clone package ve 
+        - [ ] Inconsistency. Architecture va stack holder sex evaluation 
+        - [ ] Cac service dung grpc, Data tren temporal khong chua PII luu dc tren temporal.
+        - [ ] OCV Id? ANZ dien contructor.
+        - [ ] Temporal se co retry sau do se co retry. neu ko retry dc se xu ly manual tren dashboard.
+        - [ ] xu .... Replace workflow
+        - [ ] Build bang tung pod va dependency deployment.
+        - [ ] Github automation 
+        - [ ] Spander 
+        - [ ] repeated
+        - [ ] 
+        - [ ] 
+    - [ ] Verifify wide then narrow the scope
+	    - [ ] What is the protocol use to communicate between your services
+		    - [ ] 
+	    - [ ] How do you deploy your service, to mange deplyment state?
+			- [ ] Ask do I familiar with CI/CD
+				- [ ] Gitlab ci, gitlab runner.
+			- [ ] Ask do I familiar with k8s.
+				- [ ] Build docker file.
+	    - [ ] How do you observer or telemety your services? Do you apply tracing
+		    - [ ]  
+	    - [ ] How to you write test and manage test coverage.
+		    - [ ] 
+	    - [ ] Which one your code need unit test and what is the perfect percent of coverage
+	    - [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+	- [ ] OAuth
+	- [ ] OOP
+		- [ ] What is OOP ?
+		- [ ] What is SOLID
+	- [ ] Golang
+		- [ ] What is goroutines
+		- [ ] How to avoid rate condition
+			- [ ] Co gan dung channel
+			- [ ] 
+		- [ ] How you resolve consensure problem indo
+			- [ ] For loop
+	- [ ] Hieu dc dung Batching 
+	- [ ] Ask about SA: How service talking with each other
+	- [ ] Draw about current project structure
+	- [ ] 
+	- [ ] 
+# Interview Preparation Summary
+
+## 1. **Golang-Specific Topics**
+- **Concurrency:** 
+  - **Question:** "Can you tell me about how you typically handle concurrency in Go?"
+  - **Answer:** Discussed using goroutines and channels, best practices like `sync.Mutex`, `sync.WaitGroup`, and avoiding race conditions.
+- **Context**:
+	- How you use context in your 
+
+## 2. **Database Integration**
+- **Query Optimization:** Techniques like indexing, avoiding `SELECT *`, using proper joins, and analyzing query execution plans.
+
+## 3. **Distributed Transactions**
+- **Saga Pattern:**
+  - **Question:** "Can you explain the Saga pattern and how it works in distributed systems?"
+  - **Answer:** The Saga pattern indeed involves a series of local transactions, each with a corresponding compensation transaction. The orchestrator is responsible for managing the overall workflow and ensuring that if any step fails, it triggers the compensating transactions to roll back the previous steps.
+
+The two main approaches are:
+
+1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails.
+    
+2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.
+
+	Cloud run 
+
+* Two phase commit:
+
+|Aspect|2PC|3PC|Saga|
+|---|---|---|---|
+|Consistency|Strong (ACID)|Strong|Eventual|
+|Blocking|Yes|No (theoretical)|No|
+|Availability|Low|Medium|High|
+|Scalability|Poor|Poor|Excellent|
+|Complexity|Medium|High|High (business logic)|
+|Real-world usage|Legacy systems|Rare|Very common|
+
+
+## 4. **Web Architecture**
+- **Communication:** Using GraphQL for public APIs and gRPC for internal service communication.
+- **Scalability:** Deployment in Kubernetes for auto-scaling, fault tolerance, and using caching layers to reduce load.
+
+## 5. **System Design & Scaling**
+- **Load Balancing:** Distributing traffic to prevent overload.
+- **Horizontal Scaling:** Adding more instances to manage increased load.
+- **Caching:** Using Redis or Memcached to reduce database load.
+- **Database Sharding:** Partitioning data to improve performance.
+- **Auto-Scaling:** Automatically adjusting resources based on traffic.
+
+## **Sample Questions Practiced:**
+
+### **Scaling Example Question:**
+- *"Imagine you’re designing an e-commerce platform that expects a large number of users during peak seasons. How would you design the system to handle this high load?"*
+
+### **System Design Example Questions:**
+- *"Can you describe a microservice you previously worked on? What was its main functionality, and how did you design it to handle high traffic and ensure fault tolerance?"*
+
+- *"What were some of the key challenges you faced during the development of that service, and how did you overcome them?"*
+
+### **Additional Questions Practiced:**
+
+- **Concurrency in Go:**
+  - *"How do you use goroutines and channels to manage parallel tasks in Go?"*
+
+- **Saga Pattern in Distributed Transactions:**
+  - *"Can you explain how the Saga pattern works and how you handle compensating transactions?"*
+
+- **Web Architecture and Communication:**
+  - *"Why do you choose GraphQL for public APIs and gRPC for internal communication?"*
+
+---
+The two main approaches are:
+
+1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails.
+    
+2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.

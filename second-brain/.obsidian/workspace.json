@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6fa6f2b680333381",
+        "id": "46aa2358e766c640",
         "type": "tabs",
         "children": [
           {
-            "id": "86fdca82a29b91a9",
+            "id": "afcac82ed0f7d296",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/enjoy-sport/architecture/architect.md",
+                "file": "2. Areas/andpadvn/Interview/2026-03-23 Nguyen Kim Long.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "architect"
+              "title": "2026-03-23 Nguyen Kim Long"
             }
           },
           {
-            "id": "f2a830cdf6a92e84",
+            "id": "f2b1de048076dfb4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/comvex/projects/LLM explore/Note.md",
+                "file": "2. Areas/comvex/meetings/Release Prepairation/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,25 +52,50 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Note"
+              "title": "README"
             }
           },
           {
-            "id": "0a4c2aa6a53f627d",
+            "id": "a6368102019cde24",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": "second-brain/3. Resources/books/DDD (quickly).md",
-                "bFile": "second-brain/3. Resources/books/DDD (quickly).md",
-                "aRef": ""
+                "aFile": "second-brain/2. Areas/comvex/projects/billing/Usage mismatch.md",
+                "bFile": "second-brain/2. Areas/comvex/projects/billing/Usage mismatch.md",
+                "aRef": "HEAD",
+                "bRef": ""
               },
               "icon": "diff",
-              "title": "Diff: DDD (quickly)  (Working Tree)"
+              "title": "Diff: Usage mismatch  (Index)"
+            }
+          },
+          {
+            "id": "744ce092cbd6ab03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-03-17"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -154,7 +179,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -174,12 +200,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3. Resources/books/DDD (quickly).md",
+                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from DDD (quickly)"
+              "title": "Outgoing links from Upgrade Go-Framework to v8"
             }
           },
           {
@@ -188,13 +214,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3. Resources/books/DDD (quickly).md",
+                "file": "2. Areas/andpadvn/Interview/20206-01-14 Nguyen Van Tuan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DDD (quickly)"
+              "title": "Outline of 20206-01-14 Nguyen Van Tuan"
             }
           },
           {
@@ -203,7 +229,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3. Resources/books/DDD (quickly).md",
+                "file": "2. Areas/comvex/procedure/Upgrade Go-Framework to v8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,7 +239,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for DDD (quickly)"
+              "title": "Backlinks for Upgrade Go-Framework to v8"
             }
           },
           {
@@ -231,6 +257,16 @@
             }
           },
           {
+            "id": "2990fe6c1bc92d36",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
             "id": "bf79c5505f8cf520",
             "type": "leaf",
             "state": {
@@ -239,19 +275,9 @@
               "icon": "excalidraw-icon",
               "title": "Excalidraw Sidepanel"
             }
-          },
-          {
-            "id": "348fa9e8e206d024",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -259,6 +285,11 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "periodic-para:LifeOS Creation": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-git:Open Git source control": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -266,53 +297,48 @@
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
       "random-note:Open random note": false,
-      "workspaces:Manage workspace layouts": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-git:Open Git source control": false,
-      "periodic-para:LifeOS Creation": false
+      "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "f2a830cdf6a92e84",
+  "active": "a6368102019cde24",
   "lastOpenFiles": [
-    "2. Areas/comvex/projects/LLM explore/Workflow.md",
+    "conflict-files-obsidian-git.md",
+    "2. Areas/comvex/meetings/Release Prepairation/README.md",
+    "3. Resources/books/books.README.md",
+    "3. Resources/books/DDD (quickly).md",
+    "3. Resources/books",
+    "2. Areas/enjoy-sport/Contribute.md.md",
     "2. Areas/comvex/projects/LLM explore/Note.md",
     "1. Projects/visa_taiwan/visa_taiwan.README.md",
-    "1. Projects/README.md",
-    "2. Areas/enjoy-sport/Contribute.md.md",
-    "2. Areas/enjoy-sport/Design/README.md",
-    "3. Resources/books/DDD (quickly).md",
-    "3. Resources/go-lang/Docker sample.md",
-    "3. Resources/books/books.README.md",
-    "3. Resources/book/book.README.md",
-    "3. Resources/books",
-    "3. Resources/book",
-    "Excalidraw/daily-usage.excalidraw.md",
-    "2. Areas/comvex/projects/billing/Trigger Invoice Calculation.md",
-    "2. Areas/comvex/projects/billing/Migration.md",
-    "2. Areas/comvex/projects/billing/Feature Usage.md",
-    "2. Areas/comvex/projects/backend-app/Untitled.md",
-    "2. Areas/comvex/projects/backend-app/Start worker.md",
-    "2. Areas/comvex/projects/backend-app/Migrate user_references.md",
-    "2. Areas/comvex/projects/backend-app/Local incident.md",
-    "2. Areas/comvex/projects/LLM explore/Claude Code Extend.md",
-    "2. Areas/comvex/projects/LLM explore",
-    "2. Areas/comvex/meetings/Release Prepairation/2026-03-17.md",
-    "2. Areas/comvex/meetings/Product Backlog/2026-03-10.md",
-    "2. Areas/comvex/meetings/1on1/2026-02-27 Yoshi.md",
-    "2. Areas/andpadvn/Interview/2026-xx-xx tran hung.md",
-    "2. Areas/andpadvn/Interview/2026-xx-xx Template.md",
-    "2. Areas/andpadvn/Interview/2026-03-19 Tan Phat.md",
-    "2. Areas/andpadvn/Interview/2026-03-06 Nguyen Xuan Quang.md",
-    "1. Projects/comvex_rule",
-    "1. Projects/claude_code",
-    "0. PeriodicNotes/2026/Weekly",
-    "0. PeriodicNotes/2026/Daily/03",
-    "0. PeriodicNotes/2026/Monthly",
     "1. Projects/visa_taiwan",
-    "2. Areas/comvex/Note/AWS Cloudwatch",
+    "0. PeriodicNotes/2026/Monthly/2026-03.md",
+    "0. PeriodicNotes/2026/Monthly",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-31.md",
+    "2. Areas/comvex/projects/billing/Usage mismatch.md",
+    "2. Areas/comvex/projects/billing/Todo.md",
+    "2. Areas/comvex/meetings/Sprint Planning/README.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-30.md",
+    "2. Areas/comvex/Onboarding/Teams.md",
+    "2. Areas/comvex/meetings/Sprint review.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-28.md",
+    "2. Areas/comvex/projects/billing/Migration.md",
+    "2. Areas/comvex/projects/billing/Invoice flow.md",
+    "2. Areas/comvex/projects/billing/README.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-23.md",
+    "2. Areas/andpadvn/Interview/2026-03-24 Tam.md",
+    "2. Areas/andpadvn/Interview/2026-xx-xx Template.md",
+    "2. Areas/andpadvn/Interview/2026-03-23 Nguyen Kim Long.md",
+    "0. PeriodicNotes/Templates/Daily.md",
+    "2. Areas/andpadvn/Interview/templates",
+    "2. Areas/andpadvn/Interview/Untitled.md",
+    "2. Areas/andpadvn/Interview/2026-03-18 tran hung.md",
+    "2. Areas/graphql",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
+    "1. Projects/comvex_rule",
+    "0. PeriodicNotes/2026/Daily/03",
+    "2. Areas/comvex/projects/LLM explore",
+    "3. Resources/docker",
+    "2. Areas/enjoy-sport/architecture",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",
     "HOME.canvas",
