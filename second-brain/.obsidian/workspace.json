@@ -61,13 +61,12 @@
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": "second-brain/2. Areas/comvex/projects/billing/Usage mismatch.md",
-                "bFile": "second-brain/2. Areas/comvex/projects/billing/Usage mismatch.md",
-                "aRef": "HEAD",
-                "bRef": ""
+                "aFile": "second-brain/.obsidian/workspace.json",
+                "bFile": "second-brain/.obsidian/workspace.json",
+                "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: Usage mismatch  (Index)"
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           },
           {
@@ -300,7 +299,7 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "a6368102019cde24",
+  "active": "2990fe6c1bc92d36",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "2. Areas/comvex/meetings/Release Prepairation/README.md",
