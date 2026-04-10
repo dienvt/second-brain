@@ -1,3 +1,10 @@
+---
+title: "Interview question bank"
+date: 2026-01-14
+tags:
+  - career
+---
+
 Redis
 
 Chuyện gì sẽ xảy ra khi redis đầy

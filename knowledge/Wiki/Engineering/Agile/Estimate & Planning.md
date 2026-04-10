@@ -1,3 +1,11 @@
+---
+title: "Planning Onion"
+date: 2026-01-14
+tags:
+  - engineering
+  - agile
+---
+
 # Planning Onion
 There are 
 Strategy > Portfolio > Product > Release > Interation (sprint) > Day

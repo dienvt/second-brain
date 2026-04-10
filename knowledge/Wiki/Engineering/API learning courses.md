@@ -1,3 +1,11 @@
+---
+title: "API learning courses"
+date: 2026-01-14
+tags:
+  - engineering
+  - api
+---
+
 Do you know enough about APIs as a Product Manager? Quick test: What does "API" stand for? Don't know? No worries! Here's a list of 13 𝗙𝗥𝗘𝗘 courses for this hot tech skill for Product Managers:
 
 1. API and REST API Fundamentals - [https://lnkd.in/e8eMet_k](https://lnkd.in/e8eMet_k)

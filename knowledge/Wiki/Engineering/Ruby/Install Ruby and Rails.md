@@ -1,3 +1,11 @@
+---
+title: "Install Ruby and Rails"
+date: 2026-01-14
+tags:
+  - engineering
+  - ruby
+---
+
 
 ## Check version homebrew
 We need to check homebrew currently is using for M1 or Intel chip

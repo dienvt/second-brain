@@ -1,3 +1,11 @@
+---
+title: "install gpg if missing"
+date: 2026-01-14
+tags:
+  - engineering
+  - ruby
+---
+
 ### install ruby
 ```shell
 # install gpg if missing

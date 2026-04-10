@@ -1,3 +1,11 @@
+---
+title: "Manifesto"
+date: 2026-01-14
+tags:
+  - engineering
+  - agile
+---
+
 4 value
 -   Individuals and interactions over processes and tools
     

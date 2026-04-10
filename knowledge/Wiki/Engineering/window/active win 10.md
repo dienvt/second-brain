@@ -1,3 +1,11 @@
+---
+title: "active win 10"
+date: 2026-01-14
+tags:
+  - engineering
+  - windows
+---
+
 Mở powershell với quyền admin, dán vào dòng lệnh sau enter:
 
 > irm [https://massgrave.dev/get](https://massgrave.dev/get?fbclid=IwAR2dI_knWvWSquNPOvHh5dM-WMZY4d6asEapHyraS9jLqEnGdfV0HbSSyC0) | iex

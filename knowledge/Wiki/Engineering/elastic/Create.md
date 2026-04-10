@@ -1,3 +1,11 @@
+---
+title: "Index"
+date: 2026-01-14
+tags:
+  - engineering
+  - elasticsearch
+---
+
 # Index
 ## create new index
 ```

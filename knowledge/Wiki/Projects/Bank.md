@@ -1,3 +1,10 @@
+---
+title: "Authorization"
+date: 2026-01-14
+tags:
+  - projects
+---
+
 Authorization
 
 Authorize now, capture later

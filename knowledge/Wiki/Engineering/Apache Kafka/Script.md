@@ -1,3 +1,12 @@
+---
+title: "Kafka script"
+date: 2026-01-14
+tags:
+  - engineering
+  - kafka
+  - messaging
+---
+
 # Kafka script
 ## start broker
 ```bash

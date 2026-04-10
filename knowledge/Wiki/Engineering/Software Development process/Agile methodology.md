@@ -1,3 +1,11 @@
+---
+title: "Four values"
+date: 2026-01-14
+tags:
+  - engineering
+  - sdlc
+---
+
 ref: [https://agilemanifesto.org](https://agilemanifesto.org/)
 
 # Four values

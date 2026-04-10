@@ -1,3 +1,11 @@
+---
+title: "Curl"
+date: 2022-11-29
+tags:
+  - engineering
+  - curl
+---
+
 
 curl POST 'https://backend.epass-vdtc.com.vn/crm2/api/v1/login' \
 --insecure --location --request \

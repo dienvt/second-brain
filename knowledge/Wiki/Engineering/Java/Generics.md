@@ -1,3 +1,11 @@
+---
+title: "Generics"
+date: 2026-01-14
+tags:
+  - engineering
+  - java
+---
+
 Generics in Java provide a way to create classes, interfaces, and methods that operate on specified types, allowing for the creation of reusable, type-safe code. Introduced in Java 5, generics enable you to write code that can work with any type while maintaining compile-time type safety.
 
 Key aspects of generics include:

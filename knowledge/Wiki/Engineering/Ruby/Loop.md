@@ -1,3 +1,11 @@
+---
+title: "until mean if condition is true it will stop execute so"
+date: 2026-01-14
+tags:
+  - engineering
+  - ruby
+---
+
 
 ``` ruby
 i = 1

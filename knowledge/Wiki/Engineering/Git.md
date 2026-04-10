@@ -1,3 +1,11 @@
+---
+title: "Git"
+date: 2026-01-14
+tags:
+  - engineering
+  - git
+---
+
 Git is a version control system that is used for tracking changes in computer files. It is mainly used for software development but it can be used for any type of file. Git stores and detects changes in files using a system called hashing.
 
 When a file is added to Git, it is assigned a unique hash code that represents the contents of the file at that time. When changes are made to the file, Git generates a new hash code that represents the new version of the file. Git then stores both versions of the file in its database.

@@ -1,3 +1,11 @@
+---
+title: "OAuth2"
+date: 2026-01-14
+tags:
+  - engineering
+  - authentication
+---
+
 OAuth2
 
 Server-Side Web Application Flow

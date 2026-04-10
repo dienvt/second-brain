@@ -1,3 +1,11 @@
+---
+title: "remove dup"
+date: 2022-10-25
+tags:
+  - engineering
+  - regex
+---
+
 
 `\b(\w+)(?:\W+\1)+`
 

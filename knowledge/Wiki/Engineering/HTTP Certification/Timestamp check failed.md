@@ -1,3 +1,12 @@
+---
+title: "Solution"
+date: 2026-01-14
+tags:
+  - engineering
+  - http
+  - networking
+---
+
 Full error:
 
 ```Plain

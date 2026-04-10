@@ -1,3 +1,11 @@
+---
+title: "Pattern"
+date: 2026-01-14
+tags:
+  - engineering
+  - architecture
+---
+
 # Pattern
 
 ## 1. Event Notification

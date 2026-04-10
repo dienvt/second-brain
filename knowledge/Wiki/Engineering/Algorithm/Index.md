@@ -1,3 +1,11 @@
+---
+title: "Techniques"
+date: 2026-01-14
+tags:
+  - engineering
+  - algorithm
+---
+
 Techniques
 
 Hashing

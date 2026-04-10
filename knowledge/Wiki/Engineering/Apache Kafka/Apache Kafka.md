@@ -1,3 +1,12 @@
+---
+title: "Config"
+date: 2026-01-14
+tags:
+  - engineering
+  - kafka
+  - messaging
+---
+
 ## References
 
 [https://kafka.apache.org](https://kafka.apache.org/)

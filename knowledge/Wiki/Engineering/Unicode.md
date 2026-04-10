@@ -1,3 +1,11 @@
+---
+title: "Unicode"
+date: 2026-01-14
+tags:
+  - engineering
+  - unicode
+---
+
 equivalence: tương đương
 
 Compose: gọp nhiều unicode code point thành một

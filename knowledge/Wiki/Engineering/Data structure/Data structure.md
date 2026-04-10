@@ -1,3 +1,11 @@
+---
+title: "Tree"
+date: 2026-01-14
+tags:
+  - engineering
+  - data-structure
+---
+
 Tree
 
 Tree traversal

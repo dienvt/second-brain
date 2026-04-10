@@ -1,3 +1,12 @@
+---
+title: "Session"
+date: 2026-01-14
+tags:
+  - engineering
+  - os
+  - linux
+---
+
 
 # Session
 

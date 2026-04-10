@@ -1,3 +1,11 @@
+---
+title: "Rails"
+date: 2026-01-14
+tags:
+  - engineering
+  - ruby
+---
+
 ## MVC model
 set up controller
 config > routes.rb

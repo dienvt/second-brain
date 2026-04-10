@@ -1,3 +1,11 @@
+---
+title: "Sort algorithm"
+date: 2026-01-14
+tags:
+  - engineering
+  - algorithm
+---
+
 Sure! Sorting algorithms can be categorized based on their characteristics and how they operate. Here are some common categories of sorting algorithms:
 
 1. Comparison-Based Sorting Algorithms:

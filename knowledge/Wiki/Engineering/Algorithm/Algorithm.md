@@ -1,3 +1,11 @@
+---
+title: "Algorithm"
+date: 2026-01-14
+tags:
+  - engineering
+  - algorithm
+---
+
 [[BigO notation]]
 
 [[Sort algorithm]]

@@ -1,3 +1,12 @@
+---
+title: "Basic cache metrics"
+date: 2026-01-14
+tags:
+  - engineering
+  - database
+  - storage
+---
+
 caching metric
 
 ## **cache hit ratio**

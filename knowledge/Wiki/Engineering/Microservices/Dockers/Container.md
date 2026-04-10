@@ -1,3 +1,12 @@
+---
+title: "Container"
+date: 2026-01-14
+tags:
+  - engineering
+  - docker
+  - devops
+---
+
 ```bash
 docker run -d -p 5000:5000 --restart=always --name registry -v $PWD/registry:/var/lib/registry registry
 ```

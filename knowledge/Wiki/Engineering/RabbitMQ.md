@@ -1,3 +1,11 @@
+---
+title: "**Note**"
+date: 2024-01-01
+tags:
+  - engineering
+  - rabbitmq
+---
+
 # **Note**
 
 - **Management page:** [http://localhost:15672/](http://localhost:15672/)

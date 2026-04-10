@@ -1,3 +1,11 @@
+---
+title: "BigO notation"
+date: 2026-01-14
+tags:
+  - engineering
+  - algorithm
+---
+
 # BigO notation
 
 BigO notation is a mathematical concept that is used to describe the performance of an algorithm. It is used to measure the time complexity of an algorithm, which is the amount of time it takes to complete a task as the size of the input increases.

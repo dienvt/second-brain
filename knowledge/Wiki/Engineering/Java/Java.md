@@ -1,3 +1,11 @@
+---
+title: "Java"
+date: 2026-01-14
+tags:
+  - engineering
+  - java
+---
+
 [[Generics]]
 
 ```Java

@@ -1,3 +1,13 @@
+---
+title: "Single Responsibility Principle (SRP)"
+date: 2026-01-14
+tags:
+  - engineering
+  - oop
+  - design-patterns
+  - solid
+---
+
 # Single Responsibility Principle (SRP)
 A class should have only one reason to change, meaning it should have a single responsibility or purpose. This principle promotes high cohesion by ensuring that a class is focused on a single task.
 

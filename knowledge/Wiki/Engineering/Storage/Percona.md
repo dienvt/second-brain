@@ -1,3 +1,13 @@
+---
+title: "Understand EXPLAIN"
+date: 2026-01-14
+tags:
+  - engineering
+  - database
+  - storage
+  - percona
+---
+
   
 
 # Understand EXPLAIN

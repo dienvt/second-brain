@@ -1,3 +1,11 @@
+---
+title: "Heap"
+date: 2024-01-01
+tags:
+  - engineering
+  - data-structure
+---
+
 A **heap** is a specialized tree-based data structure that satisfies the heap property. The heap property differs depending on whether it is a min-heap or a max-heap.
 
 In a **min-heap**, for every node `**i**`, the value of `**i**` is smaller than or equal to the values of its children. This means that **the minimum element is always stored at the root of the heap**.

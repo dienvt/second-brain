@@ -1,3 +1,11 @@
+---
+title: "upsert"
+date: 2026-01-14
+tags:
+  - engineering
+  - elasticsearch
+---
+
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html#upserts
 ```
 POST test/_update/1

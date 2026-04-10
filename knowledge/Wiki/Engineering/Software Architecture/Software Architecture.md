@@ -1,3 +1,11 @@
+---
+title: "DDD vs Hexagonal architecture"
+date: 2026-01-14
+tags:
+  - engineering
+  - architecture
+---
+
 write something
 
 # DDD vs Hexagonal architecture

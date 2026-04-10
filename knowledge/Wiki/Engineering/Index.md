@@ -1,3 +1,10 @@
+---
+title: "Base knowledge"
+date: 2026-01-14
+tags:
+  - engineering
+---
+
 [http://highscalability.com/all-time-favorites](http://highscalability.com/all-time-favorites)
 
 # Base knowledge

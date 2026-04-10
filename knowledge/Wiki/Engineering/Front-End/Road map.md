@@ -1,3 +1,11 @@
+---
+title: "Learing process"
+date: 2026-01-14
+tags:
+  - engineering
+  - frontend
+---
+
 # Learing process
 
 ## Material

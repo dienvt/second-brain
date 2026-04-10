@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "Wiki/Engineering/Agile/Manifesto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "Manifesto"
             }
           }
         ]
@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -123,11 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Wiki/Engineering/Agile/Manifesto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Manifesto"
             }
           },
           {
@@ -165,12 +165,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Wiki/Engineering/Agile/Manifesto.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Manifesto"
             }
           }
         ],
@@ -191,10 +192,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9659652e950a6500",
+  "active": "464829fcb1f5f708",
   "lastOpenFiles": [
-    "Templates/Raw Document.md",
+    "Wiki/Personal/quotes/Programming Quotes.md",
+    "Wiki/Engineering/Golang/Context Value Comparison.md",
+    "Wiki/Projects/Bank.md",
+    "Wiki/Projects",
+    "Wiki/Career/Interview question bank.md",
+    "Wiki/Career/Individual Development Plan (IDP).md",
+    "Wiki/Career",
+    "Wiki/Engineering/Index.md",
+    "Wiki/Personal/Kindle note to notion.md",
+    "Wiki/Personal/Learning English Tips.md",
+    "Wiki/Engineering/Microservices/Kubernetes/Control Plane.md",
+    "Wiki/Engineering/Microservices/Kubernetes",
+    "Wiki/Engineering/Apache Kafka/Script.md",
+    "Wiki/Engineering/Agile/Estimate & Planning.md",
     "Templates/Wiki Note.md",
+    "Templates/Raw Document.md",
+    "Wiki/Engineering/Eisenhower matrix/Testing/TASKS/For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For....md",
+    "Raw/Notion-Import/Career Path/Brag Document/Move from physic server to k8s.md",
+    "Raw/Notion-Import/Career Path/Brag Document/Tracking.md",
+    "Raw/Notion-Import/Career Path/Brag Document/Brag Document.md",
+    "Raw/Notion-Import/Career Path/Brag Document/Kho thẻ.md",
+    "Raw/Notion-Import/Career Path/Brag Document/Bill system.md",
+    "Raw/Notion-Import/Blog/Do you understand S.O.L.I.D- The S.md",
+    "Raw/Notion-Import/Blog/Do you understand S.O.L.I.D- The L.md",
+    "Raw/Notion-Import/Blog/Do you understand S.O.L.I.D- The I.md",
+    "Raw/Notion-Import/Blog/Do you understand S.O.L.I.D- The D.md",
+    "Wiki/Engineering/HTTP Certification/Timestamp check failed.md",
+    "Wiki/Engineering/HTTP Certification/HTTP Certification.md",
+    "Wiki/Personal/quotes/Untitled.md",
     "Attachments/Untitled.canvas",
     "Attachments/Untitled 1.canvas",
     "Raw/Documents/Senior_Backend_Software_Engineer.pdf",
@@ -210,37 +238,10 @@
     "Attachments/1KfZYFUT2OKfjekJlCeYvuQ.jpeg",
     "Attachments/Untitled 8.png",
     "Attachments/Untitled.png",
-    "Home.md",
-    "Raw/Notion-Import/VNG Works/Work Note/EVN-Gateway/Module/EVNGATEWAY3.md",
-    "Raw/Notion-Import/VNG Works/Work Note/EVN-Gateway/Module/EVNGATEWAY2.md",
-    "Raw/Notion-Import/VNG Works/Work Note/EVN-Gateway/Module/EVNGATEWAY1.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Untitled Database/ZMS.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Untitled Database/STG Hot fix 1.0.8.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Untitled Database/Card 3.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowTransitPending.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowTransitFailFundBackSuccess.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowTransitFailFundBackPending.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowTransitFailFundBackFail.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowSuccess.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowProcessing.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowPending.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowNotFound.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status/FundFlowFail.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Domain/Untitled.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Domain/STG.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Domain/SB.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Domain/REAL.md",
-    "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Domain/LOADTEST.md",
-    "Raw/Notion-Import/VNG Works/Work Note/CI-CD/Progress/provider-vinhlong.md",
-    "Raw/Notion-Import/VNG Works/Work Note/CI-CD/Progress/provider-shinhan.md",
-    "Raw/Notion-Import/VNG Works/Work Note/CI-CD/Progress/provider-namdinh.md",
     "Raw/Notion-Import/VNG Works/Work Note/EVN-Gateway/Module",
     "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Untitled Database",
     "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Fund Flow Status",
     "Raw/Notion-Import/VNG Works/Work Note/Disburserment/Domain",
-    "Raw/Notion-Import/VNG Works/Work Note/CI-CD/Progress",
-    "Raw/Notion-Import/VNG Works/Work Note/Billing/Task",
-    "Raw/Notion-Import/VNG Works/Work Note/Billing/Operation Note",
     "Untitled 1.canvas",
     "TiDB/Untitled.canvas",
     "Untitled.canvas",

@@ -1,3 +1,10 @@
+---
+title: "Engineer blog"
+date: 2022-11-29
+tags:
+  - engineering
+---
+
 Company engineering blogs
 
 If you are going to interview with a company, it is a great idea to read their engineering blogs and get familiar with technologies and systems adopted and implemented there. Besides, engineering blogs provide invaluable insights about certain fields. Reading them regularly could help us become better engineers.

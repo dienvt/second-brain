@@ -1,3 +1,0 @@
-
-# Schedule 
-=> Kernel , OS schedule

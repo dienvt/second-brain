@@ -1,3 +1,12 @@
+---
+title: "hostname"
+date: 2026-01-14
+tags:
+  - engineering
+  - docker
+  - devops
+---
+
 docker host name is like cluster name 
 
 create network then connect those containers with each others

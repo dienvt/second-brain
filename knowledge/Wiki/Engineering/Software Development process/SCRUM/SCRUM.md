@@ -1,3 +1,12 @@
+---
+title: "Scrum value"
+date: 2026-01-14
+tags:
+  - engineering
+  - agile
+  - scrum
+---
+
 ![[ScrumValues.png]]
 
 source: [https://www.scrum.org/resources/what-scrum-module](https://www.scrum.org/resources/what-scrum-module)

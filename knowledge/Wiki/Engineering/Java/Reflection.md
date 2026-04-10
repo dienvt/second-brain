@@ -1,3 +1,11 @@
+---
+title: "Reflection"
+date: 2026-01-14
+tags:
+  - engineering
+  - java
+---
+
 Reflection in Java is a powerful feature that allows a program to examine or introspect itself at runtime. It enables you to inspect classes, interfaces, fields, methods, and their annotations, and even modify their behavior dynamically. Reflection gives Java code the ability to inspect and manipulate its own structure, providing mechanisms to achieve tasks that would otherwise be difficult or impossible.
 
 Here are some key aspects of reflection in Java:

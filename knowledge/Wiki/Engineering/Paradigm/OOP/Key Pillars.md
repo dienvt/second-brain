@@ -1,3 +1,12 @@
+---
+title: "Key Pillars"
+date: 2026-01-14
+tags:
+  - engineering
+  - oop
+  - design-patterns
+---
+
 Abstraction: Abstraction involves capturing the essential features and behavior of an object or a class, while hiding unnecessary details. It focuses on defining interfaces and functionality without getting into implementation specifics. Abstraction helps manage complexity and enables modular design.
 
 Encapsulation: Encapsulation is the process of bundling data and related methods into a class, hiding the internal implementation details from the outside. It provides data protection and helps ensure that changes to the internal state of an object are done through well-defined interfaces.

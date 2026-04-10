@@ -1,3 +1,10 @@
+---
+title: "Learning English Tips"
+date: 2026-01-14
+tags:
+  - personal
+---
+
 ## MacOS speak selection
 
 Đầu tiên "System Preferences" -> chọn Accessibility -> chọn "Spoken content" -> chọn "Speak selection" hoặc đơn giản là search luôn "Speak selection" trong spotligth search.

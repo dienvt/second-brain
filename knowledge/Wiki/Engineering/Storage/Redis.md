@@ -1,3 +1,13 @@
+---
+title: "**Serialize**"
+date: 2026-01-14
+tags:
+  - engineering
+  - database
+  - storage
+  - redis
+---
+
 ## Best practict
 
 [https://instagram-engineering.com/storing-hundreds-of-millions-of-simple-key-value-pairs-in-redis-1091ae80f74c](https://instagram-engineering.com/storing-hundreds-of-millions-of-simple-key-value-pairs-in-redis-1091ae80f74c)

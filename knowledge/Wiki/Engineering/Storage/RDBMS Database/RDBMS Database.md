@@ -1,3 +1,12 @@
+---
+title: "Indexing"
+date: 2026-01-14
+tags:
+  - engineering
+  - database
+  - rdbms
+---
+
   
 
 Indexing

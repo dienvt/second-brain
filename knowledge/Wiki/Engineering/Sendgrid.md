@@ -1,1 +1,0 @@
-[https://sendgrid.com/blog/test-webhooks-ngrok/](https://sendgrid.com/blog/test-webhooks-ngrok/)

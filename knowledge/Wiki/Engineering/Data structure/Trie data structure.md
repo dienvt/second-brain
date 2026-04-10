@@ -1,3 +1,11 @@
+---
+title: "Trie data structure"
+date: 2026-01-14
+tags:
+  - engineering
+  - data-structure
+---
+
 # Trie data structure
 
 Trie is a type of tree data structure that is used to store an associative array where the keys are usually strings. It is also known as a prefix tree because it stores words as a set of prefixes.

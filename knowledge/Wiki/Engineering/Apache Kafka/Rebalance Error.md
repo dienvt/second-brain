@@ -1,3 +1,12 @@
+---
+title: "Rebalance Error"
+date: 2026-01-14
+tags:
+  - engineering
+  - kafka
+  - messaging
+---
+
 ## Symptom
 
 ```Plain

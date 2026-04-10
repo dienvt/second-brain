@@ -1,3 +1,11 @@
+---
+title: "helpful tool"
+date: 2026-01-14
+tags:
+  - engineering
+  - sql
+---
+
 # helpful tool
 
 visualize [https://dbdiagram.io/d](https://dbdiagram.io/d)

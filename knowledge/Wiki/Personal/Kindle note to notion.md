@@ -1,3 +1,10 @@
+---
+title: "Reference"
+date: 2026-01-14
+tags:
+  - personal
+---
+
 # Reference
 
 [https://developers.notion.com/docs/authorization#authorizing-public-integrations](https://developers.notion.com/docs/authorization#authorizing-public-integrations)
