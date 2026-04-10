@@ -107,24 +107,14 @@
             "id": "744ce092cbd6ab03",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "2. Areas/andpadvn/Interview/2026-04-09.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "knowledge/Knowledge/Software Development process/Agile methodology.md",
+                "bFile": "knowledge/Knowledge/Software Development process/Agile methodology.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "2026-04-09"
+              "icon": "diff",
+              "title": "Diff: Agile methodology  (Working Tree)"
             }
           }
         ],
@@ -334,9 +324,11 @@
   },
   "active": "744ce092cbd6ab03",
   "lastOpenFiles": [
+    "2. Areas/andpadvn/Interview/2026-04-09.md",
+    "2. Areas/andpadvn/Interview/Untitled 2.md",
+    "2. Areas/andpadvn/Interview/Untitled 1.md",
     "2. Areas/enjoy-sport/Design/Rule engineer.md",
     "2. Areas/enjoy-sport/enjoy-sport.README.md",
-    "2. Areas/andpadvn/Interview/2026-04-09.md",
     "2. Areas/andpadvn/Interview/2026-xx-xx Template.md",
     "2. Areas/andpadvn/Interview/Untitled.md",
     "2. Areas/comvex/meetings/Sprint Review/README.md",
@@ -358,8 +350,6 @@
     "2. Areas/comvex/projects/backend-app/Readme.md",
     "2. Areas/comvex/projects/backend-app/Migrate billing_properties.md",
     "2. Areas/comvex/projects/backend-app/Local incident.md",
-    "2. Areas/comvex/projects/backend-app/Start worker.md",
-    "2. Areas/comvex/projects/backend-app/Migrate user_references.md",
     "0. PeriodicNotes/2026/Daily/04",
     "3. Resources/books",
     "1. Projects/visa_taiwan",
