@@ -84,13 +84,14 @@ https://github.com/comvex-jp/digima-backend-app/blob/develop/composer.json
 #### Web App
 
 For Frontend Deployment Preparation:
+
 1st - Staging Promote: `master` 
 - Store the build tag like `v0.1.0.3-frontend-secure`
+
 2nd - Production Build `master`
 
 3rd - Production Deploy (9PM)
 	Using the build tag `v0.1.0-frontend-secure`
-
 
 For update version we have to alter the `package.json`. Ex: https://github.com/comvex-jp/digima-web-app/blob/develop/package.json
 

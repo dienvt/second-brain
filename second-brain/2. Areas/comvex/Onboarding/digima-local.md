@@ -65,6 +65,10 @@ php artisan digima:db-core-seed [[--force] [--dev]]
 php artisan digima:db-account-migrate 1 [[--force] [--pretend]]
 
 php artisan digima:db-account-seed 1 [[--force] [--dev]]
+
+php artisan digima:db-account-create 2 [[--force] [--pretend]]
+
+php artisan digima:db-account-migrate 2 [[--force] [--pretend]]
 ```
 * [ ] 
 

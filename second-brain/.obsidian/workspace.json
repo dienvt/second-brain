@@ -59,23 +59,9 @@
             "id": "a6368102019cde24",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "second-brain/.obsidian/workspace.json",
-                "bFile": "second-brain/.obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
-            }
-          },
-          {
-            "id": "744ce092cbd6ab03",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
+                "file": "2. Areas/andpadvn/Interview/2026-04-01.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -90,11 +76,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-03-17"
+              "title": "2026-04-01"
+            }
+          },
+          {
+            "id": "9cd20ead11527f85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Areas/andpadvn/Interview/2026-04-07 An.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-07 An"
+            }
+          },
+          {
+            "id": "744ce092cbd6ab03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Areas/andpadvn/Interview/2026-04-09.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-09"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -142,7 +176,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"Usage reconciliation\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,8 +212,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -299,45 +332,45 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "2990fe6c1bc92d36",
+  "active": "744ce092cbd6ab03",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "2. Areas/comvex/meetings/Release Prepairation/README.md",
-    "3. Resources/books/books.README.md",
-    "3. Resources/books/DDD (quickly).md",
-    "3. Resources/books",
-    "2. Areas/enjoy-sport/Contribute.md.md",
-    "2. Areas/comvex/projects/LLM explore/Note.md",
-    "1. Projects/visa_taiwan/visa_taiwan.README.md",
-    "1. Projects/visa_taiwan",
-    "0. PeriodicNotes/2026/Monthly/2026-03.md",
-    "0. PeriodicNotes/2026/Monthly",
-    "0. PeriodicNotes/2026/Daily/03/2026-03-31.md",
-    "2. Areas/comvex/projects/billing/Usage mismatch.md",
-    "2. Areas/comvex/projects/billing/Todo.md",
-    "2. Areas/comvex/meetings/Sprint Planning/README.md",
-    "0. PeriodicNotes/2026/Daily/03/2026-03-30.md",
-    "2. Areas/comvex/Onboarding/Teams.md",
-    "2. Areas/comvex/meetings/Sprint review.md",
-    "0. PeriodicNotes/2026/Daily/03/2026-03-28.md",
-    "2. Areas/comvex/projects/billing/Migration.md",
-    "2. Areas/comvex/projects/billing/Invoice flow.md",
-    "2. Areas/comvex/projects/billing/README.md",
-    "0. PeriodicNotes/2026/Daily/03/2026-03-23.md",
-    "2. Areas/andpadvn/Interview/2026-03-24 Tam.md",
+    "2. Areas/enjoy-sport/Design/Rule engineer.md",
+    "2. Areas/enjoy-sport/enjoy-sport.README.md",
+    "2. Areas/andpadvn/Interview/2026-04-09.md",
     "2. Areas/andpadvn/Interview/2026-xx-xx Template.md",
-    "2. Areas/andpadvn/Interview/2026-03-23 Nguyen Kim Long.md",
-    "0. PeriodicNotes/Templates/Daily.md",
-    "2. Areas/andpadvn/Interview/templates",
     "2. Areas/andpadvn/Interview/Untitled.md",
-    "2. Areas/andpadvn/Interview/2026-03-18 tran hung.md",
+    "2. Areas/comvex/meetings/Sprint Review/README.md",
+    "0. PeriodicNotes/2026/Daily/04/2026-04-09.md",
+    "2. Areas/comvex/projects/billing/Usage mismatch.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-28.md",
+    "0. PeriodicNotes/2026/Daily/04/2026-04-07.md",
+    "0. PeriodicNotes/2026/Daily/04/2026-04-08.md",
+    "2. Areas/comvex/meetings/Release Prepairation/README.md",
+    "2. Areas/comvex/meetings/Product Backlog/2026-04-07.md",
+    "2. Areas/comvex/meetings/Backlog meetings.md",
+    "2. Areas/comvex/meetings/Sprint retro.md",
+    "0. PeriodicNotes/2026/Daily/03/2026-03-17.md",
+    "2. Areas/andpadvn/Interview/2026-04-07 An.md",
+    "2. Areas/andpadvn/Interview/2026-04-01.md",
+    "2. Areas/andpadvn/Interview/Readme.md.md",
+    "2. Areas/andpadvn/Interview/2026-04-02 Cường.md",
+    "2. Areas/comvex/Onboarding/digima-local.md",
+    "2. Areas/comvex/projects/backend-app/Readme.md",
+    "2. Areas/comvex/projects/backend-app/Migrate billing_properties.md",
+    "2. Areas/comvex/projects/backend-app/Local incident.md",
+    "2. Areas/comvex/projects/backend-app/Start worker.md",
+    "2. Areas/comvex/projects/backend-app/Migrate user_references.md",
+    "0. PeriodicNotes/2026/Daily/04",
+    "3. Resources/books",
+    "1. Projects/visa_taiwan",
+    "0. PeriodicNotes/2026/Monthly",
+    "2. Areas/andpadvn/Interview/templates",
     "2. Areas/graphql",
     "2. Areas/comvex/meetings/Release Prepairation/Screenshot 2025-10-14 at 14.35.23.png",
     "1. Projects/comvex_rule",
     "0. PeriodicNotes/2026/Daily/03",
     "2. Areas/comvex/projects/LLM explore",
     "3. Resources/docker",
-    "2. Areas/enjoy-sport/architecture",
     "2. Areas/react/Best Practies/Pasted image 20251209224446.png",
     "Untitled.canvas",
     "HOME.canvas",

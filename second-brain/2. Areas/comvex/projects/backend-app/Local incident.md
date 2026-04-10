@@ -4,7 +4,7 @@ php artisan digima-tmp:auth-api-users-migrate Qwerty1!
 
 
 Then have to start worker
-
+php artisan queue:work queue-1 --tries=1 --timeout=300 -v
 ```
 
 # Remove account
