@@ -50,4 +50,5 @@ Switch to [PdM Sprint Management](https://comvex.myjetbrains.com/youtrack/agiles
 ## 4. Review Grantt Chart
 
 
--> In jenskin there was a task for promote. I actually don't understand the promote yet???? Should we automate the pipeline?
+## 5. Update Bug Management Sheet
+https://docs.google.com/spreadsheets/d/1cQNbpHZeAJDXQweu7Mgje0QfO5JJdJNuA1OFnsKIT3E/edit?gid=2018229120#gid=2018229120

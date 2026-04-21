@@ -77,3 +77,24 @@ php artisan digima:db-account-migrate 2 [[--force] [--pretend]]
 ### Can not start web app
 - Error: Port in use even thought there is no running program on that pod
 	- Solution: Check the hosts
+
+### Moved error
+```
+│ Error: Moved resource instances excluded by targeting
+│
+│ Resource instances in your current state have moved to new addresses in the latest configuration. Terraform must include those resource instances while planning in order to ensure a correct result, but your -target=... options do not fully cover all of those resource instances.
+│
+│ To create a valid plan, either remove your -target=... options altogether or add the following additional target options:
+│   -target="module.app.module.api.shell_script.mutagen"
+│   -target="module.app.module.worker.shell_script.mutagen"
+│
+│ Note that adding these options may include further additional resource instances in your plan, in order to respect object dependencies.
+```
+
+  1. Fixed the Terraform state — The shell_script.mutagen resources in state didn't have an index, but the config now uses count, so Terraform expected them at [0]. I ran:
+  ```
+  terraform state mv 'module.app.module.api.shell_script.mutagen' 'module.app.module.api.shell_script.mutagen[0]'
+  terraform state mv 'module.app.module.worker.shell_script.mutagen' 'module.app.module.worker.shell_script.mutagen[0]'
+  ```
+  2. This was caused by the count = var.use_mutagen ? 1 : 0 added in commit e663fcf ("Make mutagen optional with direct volume mount fallback"). Adding count to an existing resource changes its address from resource.name to resource.name[0], but the state wasn't updated to match.
+  3. Ran the apply — With the state fixed, terraform apply -auto-approve -target=module.infra.module.localstack succeeded and started the LocalStack container.

@@ -1,37 +1,37 @@
-- [ ] 1st technical interview (60m).
+# Agenda: 1st technical interview (60m)
+
+- [ ] Greeting and ask for the introduction.
+	- [ ] Introduce interviewee.
 	- [ ] Introduce in english.
+- [ ] Hỏi về định hướng khi chọn andpad
+- [ ]  Hỏi về kinh nghiệm làm việc (15’)
+	- [ ] Daily tasks
+	- [ ] Khó khăn vào thách thức
 	- [ ] 
-    - [ ] Greeting and ask for the introduction.
-	    - [ ] Introduce interviewee.
-    - [ ] Hỏi về định hướng khi chọn andpad
-    - [ ]  Hỏi về kinh nghiệm làm việc (15’)
-	    - [ ] Daily tasks
-        - [ ] Khó khăn vào thách thức
-        - [ ] 
-    - [ ] Verifify wide then narrow the scope
-	    - [ ] What is the protocol use to communicate between your services
-		    - [ ] 
-	    - [ ] How do you deploy your service, to mange deplyment state?
-			- [ ] Ask do I familiar with CI/CD.
-				- [ ] Gitlab ci, gitlab runner.
-			- [ ] Ask do I familiar with k8s.
-				- [ ] Build docker file.
-	    - [ ] How do you observer or telemety your services? Do you apply tracing
-		    - [ ] 
-	    - [ ] How to you write test and manage test coverage.
-		    - [ ] 
-	    - [ ] Which one your code need unit test and what is the perfect percent of coverage
-	    - [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
-	- [ ] OAuth
-	- [ ] OOP
-		- [ ] What is OOP ?
-		- [ ] What is SOLID
-	- [ ] Golang
-		- [ ] What is goroutines
-		- [ ] How to avoid rate condition
-		- [ ] How you resolve consensure problem indo
-	- [ ] Ask about SA: How service talking with each other
-	- [ ] Draw about current project structure
+- [ ] Verifify wide then narrow the scope
+	- [ ] What is the protocol use to communicate between your services
+		- [ ] 
+	- [ ] How do you deploy your service, to mange deplyment state?
+		- [ ] Ask do I familiar with CI/CD.
+			- [ ] Gitlab ci, gitlab runner.
+		- [ ] Ask do I familiar with k8s.
+			- [ ] Build docker file.
+	- [ ] How do you observer or telemety your services? Do you apply tracing
+		- [ ] 
+	- [ ] How to you write test and manage test coverage.
+		- [ ] 
+	- [ ] Which one your code need unit test and what is the perfect percent of coverage
+	- [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+- [ ] OAuth
+- [ ] OOP
+	- [ ] What is OOP ?
+	- [ ] What is SOLID
+- [ ] Golang
+	- [ ] What is goroutines
+	- [ ] How to avoid rate condition
+	- [ ] How you resolve consensure problem indo
+- [ ] Ask about SA: How service talking with each other
+- [ ] Draw about current project structure
 
 # Interview Preparation Summary
 

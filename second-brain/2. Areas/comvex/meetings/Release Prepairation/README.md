@@ -34,14 +34,13 @@ Now in the releasing project
 		* Access: 
 		* run with parameter: branch `origin/master` + uncheck cicd
 		* There will be image tag have format `commit-xxxx` print in console. In this case: `commit-0f651bd`
-		* We have to copy and temporary save this commit to verify the ERC tag in next step.
+		* We have to copy and temporary save this commit to verify the ECR tag in next step.
 3. Next step is promote the image. Ex: Stg user-bff promotion
 	* The purpose of the promotion is let the digima-infra create a package for the release
 	* Full promotion services: [link](https://jenkins.mgmt.digima.com/job/Digima%20Staging%20Userweb%20BFF%20Promotion/search/?q=promotion&Jenkins-Crumb=9bf90e73a3532bfee1493ca2ed29349f33d879a886cd88ea18931b1f8488f44f)
 	* [Digima Staging Userweb BFF Promotion](https://jenkins.mgmt.digima.com/job/Digima%20Staging%20Userweb%20BFF%20Promotion/search/?q=Digima+Staging+Userweb+BFF+Promotion) 
 	* Put the previous step image_tag to image_tag : `commit-0f651bd` or can use `branch-master`
 	* Then run and check and process the promotion
-
 4. Last step is bump the version for the next release. We need to increase the `package.yml` minor version, prepair for the next release
 	* checkout branch `develop`
 	* Update the `package.yml`

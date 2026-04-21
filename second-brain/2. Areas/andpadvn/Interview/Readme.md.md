@@ -1,10 +1,5 @@
-*
+# Responsible scopes:
 
-*
-
-Detail:
-
-Responsible scopes: [Grade Definition Q&A](https://docs.google.com/spreadsheets/d/1O6gA-jQUstrBE6zUGuvBJktZaCdZgOOz48en5hBWIA8/edit?gid=1594642932#gid=1594642932)
 - D1: Complete assigned tasks with support from others.
 - D2: Work independently to complete assigned tasks with a little support from others.
 - D-3-1: Work independently on assigned tasks from their platform.
@@ -13,7 +8,10 @@ Responsible scopes: [Grade Definition Q&A](https://docs.google.com/spreadsheets/
 - D-4-1: Lead one team within their platform.
 - D-4-2: Lead 2-4 different teams across projects.
 - D-4-3 and above: Lead more than 4 different teams on a company-wide scale across projects.
-Grading Definition for Dev: [開発本部版_グレード別要件定義 Grading Definition for Dev](https://docs.google.com/spreadsheets/d/1UrXiSKDA0jIJP0Ul7pboeHT5foJ9Wgy5jIE9Pd3pIFo/edit?gid=1057625781#gid=1057625781)**
+
+references:
+- [Grade Definition Q&A](https://docs.google.com/spreadsheets/d/1O6gA-jQUstrBE6zUGuvBJktZaCdZgOOz48en5hBWIA8/edit?gid=1594642932#gid=1594642932)
+- Grading Definition for Dev: [開発本部版_グレード別要件定義 Grading Definition for Dev](https://docs.google.com/spreadsheets/d/1UrXiSKDA0jIJP0Ul7pboeHT5foJ9Wgy5jIE9Pd3pIFo/edit?gid=1057625781#gid=1057625781)**
 
 ### Core value
 Reality 
