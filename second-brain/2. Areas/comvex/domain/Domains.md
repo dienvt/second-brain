@@ -14,6 +14,12 @@
 - Drive
 	- File
 	- Image
+- [[Workflow]]
+	- scheduled + event-driven automation (send email / sms / line, delay, condition, await-event)
+- Tenant
+	- [[Account]]
+	- [[FranchiseAccount]]
+	- [[Onboarding a new Account]]
 
 This Product is amount a huge data 
 using pipeline mongoDB pipeline

@@ -1,41 +1,48 @@
-- [ ] 1st technical interview (60m).
+---
+Round: Technical Interview
+Date: tp.date.now("YYYY-MM-DD")
+Candidate:
+Decision:
+Evaluation:
+---
+<%* await tp.file.rename(tp.date.now("YYYY-MM-DD") + "_{{Candidate}}") -%>
+## Agenda: 1st technical interview (60m)
+- [ ] Greeting and ask for the introduction.
+	- [ ] Introduce interviewee.
 	- [ ] Introduce in english.
+- [ ] Hỏi về định hướng khi chọn andpad
+- [ ]  Hỏi về kinh nghiệm làm việc (15’)
+	- [ ] Daily tasks
+	- [ ] Khó khăn vào thách thức
 	- [ ] 
-    - [ ] Greeting and ask for the introduction.
-	    - [ ] Introduce interviewee.
-    - [ ] Hỏi về định hướng khi chọn andpad
-    - [ ]  Hỏi về kinh nghiệm làm việc (15’)
-	    - [ ] Daily tasks
-        - [ ] Khó khăn vào thách thức
-        - [ ] 
-    - [ ] Verifify wide then narrow the scope
-	    - [ ] What is the protocol use to communicate between your services
-		    - [ ] 
-	    - [ ] How do you deploy your service, to mange deplyment state?
-			- [ ] Ask do I familiar with CI/CD.
-				- [ ] Gitlab ci, gitlab runner.
-			- [ ] Ask do I familiar with k8s.
-				- [ ] Build docker file.
-	    - [ ] How do you observer or telemety your services? Do you apply tracing
-		    - [ ] 
-	    - [ ] How to you write test and manage test coverage.
-		    - [ ] 
-	    - [ ] Which one your code need unit test and what is the perfect percent of coverage
-	    - [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
-	- [ ] OAuth
-	- [ ] OOP
-		- [ ] What is OOP ?
-		- [ ] What is SOLID
-	- [ ] Golang
-		- [ ] What is goroutines
-		- [ ] How to avoid rate condition
-		- [ ] How you resolve consensure problem indo
-	- [ ] Ask about SA: How service talking with each other
-	- [ ] Draw about current project structure
+- [ ] Verifify wide then narrow the scope
+	- [ ] What is the protocol use to communicate between your services
+		- [ ] 
+	- [ ] How do you deploy your service, to mange deplyment state?
+		- [ ] Ask do I familiar with CI/CD.
+			- [ ] Gitlab ci, gitlab runner.
+		- [ ] Ask do I familiar with k8s.
+			- [ ] Build docker file.
+	- [ ] How do you observer or telemety your services? Do you apply tracing
+		- [ ] 
+	- [ ] How to you write test and manage test coverage.
+		- [ ] 
+	- [ ] Which one your code need unit test and what is the perfect percent of coverage
+	- [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+- [ ] OAuth
+- [ ] OOP
+	- [ ] What is OOP ?
+	- [ ] What is SOLID
+- [ ] Golang
+	- [ ] What is goroutines
+	- [ ] How to avoid rate condition
+	- [ ] How you resolve consensure problem indo
+- [ ] Ask about SA: How service talking with each other
+- [ ] Draw about current project structure
 
-# Interview Preparation Summary
+## Interview Preparation Summary
 
-## 1. **Golang-Specific Topics**
+### 1. **Golang-Specific Topics**
 - **Concurrency:** 
   - **Question:** "Can you tell me about how you typically handle concurrency in Go?"
   - **Answer:** Discussed using goroutines and channels, best practices like `sync.Mutex`, `sync.WaitGroup`, and avoiding race conditions.
@@ -85,10 +92,10 @@
 		- 
 
 
-## 2. **Database Integration**
+### 2. **Database Integration**
 - **Query Optimization:** Techniques like indexing, avoiding `SELECT *`, using proper joins, and analyzing query execution plans.
 
-## 3. **Distributed Transactions**
+### 3. **Distributed Transactions**
 - **Saga Pattern:**
   - **Question:** "Can you explain the Saga pattern and how it works in distributed systems?"
   - **Answer:** The Saga pattern indeed involves a series of local transactions, each with a corresponding compensation transaction. The orchestrator is responsible for managing the overall workflow and ensuring that if any step fails, it triggers the compensating transactions to roll back the previous steps.
@@ -111,11 +118,11 @@ The two main approaches are:
 |Real-world usage|Legacy systems|Rare|Very common|
 
 
-## 4. **Web Architecture**
+### 4. **Web Architecture**
 - **Communication:** Using GraphQL for public APIs and gRPC for internal service communication.
 - **Scalability:** Deployment in Kubernetes for auto-scaling, fault tolerance, and using caching layers to reduce load.
 
-## 5. **System Design & Scaling**
+### 5. **System Design & Scaling**
 - **Load Balancing:** Distributing traffic to prevent overload.
 - **Horizontal Scaling:** Adding more instances to manage increased load.
 - **Caching:** Using Redis or Memcached to reduce database load.
@@ -123,7 +130,6 @@ The two main approaches are:
 - **Auto-Scaling:** Automatically adjusting resources based on traffic.
 
 ## **Sample Questions Practiced:**
-
 ### **Scaling Example Question:**
 - *"Imagine you’re designing an e-commerce platform that expects a large number of users during peak seasons. How would you design the system to handle this high load?"*
 

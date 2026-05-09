@@ -1,4 +1,4 @@
-# Digima Backend SMS API - Domain Models Dependencies Diagram
+- [ ] # Digima Backend SMS API - Domain Models Dependencies Diagram
 
   
 
@@ -7,8 +7,6 @@
   
 
 This diagram shows the relationships and dependencies between all models in the `domain/models` directory of the Digima Backend SMS API.
-
-  
 
 ## Entity Relationship Diagram
 
