@@ -5,7 +5,6 @@ Candidate:
 Decision:
 Evaluation:
 ---
-<%* await tp.file.rename(tp.date.now("YYYY-MM-DD") + "_{{Candidate}}") -%>
 ## Agenda: 1st technical interview (60m)
 - [ ] Greeting and ask for the introduction.
 	- [ ] Introduce interviewee.
