@@ -23,18 +23,36 @@ How Digima tracks the lifecycle of a sent email (delivered / bounced / opened / 
 
 ## 1. The unit of tracking: `Envelope`
 
-Every send (manual blast or workflow) creates **one `Envelope` row per recipient**. All tracking attaches to that envelope.
+All tracking attaches to an `Envelope`. **Envelope-to-recipient cardinality depends on email type:**
+
+| Email type | Envelope ↔ Recipient | Notes |
+|---|---|---|
+| **Bulk email** (manual blast) | 1 envelope = 1 recipient | Each recipient gets their own envelope row |
+| **Workflow email** (`Action::TYPE_SEND_EMAIL`) | 1 envelope = 1 recipient | `EnvelopeCreator->createEnvelope(collect([$participant->contact]))` — always single contact |
+| **Classic email** | 1 envelope = many recipients | 1 `to` (the **main recipient**, the one Digima considers tracked) + many `cc` / `bcc` |
+
+> Source: thread with Anderson Oki, 2026-05-15. Classic emails ship as a **single email with one shared `message_id`** so reply-all preserves the thread; you cannot split into N envelopes without breaking the thread.
 
 ```
 Email
- └─< Envelope (1 per recipient)
-       ├─< Recipient
-       │     └─< Recipient\Event   ← SendGrid lifecycle (delivered, bounced, …)
-       ├─< Open                    ← pixel beacon
-       ├─< Click                   ← link redirect
+ └─< Envelope
+       ├─< Recipient (1 for bulk/workflow, N for classic — 1 `to` + many `cc`/`bcc`)
+       │     └─< Recipient\Event   ← SendGrid lifecycle, PER RECIPIENT (delivered, bounced, …)
+       ├─< Open                    ← pixel beacon, PER ENVELOPE (see §3.1)
+       ├─< Click                   ← link redirect, PER ENVELOPE (see §4.1)
        ├─< Unsubscribe
        └─  Statistic (denormalised counters)
 ```
+
+### Why opens/clicks are per-envelope but delivery events are per-recipient
+
+The email **body is identical for all recipients** of a single envelope — for classic email, all `to`/`cc`/`bcc` receive the same rendered MIME with the same embedded pixel URL and the same rewritten click links. The tracking code (`?openCode=abc`, `?clickCode=xyz`) is baked into the body and **cannot be parameterised per recipient** without sending separate emails (which would lose the thread for reply-all).
+
+→ When someone opens/clicks, we know **the envelope was opened/clicked** but not **which recipient** did it.
+
+SendGrid's webhook, on the other hand, fires per recipient address (it tracks SMTP delivery per address) — so `email_envelope_recipient_events` *is* per recipient.
+
+For bulk/workflow emails this distinction is moot since envelope ↔ recipient is 1:1 anyway.
 
 Models — all in `app/Models/Account/Email/Envelope/`:
 
@@ -145,7 +163,7 @@ $envelopeCreator = new EnvelopeCreator($email);
 $envelopeCreator->createEnvelope(collect([$this->participant->contact]));
 ```
 
-Same envelope creation as a normal send → **all three tracking pipelines (delivery/open/click) work identically**.
+Always **1 envelope = 1 recipient (the participant's contact)** — so opens/clicks can be unambiguously attributed to that one contact. Same envelope creation as a normal send → **all three tracking pipelines (delivery/open/click) work identically**.
 
 ---
 
