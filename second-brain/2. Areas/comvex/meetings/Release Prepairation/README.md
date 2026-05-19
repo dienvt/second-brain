@@ -24,7 +24,7 @@ If there are many in charge of one service. Or one person in charge in many serv
 * Each member will check the service their in charge and merge the release PRs to `develop`
 ## 3. Create ECR
 
-### Backend Release
+### Backend / Microservice Release
 Now in the releasing project
 1. fetch all change in develop and master branch
 	Then `rebase develop master`
@@ -50,17 +50,6 @@ chore: Bump app version to x.x.x
 
 #### Release
 To release we just need to use the release tag
-### Hotfix 
-* Create hotfix branch `hotfix/vx.x.1`
-* Then create PR to master. Waiting approve and merge this PR
-* And then run release please with master branch target
-* Then just do the promotion the newly created image
-
-* After the release, we have to merge the release back to the 
-
-We have to update the print page when create release
-
-Frontend have another way, we have to push to master for the production release.
 
 ### Backend App
 
@@ -80,7 +69,7 @@ For update version we have to alter the `composer.json`
 https://github.com/comvex-jp/digima-backend-app/blob/develop/composer.json
 
 
-#### Web App
+### Web App
 
 For Frontend Deployment Preparation:
 
@@ -94,7 +83,20 @@ For Frontend Deployment Preparation:
 
 For update version we have to alter the `package.json`. Ex: https://github.com/comvex-jp/digima-web-app/blob/develop/package.json
 
-### Short link:
+#### Short link:
 Production Prontend Build:
 https://jenkins.mgmt.digima.com/view/App%20-%20Frontend/job/Digima%20Production%20Frontend%20Build/
+
+## 4. Hotfix 
+* Create hotfix branch `hotfix/vx.x.1`
+* Then create PR to master. Waiting approve and merge this PR
+* And then run release please with master branch target
+* Then just do the promotion the newly created image
+
+* After the release, we have to merge the release back to the 
+
+We have to update the print page when create release
+
+Frontend have another way, we have to push to master for the production release.
+
 # Post Meeting
