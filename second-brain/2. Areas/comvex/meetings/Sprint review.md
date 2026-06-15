@@ -48,6 +48,7 @@ Switch to [PdM Sprint Management](https://comvex.myjetbrains.com/youtrack/agiles
 
 
 ## 4. Review Grantt Chart
+Moi truong khong toi uwu.
 
 
 ## 5. Update Bug Management Sheet

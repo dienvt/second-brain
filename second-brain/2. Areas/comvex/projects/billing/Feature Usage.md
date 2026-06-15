@@ -267,6 +267,9 @@ Headers:
 Response field used: `total_outbound_sent_parts`
 What's Counted: SMS parts/segments sent (long messages split into multiple parts)
 
+
+
+
 ---
 #### 6. SMS/InboundUsageManager - PERIOD-BASED (Monthly)
 | Aspect           | Details                                  |
@@ -291,6 +294,32 @@ FeatureUsage->show(
     retrieve_to: Timestamp($to)
 )->getOutboundMessagesCount()
 ```
+
+In line service:
+
+Calculation (domain/services/feature_usage/service.go:23)
+
+  For the time window [from, to], the service returns a models.FeatureUsage with:
+  - **OutboundMessagesCount** = sum of two counts (see below)
+  - **ChannelsCount** = hardcoded 0 (not used yet — service.go:37)
+  - From, To = the requested window
+  - CalculatedAt = time.Now() at call time
+
+  **OutboundMessagesCount** (the billing count) is computed in countMessagesForBilling:
+  billingCount = CountSingleMessages(outbound) + CountGroupedMessages(outbound)
+  Both filter by exchange_type = outbound.
+
+  Counting rules (infra/database/repositories/mysql/contact_message/repository.go:206)
+
+  Both calls go through countByCondition against contact_messages:
+  - db.Unscoped() — soft-deleted rows are still counted
+  - occurred_at is within [from, to] inclusive
+  - exchange_type = 'outbound'
+  - Group filter via getGroupCondition at repository.go:238:
+    - Single messages (BelongsToGroupMessage=false): **group_message_recipient_id IS NULL**
+    - Grouped messages (BelongsToGroupMessage=true): **group_message_recipient_id IS NOT NULL**, then GROUP BY group_message_recipient_id — so each group blast counts as 1, regardless of how many recipients it had
+
+
 ---
 #### 8. Phone/Number/UsageManager - PERIOD-BASED (Point-in-Time)
 | Aspect | Details |
@@ -323,7 +352,7 @@ OutgoingCall::withTrashed()
     ->where('ended_at', '>=', $from)
     ->where('ended_at', '<=', $to)
     ->where('type', 'browser')          // Outgoing only
-    ->where('status', '!=', 'failed')
+    ->where('status', '!=', 'failed') ??? 
     ->where('is_mobile', true/false)
     ->where(fn($q) => $q->whereNull('deleted_at')->orWhere('deleted_at', '>=', $from))
 Duration Calculation:
@@ -333,6 +362,7 @@ Duration Calculation:
  ELSE ROUND(duration/60+0.5, 0) END) AS duration_in_minutes
 ```
 What's Counted: Sum of call duration in minutes (rounded up)
+
 
 ---
 #### 13. Call/PlanSubscription/UsageManager - PERIOD-BASED (Peak)

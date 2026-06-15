@@ -2,9 +2,9 @@
 title: digima-backend-agent — AI Agent Detail
 project: digima-backend-agent
 type: project-reference
-tags: [comvex, digima, ai-agent, gemini, adk, reference]
+tags: [comvex, digima, ai-agent, gemini, adk, reference, dai-location-filtering]
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-06-04
 repo: github.com/comvex-jp/digima-backend-agent
 ---
 
@@ -102,7 +102,7 @@ All wiring lives in `app/providers/routes.go`.
 |---|---|
 | `AgentService` | CRUD on agent registrations for a tenant |
 | `AgentSettingsService` | Per-agent feature flags & configuration |
-| `BusinessTypeSettingsService` | Business-type rules (real estate, recruiting, etc.) |
+| `BusinessTypeSettingsService` | Business-type rules (real estate, recruiting, etc.); per-BT trigger target `trigger_contact_group_id` + `CheckTriggerGroupInUse` delete guard (DGM2-28496) |
 | `TaskService` | Create / inspect agent tasks (e.g. `send_sms_message`) |
 
 Interceptor chain: `log → recovery → authIntrospect → (xray) → db`. Auth is delegated to `digima-backend-auth`.
@@ -306,6 +306,224 @@ sequenceDiagram
     end
 ```
 
+### 4.3 DAI trigger-group execution filter — 拠点別絞り込み (DGM2-28496)
+
+Per-business-type **起動対象 / trigger target**: an execution filter that decides whether DAI runs *at all* for a contact, by membership in a dynamic contact group (e.g. "store-A customers"). Enables phased rollout per location.
+
+**Two contact-group fields on `business_type_settings` — different roles:**
+
+| Field | Cardinality | Role | Can drop DAI? |
+|---|---|---|---|
+| `contact_group_ids` (existing) | repeated | **SELECTION** — which BT's messaging applies (multi-BT accounts only; contact in no group still falls back to primary/random/first) | never |
+| `trigger_contact_group_id` (new) | single, nullable | **GATING** — execution filter; `NULL` = 全顧客 (all contacts, no restriction) | yes |
+
+**Filter algorithm** (identical in both pipelines, runs before BT determination and before any LLM spend):
+
+1. Collect non-nil `TriggerContactGroupId`s across the agent setting's BTs — none set → pass through unchanged (backward compatible).
+2. `GetContactGroupMemberships(account, contact, triggerGroupIds)` → digima-app, which evaluates dynamic-group membership via filter-api **at query time**. Fresh per run, no caching (AC requirement).
+3. Keep a BT if its trigger is `nil` OR the contact is a member.
+4. **All BTs gated out** → drop + log `reason=trigger_contact_group_excluded`.
+5. Survivors → existing determination logic (`selectBusinessTypeSetting`: contact_group_ids match / primary / random).
+
+**Deletion guard**: `CheckTriggerGroupInUse(group_id) → {in_use}` RPC backed by `ExistsByTriggerContactGroupId(accountId, groupId)` — account-scoped via an `agent_settings` subquery (BT settings have no `account_id` column; contact-group ids are account-scoped in Digima). The BFF must call this before forwarding a contact-group delete to backend-app — `GroupPolicy::delete()` there has **no** guard.
+
+**Work breakdown / status (2026-06-04):**
+
+| Card | Scope | Status |
+|---|---|---|
+| [DGM2-29937](https://comvex.myjetbrains.com/youtrack/issue/DGM2-29937) | proto: `trigger_contact_group_id` field | draft PR [agent-proto #47](https://github.com/comvex-jp/digima-backend-agent-proto/pull/47) |
+| [DGM2-29946](https://comvex.myjetbrains.com/youtrack/issue/DGM2-29946) | proto: `CheckTriggerGroupInUse` RPC | same PR #47 |
+| [DGM2-29938](https://comvex.myjetbrains.com/youtrack/issue/DGM2-29938) | persist end-to-end + migration 010 | branch `feat/dgm2-29938-persist-trigger-contact-group-id`, green |
+| [DGM2-29939](https://comvex.myjetbrains.com/youtrack/issue/DGM2-29939) | execution filter (both pipelines) | draft [PR #214](https://github.com/comvex-jp/digima-backend-agent/pull/214) → base 29938 |
+| [DGM2-29943](https://comvex.myjetbrains.com/youtrack/issue/DGM2-29943) | delete-guard endpoint | draft [PR #215](https://github.com/comvex-jp/digima-backend-agent/pull/215) → base 29938 |
+| [DGM2-29944](https://comvex.myjetbrains.com/youtrack/issue/DGM2-29944) | BFF passthrough + guard enforcement | pending |
+| [DGM2-29945](https://comvex.myjetbrains.com/youtrack/issue/DGM2-29945) | FE: per-BT trigger target UI | pending |
+
+> [!warning] Open design question — one field or two?
+> The card's AC determines survivors by *main-first/random* — **not** by `contact_group_ids` — and frames the feature as repurposing "the existing dynamic contact group selection" as an execution filter. That makes the old `contact_group_ids` selection potentially vestigial. Consolidating to one field would also collapse the two `GetContactGroupMemberships` calls per run into one. Unresolved as of 2026-06-04; both PRs implement the two-field layering (filter in front, selection preserved).
+
+### 4.4 Full `Run()` gate order — Contact Nurturing (as of 2026-06-04, incl. trigger filter)
+
+Scheduling phase (`ScheduleDelayed` from Kafka contact/click events):
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant K as Kafka event
+    participant S as Service
+    participant DB as MySQL
+    participant R as Redis
+    participant SQ as SQS
+
+    K->>S: ScheduleDelayed(contactId, trigger)
+    S->>DB: List agent_setting (contact_nurturing)
+    break nil / disabled
+        S-->>K: skip "agent_setting_not_enabled"
+    end
+    S->>R: SetNx dedup:contact_nurturing:schedule:{a}:{c}
+    break already set
+        S-->>K: skip "duplicate"
+    end
+    S->>SQ: ScheduleContactNurturingAgent(now + WaitBeforeEngageHours)
+    Note over S,SQ: (alt) ScheduleImmediate → publish RabbitMQ immediate job
+```
+
+Worker execution:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant W as Worker
+    participant S as Service
+    participant R as Redis
+    participant DB as MySQL
+    participant DG as digima-app
+    participant L as LLM agents
+    participant MQ as RabbitMQ
+    participant SL as Slack
+
+    W->>S: Run(contactId, accountId, triggerType)
+    S->>R: SetNx dedup:contact_nurturing:{a}:{c}
+    break already set
+        S-->>W: skip "duplicate"
+    end
+    S->>DB: List agent_setting (contact_nurturing)
+    break nil / disabled
+        S-->>W: skip "agent_setting_not_enabled"
+    end
+    S->>DG: GetContact (retry) + GetAccount
+    break invalid status description
+        S-->>W: skip "invalid_status_description"
+    end
+    break not eligible
+        S-->>W: skip "contact_not_eligible"
+    end
+    S->>DG: GetActiveFeatureSubscriptions
+    break SMS not subscribed
+        S-->>W: skip "sms_not_subscribed"
+    end
+    rect rgb(255,245,200)
+        Note over S,DG: ★ DGM2-29939 trigger-group filter (起動対象)
+        S->>S: collect non-nil TriggerContactGroupIds (none → pass through)
+        S->>DG: GetContactGroupMemberships(triggerGroupIds) — fresh, no cache
+        S->>S: keep BT if trigger nil OR contact ∈ group
+        break all business types gated out
+            S-->>W: DROP "trigger_contact_group_excluded"
+        end
+    end
+    S->>S: contactProfile / messageHistory / lastSentSms
+    S->>DG: getBusinessTypeInfo(FILTERED) + GetContactStatuses
+    Note over S,DG: multi-BT only: 2nd membership call for contact_group_ids SELECTION
+    S->>L: ActionSelector
+    break action ≠ send_sms
+        S-->>W: skip
+    end
+    S->>L: MessageGenerator
+    break guardrail blocked
+        S->>SL: evaluator workflow (guardrail payload)
+    end
+    S->>L: KnowledgeRetriever (+ KB service)
+    S->>L: QualityEvaluator
+    S->>MQ: CreateTask v1.agent.task.create
+    S->>SL: message-evaluator workflow
+```
+
+### 4.5 Full `Run()` gate order — SMS Reply (as of 2026-06-04, incl. trigger filter)
+
+Scheduling phase (`RunDelayed` from inbound `contact_message.created.v1`):
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant K as Kafka inbound SMS
+    participant S as Service
+    participant DB as MySQL
+    participant R as Redis
+    participant SQ as SQS
+
+    K->>S: RunDelayed(contactId, accountId, smsMsgId)
+    S->>DB: List agent_setting (sms_reply)
+    break nil / disabled
+        S-->>K: skip "agent_setting_not_enabled"
+    end
+    S->>R: SetNx sms_reply_delayed:A{a}C{c}
+    break already set
+        S-->>K: skip "duplicate" (collapses burst of inbound SMS)
+    end
+    S->>SQ: ScheduleSmsReplyAgent(now + 10 min)
+    Note over S,SQ: staging bypass: account 499 runs synchronously
+```
+
+Worker execution:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant W as Worker
+    participant S as Service
+    participant DB as MySQL
+    participant DG as digima-app
+    participant SM as sms-api
+    participant L as LLM agents
+    participant MQ as RabbitMQ
+    participant SL as Slack
+
+    W->>S: Run(contactId, accountId, smsMsgId)
+    S->>DB: List agent_setting (sms_reply)
+    break nil / disabled
+        S-->>W: skip "agent_setting_not_enabled"
+    end
+    S->>DG: GetContact
+    break not eligible
+        S-->>W: skip "contact_not_eligible"
+    end
+    break stop conditions
+        S-->>W: skip "stop_conditions_triggered"
+    end
+    S->>DG: GetActiveFeatureSubscriptions
+    break SMS not subscribed
+        S-->>W: skip "sms_not_subscribed"
+    end
+    S->>SM: list all contact SMS messages
+    break no relevant messages
+        S-->>W: skip "no_relevant_messages"
+    end
+    break user already replied
+        S-->>W: skip "user_already_replied"
+    end
+    S->>S: receivedMessage / profile / messageHistory / lastSent
+    rect rgb(255,245,200)
+        Note over S,DG: ★ DGM2-29939 trigger-group filter (起動対象)
+        S->>S: collect non-nil TriggerContactGroupIds (none → pass through)
+        S->>DG: GetContactGroupMemberships(triggerGroupIds) — fresh, no cache
+        S->>S: keep BT if trigger nil OR contact ∈ group
+        break all business types gated out
+            S-->>W: DROP "trigger_contact_group_excluded"
+        end
+    end
+    S->>DG: getBusinessTypeInfo(FILTERED) + statuses + account name
+    Note over S,DG: multi-BT only: 2nd membership call for contact_group_ids SELECTION
+    S->>L: ActionSelector
+    break action ∉ {reply_sms, ADD_TO_SMS_EXCLUSION}
+        S-->>W: skip
+    end
+    opt ADD_TO_SMS_EXCLUSION
+        S->>SL: action-evaluator workflow
+    end
+    S->>L: PolePositionPlanner
+    S->>L: MessageGenerator
+    break guardrail blocked
+        S->>SL: evaluator workflow (guardrail payload)
+    end
+    S->>S: fetchKnowledgeRetrieved (KB service)
+    S->>L: QualityEvaluator
+    S->>MQ: CreateTask v1.agent.task.create
+    S->>SL: message-evaluator workflow
+```
+
+> [!note] Placement of the filter
+> The filter is the **last gate before LLM spend** — a gated-out contact costs one extra membership HTTP call, zero tokens. Nurturing runs it before profile/history gathering; SMS reply after (those were already needed for the relevance gates). Both run it before BT determination, so behavior is equivalent.
+
 ---
 
 ## 5. External dependencies
@@ -355,6 +573,7 @@ sequenceDiagram
 | Change an agent's prompt | `infra/agent/<agent>/instructions.go` |
 | Change an agent's model / tools | `infra/agent/<agent>/agent.go` |
 | Add a new agent to a pipeline | `domain/services/contact_nurturing/pipeline.go` or `domain/services/sms_reply/pipeline.go` |
+| Change the DAI trigger-group filter (起動対象) | `domain/services/{contact_nurturing,sms_reply}/…` `withFilteredBusinessTypeSettings` / `filterByTriggerContactGroup` |
 | Wire a new gRPC method | `interface/resources/<domain>/grpc/v1/` + `routes.go:registerGrpcRoutes` |
 | Add a Kafka event handler | `interface/resources/<domain>/event/` + `routes.go:registerEventListenerRoutes` |
 | Add a RabbitMQ worker | `interface/resources/<domain>/worker/` + `routes.go:registerWorkerRoutes` |
