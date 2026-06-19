@@ -6,19 +6,29 @@ Schedule
 Monthly Invoice: 6h
 19h: Carry over
 
+* Backend-app accumulative usage:
+```
+Resume this session with:
+claude --resume 495f3805-00cf-471b-bc8d-d72b5080bbfb
+```
 
-| Task                                   | status | Fix applied after |                                                                                            |
-| -------------------------------------- | ------ | ----------------- | ------------------------------------------------------------------------------------------ |
-| Fix Call made event in Backend-App     | 🟡🔴   |                   |                                                                                            |
-| [Billing] Fix the duration calculation | 🟢🟢   |                   |                                                                                            |
-| [BackendApp] Fix the phone made event  | 🟡🔴   |                   |                                                                                            |
-| Investigate line_message               | 🟢🟢   | 2026-05-23:00:00  | Duplicate idempotency key. The contact_group_recipient_id                                  |
-| Investigate call_phone_number          | 🟡🔴   |                   | carry over error                                                                           |
-| Investigate call_plan_call_digima      | 🟡🔴   |                   | carry over error                                                                           |
-| Investigate web_tracking_visit         | 🟢🔴   |                   | Maybe there is some duplicate webtracingvisit. Because it upsert so it still publish twice |
-| Inviestigate sms_message_outbound      | 🟡🔴   |                   | The events duplicated                                                                      |
-| Inviestigate email_message             | 🟡🔴   |                   |                                                                                            |
-|                                        |        |                   |                                                                                            |
+* Default billing properties
+* 
+
+| Task                                   | status | Fix applied after |                                                                                                                                                                                                      |
+| -------------------------------------- | ------ | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fix Call made event in Backend-App     | 🟡🔴   |                   |                                                                                                                                                                                                      |
+| [Billing] Fix the duration calculation | 🟢🟢   |                   |                                                                                                                                                                                                      |
+| [BackendApp] Fix the phone made event  | 🟡🔴   |                   |                                                                                                                                                                                                      |
+| Investigate line_message               | 🟢🟢   | 2026-05-23:00:00  | Duplicate idempotency key. The contact_group_recipient_id                                                                                                                                            |
+| Investigate call_phone_number          | 🟡🔴   |                   | carry over error                                                                                                                                                                                     |
+| Investigate call_plan_call_digima      | 🟡🔴   |                   | carry over error                                                                                                                                                                                     |
+| Investigate web_tracking_visit         | 🟢🟢   |                   | Maybe there is some duplicate webtracingvisit. Because it upsert so it still publish twice                                                                                                           |
+| Inviestigate sms_message_outbound      | 🟢🟢   |                   | The events duplicated                                                                                                                                                                                |
+| Inviestigate email_message             | 🟢🔴   |                   | There is mismatch in idempotency key. So we have to include the contact ID as well<br>In case workflow: if a message sent to a contact twice. <br>Biliing count it one but backend-app count it two. |
+|                                        |        |                   |                                                                                                                                                                                                      |
+| call_rate_landline_incoming            |        |                   | Ko nhan dc event                                                                                                                                                                                     |
+|                                        |        |                   |                                                                                                                                                                                                      |
 
 * [ ] migrate usage?
 * [ ] But we have to clean the usage right? 

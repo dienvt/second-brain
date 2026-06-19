@@ -198,6 +198,11 @@ WHERE type = 'notification' AND processed_at BETWEEN $from AND $to
 // Source 3: External Email Inbox (gRPC)
 FeatureUsage->show($from, $to)->getEnvelopes()->getResourceCount()
 ```
+
+```
+
+```
+
 What's Counted:
 - ✅ Distinct email recipients dispatched within period
 - ✅ Workflow notification participants processed within period
@@ -340,12 +345,12 @@ What's Counted: Phone numbers that existed at any point during the period
 
 ---
 #### 9-12. Phone Call UsageManagers - PERIOD-BASED (Monthly)
-| Manager | Feature Property | Filter |
-|---------|------------------|--------|
-| Outgoing/Landline | call_rate_landline | is_mobile = false |
-| Outgoing/Mobile | call_rate_mobile | is_mobile = true |
+| Manager           | Feature Property           | Filter            |
+| ----------------- | -------------------------- | ----------------- |
+| Outgoing/Landline | call_rate_landline         | is_mobile = false |
+| Outgoing/Mobile   | call_rate_mobile           | is_mobile = true  |
 | Incoming/Landline | call_rate_landline_forward | is_mobile = false |
-| Incoming/Mobile | call_rate_mobile_forward | is_mobile = true |
+| Incoming/Mobile   | call_rate_mobile_forward   | is_mobile = true  |
 Common Query Pattern (Outgoing):
 ```
 OutgoingCall::withTrashed()
@@ -363,6 +368,22 @@ Duration Calculation:
 ```
 What's Counted: Sum of call duration in minutes (rounded up)
 
+
+```
+IncomingCall::query()
+       ->withTrashed()
+       ->where('ended_at', '>=', $from)
+       ->where('ended_at', '<=', $to)
+       ->where('status', '!=', IncomingCall::STATUS_FAILED)
+       ->where('is_mobile', false)
+       ->where(
+           function (Builder $query) use ($from)
+           {
+               $query->whereNull('deleted_at')
+                     ->orWhere('deleted_at', '>=', $from);
+           }
+       );
+```
 
 ---
 #### 13. Call/PlanSubscription/UsageManager - PERIOD-BASED (Peak)

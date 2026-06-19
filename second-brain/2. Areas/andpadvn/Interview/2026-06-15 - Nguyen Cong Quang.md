@@ -9,13 +9,62 @@ Evaluation:
 - [ ] Greeting and ask for the introduction.
 	- [ ] Introduce interviewee.
 	- [ ] Introduce in english.
-		- [ ] 
+		- [ ] Hiện tại 
+		- [ ] Team 10 người
+			- [ ] Lead it lắm. Xem 
+			- [ ] Thich code và làm sane p
+		- [ ] Giai thich 
 - [ ] Hỏi về định hướng khi chọn andpad
-	- [ ] Match voi he thong cua minh
+	- [ ] Co moi truong san
+	- [ ] Docker chay qua ci/cd
+	- [ ] Terraform, 
 - [ ]  Hỏi về kinh nghiệm làm việc (15’)
 	- [ ] Daily tasks
+	- [ ] Dung go roi thi khong dung php nua
+	- [ ] Op metrics
+	- [ ] Hotel week 200 endpoints
+	- [ ] Microservice
+		- [ ] Doc thi nam mot database
+		- [ ] Business domains.
+		- [ ] Domain Driven Design.
+	- [ ] Services Go dung GRPC
+		- [ ] Json va resful
+		- [ ] Grpc
+		- [ ] Queue: 
+		- [ ] Saga:
+			- [ ] bottle neck
+			- [ ] Go xu ly queue 
+			- [ ] Queue, Streaming
+				- [ ] Duplicate va loss message.
+				- [ ] Transaction dung trong database message-ID
+					- [ ] Optimize lock.
+					- [ ] Permistic lock.
+				- [ ] loi mang va loi code.
+		- [ ] Gracefull shutdown. 
+			- [ ] Sigterm. 
+			- [ ] hệ thống đọc request. 
+			- [ ] Goi len sẻvice nhung ko nhan dc data.
+			- [ ] Goi API ko tra gi ve
+			- [ ] retry va timeout. Loi 500
+			- [ ] Cho Que va luu ra loc
+	- [ ] Chia theo business. Search 
 	- [ ] Khó khăn vào thách thức
+	- [ ] Thường thì anh sẽ 
 	- [ ] 
+- [ ] What do you think about AI and did you try to using AI to your work?
+- [ ] 2 nam gan day 
+- [ ] Opus Claude Code: Hoi bi roi
+	- [ ] vs code 
+	- [ ] open code
+	- [ ] Antigravity. 
+	- [ ] Chay API va query 
+- [ ] Goi 2-3 APIs chay performance test
+- [ ] euqality.
+- [ ] N + 1 problems 
+	- [ ] 3 APIs 
+	- [ ] Loops 1 
+	- [ ] Verified lai code gay ra lỗi.
+- [ ] 
 - [ ] Verifify wide then narrow the scope
 	- [ ] What is the protocol use to communicate between your services
 		- [ ] 
@@ -25,17 +74,38 @@ Evaluation:
 		- [ ] Ask do I familiar with k8s.
 			- [ ] Build docker file.
 	- [ ] How do you observer or telemety your services? Do you apply tracing
-		- [ ] 
+		- [ ] DataDog
+			- [ ] APM: SDK datadog.
+			- [ ] Metrics:
+			- [ ] 
 	- [ ] How to you write test and manage test coverage.
 		- [ ] 
 	- [ ] Which one your code need unit test and what is the perfect percent of coverage
-	- [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+		- [ ] 80% unit test.
+		- [ ] Performance test.
+		- [ ] 
+	- [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design.
+		- [ ] 
 - [ ] OAuth
 - [ ] OOP
 	- [ ] What is OOP ?
 	- [ ] What is SOLID
 - [ ] Golang
 	- [ ] What is goroutines
+		- [ ] Channel: Goroutine block lau qua. xong
+		- [ ] Stop goroutines
+		- [ ] Deadlock database. Teapod ghi het vao 1 bang log sau do 
+		- [ ] Deadlock đoc vao nhieu lần
+			- [ ] Explain
+			- [ ] Lock dynamo, mongodb.
+			- [ ] Write.
+			- [ ] Mysql sync.
+			- [ ] Cron job. 
+			- [ ] Ghi => AI, crem => id 
+			- [ ] Select for update.
+			- [ ] Khong thuong xuyen.
+			- [ ] Permi
+			- [ ] 
 	- [ ] How to avoid rate condition
 	- [ ] How you resolve consensure problem indo
 - [ ] Ask about SA: How service talking with each other
