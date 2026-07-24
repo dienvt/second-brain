@@ -120,6 +120,7 @@ These calculate usage from the beginning of time (or account creation) to the cu
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contact/UsageManager | Counts all non-archived, non-duplicate contacts created up to the current date (created_at <= $to). Uses peak billing - only updates if current count exceeds stored amount. |
 | Storage/UsageManager | Calculates total storage from account creation date to current date. Includes files, emails, and external service storage. Uses peak billing.                                |
+|                      |                                                                                                                                                                              |
 ### Period-Based (Monthly) - 10 Features
 These count events/actions that occurred within the billing month period:
 
@@ -197,6 +198,9 @@ workflow_action_participant_pivot JOIN workflow_actions
 WHERE type = 'notification' AND processed_at BETWEEN $from AND $to
 // Source 3: External Email Inbox (gRPC)
 FeatureUsage->show($from, $to)->getEnvelopes()->getResourceCount()
+
+??? lam gi o day
+
 ```
 
 ```
@@ -209,28 +213,32 @@ What's Counted:
 - ✅ External email inbox envelopes (if subscription active)
 ---
 #### 3. Storage/UsageManager - CUMULATIVE (Peak)
-| Aspect | Details |
-|--------|---------|
-| File | app/Services/Storage/UsageManager.php |
-| Feature Property | storage |
-| Data Sources | Local DB + External File & Email Services (gRPC) |
-| Period | From account creation date to current date |
+| Aspect           | Details                                          |
+| ---------------- | ------------------------------------------------ |
+| File             | app/Services/Storage/UsageManager.php            |
+| Feature Property | storage                                          |
+| Data Sources     | Local DB + External File & Email Services (gRPC) |
+| Period           | From account creation date to current date       |
 Query Conditions (4 sources combined):
 ```
 // Source 1: Local files (sum of size)
+// Billable File Types: Only email_attachment and call_recording
 File::withTrashed()
     ->where('created_at', '<=', $to)
     ->whereIn('type', ['email_attachment', 'call_recording'])
     ->where(fn($q) => $q->whereNull('deleted_at')->orWhere('deleted_at', '>=', $from))
     ->sum('size')
+
+
 // Source 2: Local emails (text length sum)
 Email::where('created_at', '<=', $to)
      ->selectRaw('SUM(LENGTH(subject)+LENGTH(body_text)+LENGTH(body_html))')
+
 // Source 3: External Email Inbox (gRPC)
 envelopes.storageBytes + attachments.storageBytes
+
 // Source 4: External File Management (gRPC)
 sharedFiles.storageBytes + files.storageBytes
-Billable File Types: Only email_attachment and call_recording
 ```
 Billing Type: Peak billing - only updates if current > stored
 
@@ -284,6 +292,11 @@ What's Counted: SMS parts/segments sent (long messages split into multiple parts
 | Data Source      | External SMS Service (REST API)          |
 API Call: Same endpoint as outbound
 Response field used: `total_inbound_received`
+```
+total_inbound_received = count of sms_statistics documents with event_type = "message_inbound_received" matching the given carrier/date-range/message_id
+  filters, computed on-demand at query time (via domain/services/statistic/service.go:25 Aggregate), exposed through the HTTP v2/v3 and gRPC statistic
+  endpoints (interface/resources/statistic/.../controller.go) and also used per-message in interface/resources/message/http/v2|v3/transformers/message.go.
+```
 
 ---
 #### 7. Line/OutboundUsageManager - PERIOD-BASED (Monthly)
@@ -327,11 +340,11 @@ Calculation (domain/services/feature_usage/service.go:23)
 
 ---
 #### 8. Phone/Number/UsageManager - PERIOD-BASED (Point-in-Time)
-| Aspect | Details |
-|--------|---------|
-| File | app/Services/Phone/Number/UsageManager.php |
-| Feature Property | call_phone_number |
-| Data Source | Local database only |
+| Aspect           | Details                                    |
+| ---------------- | ------------------------------------------ |
+| File             | app/Services/Phone/Number/UsageManager.php |
+| Feature Property | call_phone_number                          |
+| Data Source      | Local database only                        |
 Query Conditions:
 ```
 Number::withTrashed()
@@ -387,11 +400,11 @@ IncomingCall::query()
 
 ---
 #### 13. Call/PlanSubscription/UsageManager - PERIOD-BASED (Peak)
-| Aspect | Details |
-|--------|---------|
-| File | app/Services/Call/PlanSubscription/UsageManager.php |
-| Feature Property | call_plan_call_digima |
-| Data Source | Local database only |
+| Aspect           | Details                                             |
+| ---------------- | --------------------------------------------------- |
+| File             | app/Services/Call/PlanSubscription/UsageManager.php |
+| Feature Property | call_plan_call_digima                               |
+| Data Source      | Local database only                                 |
 Query Conditions:
 ```
 PlanSubscription::withTrashed()

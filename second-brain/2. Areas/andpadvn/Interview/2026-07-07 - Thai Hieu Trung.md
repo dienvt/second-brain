@@ -7,15 +7,107 @@ Evaluation:
 ---
 ## Agenda: 1st technical interview (60m)
 - [ ] Greeting and ask for the introduction.
+	- [ ] Lead team IOT.
+		- [ ] Xung đột QA và Dev: Tuổi tác dev trẻ và dev ko trẻ. Giải quyết ntn: Để tự giải quyết
+		- [ ] Có thể grow people: deligate task Collect information. and push member. own feature end to end. 
+		- [ ] Chưa tốt và chưa tốt. End to end thì làm sao grow tiếp được. 
 	- [ ] Introduce interviewee.
-	- [ ] Introduce in english.
-		- [ ] 
+		- [ ] Tony
+		- [ ] Covergo insurance stack
+		- [ ] Saas bao hieu global
+		- [ ] Apac
+		- [ ] teck stack:
+			- [ ] Typescript
+			- [ ] Next/ view
+			- [ ] posgress
+			- [ ] EKS 
+			- [ ] CI/CD: git hub action, deploy, 
+			- [ ] CD flush, eks.
+			- [ ] Infra: Infra se van hanh rieng. Ticket thong qua 
+			- [ ] Team Platform se ko dc cau hinh infra.
+			- [ ] Co dung terraform voi helm chart
+		- [ ] Daily task:
+			- [ ] Team work agile:
+				- [ ] Sprint 2 tuan
+				- [ ] DSM, retro, grooming
+				- [ ] Whole team is full stack: Using Claude
+				- [ ] Team Trung 8 engineer.
+				- [ ] Dung AI.
+				- [ ] PO/ BA/ PM
+				- [ ] Requirement
+					- [ ] Grooming. Discuss BA/PO. Clearify
+					- [ ] 8 Implemnt
+					- [ ] Pick task theo module he was implementing
+					- [ ] PO decide which task will be assigned
+					- [ ] Gia dinh: engineer off. Hang task, Truoc khi nghi se hang over.
+					- [ ] Client 
+				- [ ] Claude usage
+					- [ ] Brainstorming system design. Draft ve APIs va automation test
+					- [ ] Automation QA define.
+					- [ ] Push official doc tren confluence.
+					- [ ] Sau so se implement Copilot github.
+					- [ ] Chat luong dau ra cua code.
+					- [ ] Review code cheo nhau. PR convention can prove.
+					- [ ] Push convention vao code base. Khong review ki tung file.
+					- [ ] Automation test cover. Dev sẽ chiuuj track nhiệm về featrure.
+		- [ ] Challeng la lam sao de dung AI cho tot
+		- [ ] Collapse voi stack holder voi business cong ty.
+		- [ ] Giao bai toan luon
+			- [ ] Internal platform.
+			- [ ] stack holder phia embed 🏁 
+			- [ ] Build custome component. Tiết kiệm thời gian. 
+			- [ ] Độ tuỳ biến, customize của 
+			- [ ] Viết module và shared.
+			- [ ] Đang viết SDK cho platform. build headless 
+			- [ ] Dễ dùng và phải follow API. Interface nên define rõ. cần có docs.
+			- [ ] UI component tuỳ biết về stylelint 
+		- [ ] Bài toán: Andpad SaaS. Multi tenant.
+			- [ ] Làm user tenant. Trung propose giải pháp
+				- [ ] Tenant own một instance riêng
+					- [ ] Own DB
+						- [ ] Migration: 
+							- [ ] Đồng bộ ??? thì đồng bộ ntn?
+							- [ ] Data migration?
+							- [ ] Build module quản lý.
+							- [ ] Tenant config.
+						- [ ] Roll đều. Infra lo phần update schema.
+						- [ ] Code ts. user có quyền update. 
+						- [ ] làm sao để biết bao nhiêu tenants?
+						- [ ] System DB. hold thông tin tenant.
+					- [ ] Thêm tenant thì làm sao
+						- [ ] Raise ticket lên infra. tạo S3 tạo db. 
+						- [ ] Deployment.
+					- [ ] Authentication dùng third party
+						- [ ] Tenant own một branch
+						- [ ] Isolate keyclaude
+					- [ ] Role permission
+						- [ ] Controll inside tenant.
+				- [ ] Nếu mình chỉ có một service
+					- [ ] Tenant resolver dùng tenant ID để
+					- [ ] 
+					- [ ] 
+			- [ ] 
 - [ ] Hỏi về định hướng khi chọn andpad
 	- [ ] Match voi he thong cua minh
+	- [ ] Khoong Call sync build on async.
+	- [ ] Event driven và pubsub. Circular dependencies
+	- [ ] Insurance
+	- [ ] Contrant
+	- [ ] Outbox patterns
+	- [ ] 
 - [ ]  Hỏi về kinh nghiệm làm việc (15’)
 	- [ ] Daily tasks
 	- [ ] Khó khăn vào thách thức
-	- [ ] 
+	- [ ] Làm về typescript là chính.
+		- [ ] Team design make decision design nhưng mà chưa ready.
+		- [ ] Usecase cty hiện tại build dùng .NET vẫn build bằng .NET sau đó dùng typescript.
+		- [ ] Build team nhanh hơn.
+	- [ ] Workflow, persit trong workflow state
+	- [ ] Qua nhieu request :
+		- [ ] Race condition: Dung redis lock. Cluster hay la single node. Elsa
+		- [ ] Race condition: it khi xay ra. 
+		- [ ] Luc do chi co 1 user engage voi.
+		- [ ] 
 - [ ] Verifify wide then narrow the scope
 	- [ ] What is the protocol use to communicate between your services
 		- [ ] 
@@ -48,7 +140,7 @@ Evaluation:
   - **Question:** "Can you tell me about how you typically handle concurrency in Go?"
   - **Answer:** Discussed using goroutines and channels, best practices like `sync.Mutex`, `sync.WaitGroup`, and avoiding race conditions.
 - **Context**:
-	- How you use context in your 
+	- How you use context in your
 - Live coding:
 	* Q1: https://goplay.tools/snippet/CtzeYviqY6u
 		* **Scenario:** We are building the "Profile View" feature for a system like LinkedIn.
@@ -104,7 +196,6 @@ Evaluation:
 The two main approaches are:
 
 1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails.
-    
 2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.
 
 * Two phase commit:
@@ -156,9 +247,3 @@ The two main approaches are:
 1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails.
     
 2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.
-
-### Account and member
-For example Multi Tenant:
-- User belong to the account?
-- How to search by name?
-- 

@@ -11,7 +11,7 @@ https://comvex.atlassian.net/wiki/spaces/SE/pages/2421227545/Meeting+Schedules#S
 - There was a template that using to represent: For example [Sprint 141](https://comvex.atlassian.net/wiki/spaces/SE/pages/2667184129/Sprint+141)
 ## Preparation
 1. Switch to [PdM Sprint Management](https://comvex.myjetbrains.com/youtrack/agiles/107-133/current?query=%23Platform%20) - Where all story was listed.
-	- Add new Swim lane and named it "[Effort Spent Total] This card summarize all effort spent on Sprint 137 that cards are moved to next Sprint". Refs: DGM2-23389
+	- Add new Swim lane and named it `[Effort Spent Total] This card summarize all effort spent on Sprint 137 that cards are moved to next Sprint`. Refs: DGM2-23389
 		- Type Engineer Story
 		- Content: `## Cards under these efforts`
 		- 
