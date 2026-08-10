@@ -13,6 +13,28 @@ references:
 - [Grade Definition Q&A](https://docs.google.com/spreadsheets/d/1O6gA-jQUstrBE6zUGuvBJktZaCdZgOOz48en5hBWIA8/edit?gid=1594642932#gid=1594642932)
 - Grading Definition for Dev: [開発本部版_グレード別要件定義 Grading Definition for Dev](https://docs.google.com/spreadsheets/d/1UrXiSKDA0jIJP0Ul7pboeHT5foJ9Wgy5jIE9Pd3pIFo/edit?gid=1057625781#gid=1057625781)**
 
+### Round 1 60 - 90 mins (Optional)
+Using Vietnamese
+- Technical knowledge
+	- DB index
+	- Golang
+	- race condition
+	- none-blocking
+	- distributed Lock/transaction
+	- Dead lock
+	- Observation
+	- Design pattern
+	- System design
+	- Axis
+	- 
+- Problem solving
+	- 
+	- 
+- Logical thinking
+	- 
+	- 
+- Communication (Optional)
+
 ### Core value
 Reality 
     Value

@@ -44,9 +44,9 @@
 
 ## Kế hoạch áp dụng (Digima Notification Microservice)
 
-| Phase | Mô tả | Cách dùng SES |
-|-------|-------|--------------|
-| **Phase 1** | Nhận bounce events → gửi Slack alert | SNS Feedback Notifications → webhook → Slack |
+| Phase       | Mô tả                                         | Cách dùng SES                                               |
+| ----------- | --------------------------------------------- | ----------------------------------------------------------- |
+| **Phase 1** | Nhận bounce events → gửi Slack alert          | SNS Feedback Notifications → webhook → Slack                |
 | **Phase 2** | Lưu dispatch_events, Admin App quản lý bounce | Event Publishing → SNS/Firehose → Notification Microservice |
 
 > Phase 2 cần thiết kế tách biệt rõ ràng giữa `backend_app notifications` và `Notification Microservice`.
