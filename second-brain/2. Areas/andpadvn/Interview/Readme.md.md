@@ -26,7 +26,7 @@ Using Vietnamese
 	- Design pattern
 	- System design
 	- Axis
-	- 
+	- CI/CD
 - Problem solving
 	- 
 	- 
