@@ -1,4 +1,5 @@
 {
+  "locale": "en",
   "periodicNotesPath": "0. PeriodicNotes",
   "usePeriodicAdvanced": false,
   "periodicNotesTemplateFilePathYearly": "",
@@ -29,5 +30,10 @@
   "usePARAAdvanced": false,
   "paraIndexFilename": "readme",
   "weekStart": -1,
-  "useChineseCalendar": false
+  "useChineseCalendar": false,
+  "dailyNoteFormat": "YYYY-MM-DD",
+  "weeklyNoteFormat": "gggg-[W]ww",
+  "monthlyNoteFormat": "YYYY-MM",
+  "quarterlyNoteFormat": "YYYY-[Q]Q",
+  "yearlyNoteFormat": "YYYY"
 }

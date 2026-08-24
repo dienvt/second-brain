@@ -1,14 +1,14 @@
 [
   "dataview",
   "templater-obsidian",
-  "obsidian-tasks-plugin",
   "better-search-views",
   "obsidian-copy-block-link",
   "obsidian-excalidraw-plugin",
   "obsidian-reveal-active-file",
   "mermaid-tools",
-  "obsidian-git",
   "obsidian-enhancing-mindmap",
-  "periodic-para",
-  "obsidian-plantuml"
+  "obsidian-plantuml",
+  "obsidian-tasks-plugin",
+  "obsidian-git",
+  "periodic-para"
 ]
