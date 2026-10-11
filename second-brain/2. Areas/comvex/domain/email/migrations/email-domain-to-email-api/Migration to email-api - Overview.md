@@ -12,24 +12,24 @@ Plan for moving the **CRM email domain** out of the `digima-backend-app` Laravel
 Companions:
 - [[Migration to email-api - Waves]] — the ordered, step-by-step plan
 - [[Email Feature Usage Metering]] — the billing-critical subsystem, and why it gates the tracking wave
-- Current state: [[Relationship Diagram]], [[Email Tracking - Delivery, Open, Click]], [[email]]
+- Current state: [[domain/email/Relationship Diagram|Relationship Diagram]], [[domain/email/Email Tracking - Delivery, Open, Click|Email Tracking - Delivery, Open, Click]], [[domain/email/entites|entites]]
 - Target service: [[digima-backend-email/api|email-api project note]], [[digima-backend-email/worker|email-api worker note]]
 
 > Mirror of the repo docs at `docs/migrations/email-domain-to-email-api/` in `digima-backend-app`.
 
 ## TL;DR
 
-| Question | Answer |
-|---|---|
-| **Target** | Extend the **existing** `digima-backend-email-api`, not a new service. It already owns inbox emails, envelopes, attachments, links, clicks, opens, connections, providers — and per-account DB provisioning. |
-| **Scope** | 8 subsystems: templates, sender identity, composition/send, bulk orchestration, tracking/engagement, attachments, statistics, **feature usage metering** |
-| **Out of scope** | All transactional/system mail (password reset, activation, notifications, digests) — separate `MAIL_MAILER` path, no shared tables |
-| **How users keep working** | Monolith stays the REST façade; per-account feature flags; dual-write → backfill → verify → read cutover → stop-write → drop; Kafka events replace cross-DB SQL joins |
-| **Size** | 7 waves (0–6). Waves 1–3 parallelisable; 4 → 5 → 6 strictly sequential |
-| **Biggest blocker** | Who resolves recipients and renders placeholders (§5.1) — decides every proto |
-| **Biggest surprise** | email-api has **no SendGrid support at all**. Wave 2 adds it as a new transport, not a port. |
-| **Riskiest wave** | Wave 5 (bulk) — a bug means duplicate mail to customers' contact lists |
-| **Most constrained** | Wave 3 — it moves the table that **invoices are computed from** |
+| Question                   | Answer                                                                                                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Target**                 | Extend the **existing** `digima-backend-email-api`, not a new service. It already owns inbox emails, envelopes, attachments, links, clicks, opens, connections, providers — and per-account DB provisioning. |
+| **Scope**                  | 8 subsystems: templates, sender identity, composition/send, bulk orchestration, tracking/engagement, attachments, statistics, **feature usage metering**                                                     |
+| **Out of scope**           | All transactional/system mail (password reset, activation, notifications, digests) — separate `MAIL_MAILER` path, no shared tables                                                                           |
+| **How users keep working** | Monolith stays the REST facade; per-account feature flags; dual-write → backfill → verify → read cutover → stop-write → drop; gRPC reads and internal-API pushes replace cross-DB SQL joins                                        |
+| **Size**                   | 7 waves (0–6). Waves 1–3 parallelisable; 4 → 5 → 6 strictly sequential                                                                                                                                       |
+| **Biggest blocker**        | Who resolves recipients and renders placeholders (§5.1) — decides every proto                                                                                                                                |
+| **Biggest surprise**       | email-api has **no SendGrid support at all**. Wave 2 adds it as a new transport, not a port.                                                                                                                 |
+| **Riskiest wave**          | Wave 5 (bulk) — a bug means duplicate mail to customers' contact lists                                                                                                                                       |
+| **Most constrained**       | Wave 3 — it moves the table that **invoices are computed from**                                                                                                                                              |
 
 ---
 
@@ -88,7 +88,7 @@ System and transactional mail — Laravel Notification channel over `MAIL_MAILER
 - Email address change confirmation (`EmailUpdateConfirmationRequiredNotification`)
 - Operational notifications and digests (contact assigned, import/export completed, Andpad/Kintone sync failures, reminders, SMS/LINE/web-form notifications)
 
-> **Boundary case:** `Notifications/Email/*` (`EmailOpenedNotification`, `EmailLinkClickedNotification`, `BouncedRecipientsNotification` + digests) are *system notifications triggered by CRM email events*. The notification stays in the monolith; its **trigger** becomes a Kafka event from email-api.
+> **Boundary case:** `Notifications/Email/*` (`EmailOpenedNotification`, `EmailLinkClickedNotification`, `BouncedRecipientsNotification` + digests) are *system notifications triggered by CRM email events*. The notification stays in the monolith; its **trigger** becomes an internal-API call from email-api.
 
 ---
 
@@ -145,7 +145,7 @@ Guest tracking  GET /email/v2|v3/click, /open · POST /email/v2/unsubscribe
 
 Rate limits to preserve: `throttle.any:20,60` on click, `throttle.email_opens:1,3600` on open.
 
-See [[Email Tracking - Delivery, Open, Click]] for the full semantics, including why opens/clicks are per-envelope but delivery events are per-recipient.
+See [[domain/email/Email Tracking - Delivery, Open, Click|Email Tracking - Delivery, Open, Click]] for the full semantics, including why opens/clicks are per-envelope but delivery events are per-recipient.
 
 ### 3.3 Data
 
@@ -157,7 +157,7 @@ See [[Email Tracking - Delivery, Open, Click]] for the full semantics, including
 
 **Statistic DB:** `DatabaseManager::getStatisticConnection()`
 
-See [[Relationship Diagram]] for the ER model.
+See [[domain/email/Relationship Diagram|Relationship Diagram]] for the ER model.
 
 ### 3.4 The twelve consumers outside the email domain
 
@@ -165,7 +165,7 @@ These are the real cost of the migration — each must keep working at every ste
 
 | Consumer | Coupling |
 |---|---|
-| **Workflow** | `EmailActionExecutor` calls `EnvelopeCreator` in-process; `Workflow\Action.resource_id` references an `Email` row; `CloneWorkflowJob`, `UpdateWorkflowJob`, `DeleteActionJob`, `MarkWorkflowInvalidSubscriber`, `CreateActionRequest` read email/template rows — see [[Workflow]] |
+| **Workflow** | `EmailActionExecutor` calls `EnvelopeCreator` in-process; `Workflow\Action.resource_id` references an `Email` row; `CloneWorkflowJob`, `UpdateWorkflowJob`, `DeleteActionJob`, `MarkWorkflowInvalidSubscriber`, `CreateActionRequest` read email/template rows — see [[domain/workflow/Workflow|Workflow]] |
 | **Contact filter index** | `FilterClient\Handlers\ContactAllFieldsIndex` ships `email_events` (opened/clicked/bounced/delivered/failed/dispatched/unsubscribed `email_ids`) to filter-api, built from SQL joins across `email_envelope_*` |
 | **Contact model** | `Contact::emails()` / `Contact::envelopes()` are `belongsToMany` across `email_contact_pivot` / `email_envelope_recipients`; `getEmailIdsByEvent` and `getEnvelopeEventQuery` join engagement tables directly |
 | **Contact export** | `Export\Contact\CreateExportRequestHelper`, `Export\Contact\RowParser` |
@@ -173,7 +173,7 @@ These are the real cost of the migration — each must keep working at every ste
 | **Notifications** | opened / clicked / bounced + digests |
 | **Web tracking** | `Services/Web/Tracking/TrackingManager` correlates envelope → website visit |
 | **Bulk actions** | `Services/Bulk/Email/BulkActionHelper` (bulk delete of emails) |
-| **Kafka producers** | `EventProducer\Handlers\{Emails, EmailEnvelopeClicks, RecipientEvents}` |
+| **Kafka producers** | `EventProducer\Handlers\{Emails, EmailEnvelopeClicks, RecipientEvents}` — topics `email.backend_app.{emails.created/updated/deleted, recipient_events.created, clicks.created}.v1`, consumed by downstream services. Production must **transfer** to email-api (see §5.6) |
 | **Feature lifecycle** | `Jobs/Feature/EndSubscriptionJob`, account cancel/disable checks in `ProcessEmailJob` |
 | **Feature usage metering** | `Services/Email/UsageManager`, `Services/Storage/UsageManager`, `CalculateStorageOverchargeCommand` — see [[Email Feature Usage Metering]] |
 | **Billing** | `Billing\SegmentMaker\UsageBased\EmailSegmentMaker` → `InvoiceCalculator`, `ReconcileUsageService`, `Jobs/Feature/{CalculateFeatureUsageJob,ReconcileDailyUsageJob}` — see [[Feature Usage]], [[Invoice flow]] |
@@ -191,8 +191,10 @@ Guest click/open/unsubscribe ─────────────────
 Scheduler microservice (SQS callback) ────────────► email-api
 Workflow (monolith) ──gRPC──► email-api
 
-email-api ──Kafka──► monolith consumers (activities, notifications,
-                     filter-index projection, web tracking)
+email-api ──HTTP──► monolith internal API /internal/v3/* (activities,
+                     notification triggers, filter-index projection, web tracking)
+email-api ──Kafka──► downstream consumers (filter-api, BI) — producer role
+                     transferred from the monolith
 ```
 
 **email-api owns**, per account: emails, campaigns, envelopes, recipients, recipient events, clicks, opens, unsubscribes, links, templates, sender addresses, sender domains, the exclusion list, statistics — plus the SendGrid account relationship.
@@ -220,7 +222,7 @@ Sending needs contact data: address, person in charge, and every field a templat
 
 Cross-DB Eloquent relations cannot. In order of preference:
 
-1. **Monolith-side read projection** fed by Kafka — a narrow table (`contact_id`, `email_id`, `envelope_id`, event type, timestamp) serving the filter index, export and the `getEmailIdsByEvent` family. Eventually consistent; fine for filtering and reporting.
+1. **Monolith-side read projection** fed by email-api pushing to the monolith's **internal HTTP API** — a narrow table (`contact_id`, `email_id`, `envelope_id`, event type, timestamp) serving the filter index, export and the `getEmailIdsByEvent` family. Eventually consistent; fine for filtering and reporting.
 2. **gRPC read path** for the few call sites needing read-after-write.
 
 Identify which call sites genuinely need strong consistency before Wave 3.
@@ -241,9 +243,41 @@ Per account at flag-flip there may be: emails in `processing`, `ProcessEmailChun
 
 `FeatureUsage.Show` is extended to return CRM dispatched-recipient counts alongside the existing inbox count, and `Email\UsageManager::getUsageAmount()` changes from *(local SQL + local workflow + remote inbox)* to *(remote total + local workflow notifications)*.
 
-The alternative — monolith counts locally over a projection — is rejected: a distinct count over a projection that may lag or drop events is a **silent billing error**, strictly worse than a failed gRPC call.
+The alternative — monolith counts locally over a projection — is rejected: a distinct count over a projection that may lag or drop pushes is a **silent billing error**, strictly worse than a failed gRPC call.
 
 **Rollout rule:** billing-affecting, so **no flag-flip cutover**. Parallel-run reconciliation for at least one full billing cycle per account, with every daily bucket matching exactly, before legacy removal. Full detail in [[Email Feature Usage Metering]].
+
+### 5.6 How does email-api notify the monolith? ⚠️ CONVENTION
+
+**The monolith never implements a Kafka consumer.** This is a Comvex convention, and the
+code bears it out: `app/Services/EventProducer/` produces only, there is no consumer
+anywhere in the codebase, and `config/kafka.php`'s consumer settings are unused.
+
+The two directions are therefore asymmetric:
+
+| Direction | Mechanism | Precedent in code |
+|---|---|---|
+| monolith → email-api | **gRPC** | `Services/EmailClient/Handlers/*` |
+| email-api → monolith | **monolith internal HTTP API** (`/internal/v3/*`) | `POST activities`, `POST activities/batch`, `POST emails/{email}/send-scheduled` (scheduler callback) |
+| email-api → other services | **Kafka, produced by email-api** | topics currently produced by the monolith |
+
+`POST /internal/v3/activities` and `/activities/batch` already exist for exactly this
+purpose — other microservices push activity rows into the monolith today. Email activity
+logging needs no new mechanism, only new callers.
+
+**Kafka producer ownership transfers with the data.** The monolith currently produces
+`email.backend_app.emails.{created,updated,deleted}.v1`,
+`email.backend_app.recipient_events.created.v1` and
+`email.backend_app.clicks.created.v1` for downstream consumers. Once email-api owns the
+data it must produce these instead. Note the `backend_app` segment names the producing
+service, so there is a decision to make: either email-api keeps publishing under the
+existing topic names to avoid breaking consumers, or the topics are renamed and every
+downstream consumer is migrated. **Whichever is chosen, the two producers must never run
+concurrently on the same topic** — duplicate events corrupt downstream state.
+
+Design consequence: anything the monolith needs to *know* becomes either a gRPC read or an
+internal-API endpoint the monolith exposes and email-api calls. Nothing becomes a queue the
+monolith drains.
 
 ---
 
@@ -252,7 +286,7 @@ The alternative — monolith counts locally over a projection — is rejected: a
 1. **The monolith stays the façade.** `/user/v2/emails/*` URLs, request shapes and response shapes do not change. Controller bodies become `EmailClient\Handlers\*` calls. **The frontend changes zero times.** Moving it to `/v3` is separate follow-up work.
 2. **Per-account feature flags gate every cutover.** Database-per-account + the existing `FeatureFlag` mechanism = migrate and roll back one account at a time. One flag per wave.
 3. **Every table group follows the same five steps:** dual-write → backfill → verify → read cutover → stop legacy write → drop. Each independently revertible; nothing dropped until the *following* wave is stable.
-4. **Events replace joins.** email-api emits Kafka; the monolith maintains read projections. Consumers are rewired to events **before** the corresponding write path moves.
+4. **gRPC reads and internal-API pushes replace joins.** The monolith never consumes Kafka (§5.6). It pulls from email-api over gRPC where a synchronous read is acceptable, and email-api pushes into the monolith's internal HTTP API where the monolith must maintain state (projections, activities, notification triggers). Consumers are rewired **before** the corresponding write path moves.
 5. **Shadow comparison before every read cutover.** Read both sides, log mismatches, cut over at zero mismatches for a full business cycle.
 6. **Billing-affecting metrics are parallel-run, never flag-flipped.** A mismatch is a release blocker, not a warning.
 
@@ -268,6 +302,8 @@ The alternative — monolith counts locally over a projection — is rejected: a
 | Payload size for very large campaigns under §5.1 A | Chunk the recipient push at the existing `config('mail.bulk.chunk_size')` |
 | Scheduled emails lost at cutover | Explicit migration of `scheduled` rows + SQS drain in the Wave 4 runbook; inventory before, verify after |
 | Two systems writing engagement data during dual-write | Single writer per table group always; dual-*write* = monolith writes both, never two services writing independently |
+| Both services producing the same Kafka topic during the transfer | Producer ownership cuts over in one release per topic (§5.6); never overlap — duplicate events corrupt downstream consumers |
+| Internal-API push from email-api fails and the projection silently lags | Push endpoints are idempotent and retried by email-api; monitor projection lag explicitly, and never source a billing metric from a projection (§5.5) |
 | Usage metering drifts → wrong invoices | email-api owns the `DISTINCT` (§5.5); parallel-run with per-day equality as the gate |
 | Historical usage recomputation changes after backfill | Backfill preserves `recipient_id` + `occurred_at` identity; replay `ReconcileDailyUsageJob` on both sides and diff |
 | SendGrid invalid-domain credits stop decrementing | Credits move with the dispatch path in Wave 4; owner decided before Wave 2 closes |
@@ -285,5 +321,6 @@ The alternative — monolith counts locally over a projection — is rejected: a
 4. Does the statistic DB move, or does email-api emit into the existing one?
 5. Who owns the SendGrid invalid-domain credit counter after Wave 4 — email-api (which will own domain-auth state) or the monolith `Account` settings where it lives today?
 6. Storage metering counts `emails` rows as storage units. Once `emails` lives in email-api, should that come from `FeatureUsage.Show`, or should storage metering be redefined in actual bytes?
-7. Target account cohorts and pilot accounts per wave.
-8. Does `/user/v3/emails/*` become the long-term public shape, and is an FE migration project planned to follow?
+7. Kafka topic naming on producer transfer (§5.6) — does email-api publish under the existing `email.backend_app.*` names to spare downstream consumers, or do the topics get renamed and consumers migrated?
+8. Target account cohorts and pilot accounts per wave.
+9. Does `/user/v3/emails/*` become the long-term public shape, and is an FE migration project planned to follow?

@@ -8,6 +8,8 @@ Evaluation:
 ## Agenda: 1st technical interview (60m)
 - [ ] Greeting and ask for the introduction. Ice breaking
 	- [ ] Introduce interviewee (english is optional)
+	- [ ] 
+		- [ ] 
 - [ ] Hỏi về định hướng khi chọn andpad
 	- [ ] Match voi he thong cua minh
 - [ ] Kinh nghiệm làm việc (15’)
@@ -43,7 +45,9 @@ Evaluation:
 ## Interview Preparation Summary
 
 ### 1. **Golang-Specific Topics**
+
 ### 1. Goroutine leak
+**"Goroutine leak là gì? Những nguyên nhân phổ biến nào gây ra nó, và anh/em phát hiện ra leak trên production bằng cách nào?"**
 
 **Đáp án tốt:** Goroutine bị block vĩnh viễn nên không bao giờ được thu hồi. Nguyên nhân phổ biến:
 
@@ -60,6 +64,7 @@ Evaluation:
 ---
 
 ### 2. Context propagation
+**"Em dùng `context.Context` trong hệ thống của mình như thế nào? Khi client hủy request thì chuyện gì xảy ra với query DB / message đang publish?"**
 
 **Đáp án tốt:** `ctx` là tham số đầu tiên của mọi hàm I/O, không lưu trong struct. Dùng `QueryContext`/`ExecContext` thay vì `Query`/`Exec`, RabbitMQ dùng `PublishWithContext`, HTTP client dùng `http.NewRequestWithContext`. Khi client hủy, driver Postgres sẽ gửi cancel request lên server.
 
@@ -74,6 +79,8 @@ Evaluation:
 ---
 
 ### 3. Typed nil interface
+"Đoạn code này in ra gì — `err != nil` là true hay false? Giải thích tại sao."  
+(kèm snippet một hàm trả `error` nhưng thực chất return biến `*MyError` đang nil)
 
 **Đáp án đúng: `err != nil` là TRUE.**
 
@@ -86,6 +93,7 @@ func do() error {
     var e *MyError = nil
     return e          // BUG: caller thấy err != nil
 }
+
 // Đúng:
 func do() error {
     if failed { return &MyError{} }
@@ -99,6 +107,7 @@ func do() error {
 ---
 
 ### 4. Channel vs Mutex vs sync.Map
+**"Khi nào em dùng channel, khi nào dùng mutex, và `sync.Map` hợp trong trường hợp nào?"**
 
 **Đáp án tốt:**
 
@@ -112,6 +121,7 @@ func do() error {
 ---
 
 ### 5. Slice gotcha khi append
+**"Cho `a := []int{1,2,3,4,5}; b := a[1:3]; b = append(b, 99)` — `a` giờ bằng bao nhiêu? Vì sao, và làm sao tránh?"**
 
 **Đáp án tốt:** Slice cắt ra vẫn dùng chung backing array, và **cap kéo dài đến hết array gốc**, nên `append` sẽ ghi đè dữ liệu của slice cha:
 
@@ -132,6 +142,8 @@ b = append(b, 99)    // a giờ là [1,2,3,99,5] — a[3] bị ghi đè
 
 ### 6. Performance / giảm allocation
 
+"Kể một lần em tối ưu performance hoặc giảm allocation trong Go — em đo bằng gì, sửa cái gì, kết quả trước–sau ra sao?"
+
 **Đáp án tốt (phải kể được một case thật, có số liệu trước–sau):**
 
 - Đo trước: `go test -bench -benchmem`, heap profile qua pprof, xem `alloc_objects`/`inuse_space`.
@@ -148,6 +160,9 @@ b = append(b, 99)    // a giờ là [1,2,3,99,5] — a[3] bị ghi đè
 
 ### 7. `errors.Is` vs `errors.As`
 
+**7. `errors.Is` vs `errors.As`**  
+
+"Khác nhau giữa `errors.Is` và `errors.As`? Khi nào dùng cái nào, và team em quy ước wrap/log error thế nào?"
 **Đáp án tốt:**
 
 - `errors.Is(err, target)` — so sánh **danh tính**, đi dọc chuỗi wrap để tìm đúng sentinel error. Dùng cho `sql.ErrNoRows`, `context.DeadlineExceeded`, `io.EOF`.
@@ -161,6 +176,9 @@ b = append(b, 99)    // a giờ là [1,2,3,99,5] — a[3] bị ghi đè
 ---
 
 ### 8. Graceful shutdown trên Kubernetes
+
+**8. Graceful shutdown trên Kubernetes**  
+"Service Go của em nhận SIGTERM trên K8s thì xử lý theo thứ tự nào để không mất request và không mất message?"
 
 **Đáp án tốt — quan trọng là _thứ tự_:**
 

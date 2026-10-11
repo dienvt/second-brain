@@ -3,7 +3,7 @@ Call plan call digima
 call plan call subscription
 NameCallPlanCallDigima,
 FeatureCallPlanCallDigima
-Segment co cai kia 
+Segment co cai kia
 ## Overview
 We have table name `feature_usage` in each schema
 Then for each row we have structure like this
@@ -42,8 +42,6 @@ call plan tinh peak
 started_at, ended_at????
 
 PhoneNumber no peak compare vs CallPlans peak compare
-
-
 ## Crm
 Normally
 ```
@@ -453,6 +451,7 @@ What's Counted: Visits created within the period
 | Call Incoming Mobile   | Period                  | ❌ No          | Local                          |                   |
 | Call Plan Subscription | Period  (Point-in-time) | ❌ No          | Local                          |                   |
 | Web Tracking Visit     | Period                  | ❌ No          | Local                          |                   |
+|                        |                         |               |                                |                   |
 
 ---
 

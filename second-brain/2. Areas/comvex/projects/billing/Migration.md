@@ -37,6 +37,7 @@ Trigger daily segment
 ```
 {"accounts":{"all":true},"from":"2021-02-01T00:00:00+09:00","to":"2021-02-28T23:59:59.99999999+09:00"}
 ```
+
 Trigger monthly invoice
 routing key
 ```

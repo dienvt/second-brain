@@ -1,7 +1,7 @@
 ---
 tags: [comvex, digima, backend, domain, email, migration, microservice, runbook]
 project: digima-backend-app, digima-backend-email-api
-source: docs/migrations/email-domain-to-email-api/01-migration-steps.md
+source: app/Jobs/Email/, app/Services/Email/, app/Services/EmailClient/, app/Http/Controllers/User/v2/Email/, digima-backend-email-proto
 created: 2026-08-19
 ---
 
@@ -13,10 +13,10 @@ The ordered, step-by-step plan. Assumes [[Migration to email-api - Overview]] �
 
 | Wave | Scope | Blocked by | Risk |
 |---|---|---|---|
-| **0** | Proto, schema, event contracts, projections, adapters, flags, shadow harness, backfill tooling | Overview §5.1 | — |
+| **0** | Proto, schema, internal-API endpoints, projections, adapters, flags, shadow harness, backfill tooling | Overview §5.1 | — |
 | **1** | Templates | Wave 0 | Low — the proving ground |
 | **2** | Sender identity + **SendGrid as a new transport** | Wave 0 | Medium — net-new capability |
-| **3** | Tracking, engagement ingestion, **metering** | Wave 0 events + projections | **High — touches invoices** |
+| **3** | Tracking, engagement ingestion, **metering** | Wave 0 internal API + projections | **High — touches invoices** |
 | **4** | Classic send + workflow email action | Waves 2, 3 | High |
 | **5** | Bulk orchestration | Wave 4 | **Highest — duplicate mail to customers** |
 | **6** | Statistics, cleanup, public shape | Wave 5 | Low |
@@ -65,8 +65,9 @@ Applies at A4 in every wave. Database-per-account is what makes this safe.
 
 1. **Extend `digima-backend-email-proto`** — new services `Templates`, `CoreTemplates`, `Addresses`, `Domains`, `Exclusions`, `Recipients`, `RecipientEvents`, `Unsubscribes`, `Campaigns`, `Statistics`; extend `FeatureUsage` for CRM dispatched-recipient counts. Follow Comvex proto conventions (`List` RPC pagination, optional filters, enum naming). Public API from day one.
 2. **Per-account schema in email-api** for the ~18 tables, provisioned through the existing `Databases` service so new accounts get them automatically. Preserve column names, types and nullability — the backfill is a straight copy and any coercion becomes a data bug.
-3. **Kafka event contracts** for everything monolith consumers currently derive from SQL: email created/updated/deleted, campaign started/progressed/completed, envelope created, envelope dispatched, delivery/bounce/failure, open, click, unsubscribe. Extend the existing `email/event/*` proto tree — don't invent a parallel scheme.
-4. **Monolith read projections** replacing `Contact::emails()` / `Contact::envelopes()` (overview §5.2), plus their Kafka consumers. Build now, keep dark; they become the read source in Wave 3.
+3. **Inbound path from email-api to the monolith** — the monolith **never consumes Kafka** (overview §5.6). For everything the monolith currently derives from SQL and will need pushed to it (envelope created/dispatched, delivery/bounce/failure, open, click, unsubscribe, campaign progress), add endpoints under `routes/internal/v3/` that email-api calls. Follow the existing `POST /internal/v3/activities` and `/activities/batch` pattern — batch endpoints, idempotent, account-scoped. `POST activities/batch` may already cover the activity-logging case with no new endpoint at all.
+4. **Monolith read projections** replacing `Contact::emails()` / `Contact::envelopes()` (overview §5.2), written by the internal-API endpoints from step 3 — **not** by a queue consumer. Build now, keep dark; they become the read source in Wave 3.
+   **Also plan the Kafka producer transfer:** email-api takes over publishing `email.backend_app.emails.{created,updated,deleted}.v1`, `email.backend_app.recipient_events.created.v1` and `email.backend_app.clicks.created.v1` for downstream consumers. Decide the topic-naming question (overview open question 7) here, before any code depends on it.
 5. **Adapter layer** — new `EmailClient\Handlers\*` mirroring today's model API surface so controllers and jobs swap one line at a time instead of being rewritten. Reuse `BaseHandler` unchanged.
 6. **Feature flags** — `EMAIL_API_TEMPLATES`, `EMAIL_API_SENDER`, `EMAIL_API_TRACKING`, `EMAIL_API_SEND`, `EMAIL_API_BULK`, `EMAIL_API_STATISTICS`. On `FeatureFlag`, resolvable per account.
 7. **Shadow-compare harness** — reusable helper that reads both sides, diffs, logs structured mismatches. Every A3 uses it; without it A3 is guesswork.
@@ -123,19 +124,20 @@ Applies at A4 in every wave. Database-per-account is what makes this safe.
 2. **Move the exclusion list** (suppression). Sending consults it, so it must be readable from email-api before Wave 4.
 3. **Webhook** — keep `POST /sendgrid/v2/events` at the monolith and **forward** to email-api rather than repointing SendGrid twice. Move `ParseRawSendgridEventsJob` → `StoreSendgridEventsForAccountJob` logic into email-api. Repoint SendGrid directly only at A5, after forwarding has been stable.
 4. **Guest endpoints** — `GET /email/v2|v3/click`, `/open`, `POST /email/v2/unsubscribe`. These live in emails already delivered to real inboxes and must keep working **indefinitely**, not just through the migration. Keep the monolith URLs as permanent forwarders. Preserve the rate limits (`throttle.any:20,60`, `throttle.email_opens:1,3600`).
-5. **Rewire monolith consumers from SQL to events — before A4:**
+5. **Rewire the monolith off SQL — before A4.** Each item below moves to either a gRPC read or an internal-API push from email-api; none of them becomes a Kafka consumer:
    - `Listeners/Email/Envelope/UpdateStatisticSubscriber`
    - `Listeners/Email/Envelope/NotifyBouncedRecipientsSubscriber`, `UnBounceEmailAddressListener`
    - `Listeners/Email/{Bulk,Classic,Inbox}/LogActivitySubscriber`, `Services/Activities/MetaEnricher`
    - `Notifications/Email/*` (opened, clicked, bounced, digests)
-   - `FilterClient\Handlers\ContactAllFieldsIndex` `email_events` → projection
+   - `FilterClient\Handlers\ContactAllFieldsIndex` `email_events` → projection (fed by internal-API push)
    - `Services/Web/Tracking/TrackingManager` envelope correlation
-   - `Contact::{emails,envelopes,getEmailIdsByEvent,getEnvelopeEventQuery,getEnvelopeRecipientEventQuery}` → projection
+   - `Contact::{emails,envelopes,getEmailIdsByEvent,getEnvelopeEventQuery,getEnvelopeRecipientEventQuery}` → projection (fed by internal-API push)
    - `Export/Contact/{CreateExportRequestHelper,RowParser}`
-   - `EventProducer\Handlers\{EmailEnvelopeClicks,RecipientEvents}` — either retire in favour of email-api emitting directly, or keep the monolith as relay. **Decide explicitly**: duplicate producers on one topic corrupt downstream consumers.
+   - `Listeners/Email/{Bulk,Classic,Inbox}/LogActivitySubscriber` → email-api calls `POST /internal/v3/activities/batch`, which already exists for this purpose
+   - `EventProducer\Handlers\{Emails,EmailEnvelopeClicks,RecipientEvents}` — **producer ownership transfers to email-api**, one topic per release. The monolith stops producing in the same release email-api starts; never overlap, or downstream consumers see duplicates.
 6. **Metering — parallel run, not a flag flip.** Full procedure in [[Email Feature Usage Metering]]. In short: extend `FeatureUsage.Show` with the CRM distinct dispatched-recipient count; shadow-compute alongside the legacy local count; replay `ReconcileDailyUsageJob` over history and diff; switch only after a **full billing cycle of exact daily and monthly equality**, removing the legacy count in the **same** release.
 
-**Done when:** email-api writes all engagement data; SendGrid posts directly to email-api; guest tracking works from both old and new URLs; every consumer reads events or projections; email + storage usage reconciled exactly for a full billing cycle at 100% of accounts.
+**Done when:** email-api writes all engagement data; SendGrid posts directly to email-api; guest tracking works from both old and new URLs; every monolith consumer reads via gRPC or a projection fed by the internal API; email-api is the sole producer of the email Kafka topics; email + storage usage reconciled exactly for a full billing cycle at 100% of accounts.
 
 ---
 
@@ -204,7 +206,8 @@ Apply before any wave is called done.
 - [ ] Backfill idempotent, resumable, dry-runnable, sized against the largest account
 - [ ] Shadow-compare ran to zero mismatches for a full business cycle
 - [ ] Rollback tested — flag off, legacy path still serves
-- [ ] Every consumer in overview §3.4 rewired and verified
+- [ ] Every consumer in overview §3.4 rewired and verified — via gRPC or internal-API push, never a Kafka consumer in the monolith (§5.6)
+- [ ] Kafka producer ownership transferred with no overlap window
 - [ ] Activities, notifications and filter results verified against real account data
 - [ ] Usage metering unaffected, or reconciled per §5.5
 - [ ] Cohort rollout completed with a hold at each stage

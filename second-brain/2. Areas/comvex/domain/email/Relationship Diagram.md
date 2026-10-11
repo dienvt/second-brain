@@ -3,7 +3,7 @@
 This note documents the **legacy / SendGrid** email domain in `digima-backend-app` — the `Email`, `Envelope`, `Recipient`, etc. models that power Bulk and Classic outbound sends. It does **not** cover the inbox email microservice (Gmail/Outlook IMAP/Graph) — see [[Contact Email]] for the legacy-vs-inbox distinction.
 
 Companion files:
-- Parent: [[email]] — earlier raw entity dump
+- Parent: [[entites]] — earlier raw entity dump
 - Sibling: [[Contact Email]] — legacy vs inbox split
 
 ## TL;DR

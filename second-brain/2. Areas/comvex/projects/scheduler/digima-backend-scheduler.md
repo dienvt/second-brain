@@ -5,7 +5,34 @@ The main handler method is `Handle(ctx context.Context, event Event) error`. Thi
 Event struct will hold the general input of the lamda. That mean the event struct have to point out which follow lambda is calling
 The Event try to marshal each possible type until find the one correct.
 
-
+```
+  
+type OnDemandScheduleArgs struct {  
+    Code           string                      `json:"code"`  
+    UniqueId       string                      `json:"unique_id"`  
+    ScheduledAt    time.Time                   `json:"scheduled_at"`  
+    Payload        any                         `json:"payload"`  
+    HandlerOptions ScheduledSendHandlerOptions `json:"handler_options"`  
+}  
+  
+type ScheduledSendPayload struct {  
+    GroupMessageId uint64    `json:"message_id"`  
+    ScheduledAt    time.Time `json:"scheduled_at"`  
+}  
+  
+type ScheduledSendHandlerOptions struct {  
+    Driver      string `json:"driver"`  
+    RoutingKey  string `json:"routing_key"`  
+    Exchange    string `json:"exchange"`  
+    BearerType  string `json:"bearer_type"`  
+    AccountCode string `json:"account_code"`  
+    AccountId   uint64 `json:"account_id"`  
+    UserId      uint64 `json:"user_id"`  
+}  
+  
+const HandlerOptionsDriverRabbitMQ = "rabbitmq"  
+const HandlerOptionsDriverRabbitMQv7 = "rabbitmq_v7"
+```
 
 ### **Invocation lifecycle**
 

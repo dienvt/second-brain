@@ -7,10 +7,26 @@ aliases: "#comvex_h2_FY26"
 - [ ] deadline 📅 2026-12-30
 - key result
 Em alignment lại goal của Huy giúp anh nhé:
-- 
+- d
+
+## legacy service
+* [ ] https://github.com/comvex-jp/digima-backend-auth-api
+	* [ ] framework v7
+* [ ] https://github.com/comvex-jp/digima-backend-scheduler
+	* [ ] Framework v6,v7
+* [ ] https://github.com/comvex-jp/digima-backend-line-api
+
+## Call  
+Thêm `before` args on
+- email-api: `email.api.v1.FeatureUsageService.Show`
+- sms-api: `/v2|v3/statistics`
+- lead-api: `v2.Submissions.List`
+- line-api: 
+
 
 Cái plan cho Huy đến cuối năm sẽ support deliver những tính năng nào nhé:
--
+- https://comvex.myjetbrains.com/youtrack/gantt-charts/232-59
+
 
 Now : roald map H2 Sep
 * [ ] New Billing feature Clear requirement Sep, Oct : **Anh Huy sẽ support phần này**

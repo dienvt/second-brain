@@ -9,7 +9,7 @@ created: 2026-08-19
 
 How email usage is metered and billed, and why it is the most constrained part of [[Migration to email-api - Overview|moving the email domain to email-api]].
 
-Related: [[Feature Usage]] (the `feature_usage` table and daily-bucket mechanics) · [[Usage mismatch]] · [[Email usage]] · [[Invoice flow]] · [[Email Tracking - Delivery, Open, Click]]
+Related: [[Feature Usage]] (the `feature_usage` table and daily-bucket mechanics) · [[Usage mismatch]] · [[Email usage]] · [[Invoice flow]] · [[domain/email/Email Tracking - Delivery, Open, Click|Email Tracking - Delivery, Open, Click]]
 
 ## TL;DR
 
@@ -128,7 +128,7 @@ The tracking wave moves `email_envelope_recipient_events` — **the billing sour
 | **Before** | local SQL distinct + local workflow notifications + remote inbox |
 | **After** | **remote total** + local workflow notifications |
 
-The alternative — the monolith keeps a Kafka-fed projection and counts locally — is **rejected**: a distinct count over a projection that may lag or drop events is a *silent billing error*, strictly worse than a failed gRPC call you can see and retry.
+The alternative — the monolith keeps a projection and counts locally — is **rejected**: a distinct count over a projection that may lag or drop pushes is a *silent billing error*, strictly worse than a failed gRPC call you can see and retry. (The monolith cannot consume Kafka by convention, so such a projection would be fed by internal-API pushes from email-api — one more hop that can silently drop.)
 
 ### The rollout rule: parallel run, never a flag flip
 
