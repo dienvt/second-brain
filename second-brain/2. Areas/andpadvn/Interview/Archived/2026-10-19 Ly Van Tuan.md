@@ -7,109 +7,131 @@ Evaluation:
 ---
 ## Agenda: 1st technical interview (60m)
 - [ ] Greeting and ask for the introduction. Ice breaking
-	- [ ] Introduce interviewee (english is optional)
-	- [ ] Biên
-		- [ ] smart dev ở hn
-		- [ ] 5 năm
-		- [ ] Golang, php, python,
-		- [ ] Magic memory
-			- [ ]   
+	- Introduce interviewee (english is optional)
+	- Tuấn
+	- SE 9 năm
+	- BE là chính
+	- Golang python, nodejs
+	- BE và tech lead
+	- Automation testing 
+	- AWS, Azure
+	- 1000 con servers
+	- Golang phát triển Agent
+	- Agent Data bridge
+	- Có chứng chỉ về quản 
+		- PMI - 
+		- JCP/
+	- Những năm gần đây làm cho KH mỹ
+	- Có đi sang nhật
+	- Chỉ biết tiếng.
+	- Tạo retrospective
+	- Close incident:
+		- Check trong cache và redis
+		- Redis bị hết TTL, tại sao ko lưu trong trong database.
+		- Lưu lý trung gian & queue.
+		- Serve đẩy worker lấy thông tin trong queue.
+		- Elastic cache.
+		- Cache? 
+	- AI Enter
+	- Copilot vs Claude
+		- Enterprise
+		- ChatGPT
+		- Copilot
+			- GPT 5 
+		- Claude
+		- 
 - [ ] Hỏi về định hướng khi chọn andpad
-	- [ ] Match voi he thong cua minh
+	- Match voi he thong cua minh
+	- Multil tenant:
+		- Bên em triển khai như thế nào:
+		- DB chung, server chung 2 side Bắc / Nam
+	- Metric phân quyền với thiết kế dữ liêu
+	- Truy cập như thế nào? phân loại như thế nào?
+	- Cách feature:
+		- Service check authen/author.
+		- file/email quy trình, GR làm service riêng.
+			- Vẫn phải biết đến khái niệm tenant
+			- Chia tenant:
+				- infra
+					- Gộp chung một DB cũng được
+				- Tenant role, permission.
+				- Service có logic chung
+				- Gateway.
+				- Authentication.
+		- dùng auth.
+	- Feature: Deployment
+		- Quảng lý hết Terraform
+			- Service khác nhau có mỗi
+			- EC2
+			- EMV
+		- Image mới
+			- Helm
+			- Datadog
+		- Repose
+		- Kafka repo riêng.
+	- Các service đang giao tiếp như thế nào:
+		- Resful API
+			- Endpoint
+		- Grpc. 
+		- Async: thiết kế định nghĩ API async
+			- Endpoint Async: 
+				- Ví `/async` await?
+			- Queue để mình quản lý
+			- endpooind `/email` async
+			- Khi gửi lên:
+				- Làm sao để họ biết email đã được gửi hay chưa
+					- await. 
+					- send mail: add vào queue
+					- response: 202 accepted
+					- add vào queue.
+					- Update status thành sent.
+				- Đã tiếp nhận.
+				- send vào queue.
+				- Cập nhật vào database
+	- Tracing / Logging / metrics
+		- Logging: Ngày giờ,...
+		- Datadog: Key đó đi qua những service nào.
+		- Key: APM
+		- Datadog: SDK
+		- Deployment khai.
+		- Service sidecard.
+	- Cách em đang đánh index như thế nào:
+		- Index hay dựa vào thông tin mình query
+		- Khi có vấn đề về performance thì chạy analysize
+		- Hay dùng Hashmap, ít dùng 
+		- Câu query của anh gồm 3 columns
+		- Được truy vấn nhiều? 
+			- Ordering 
+		- Not strong
+	- Deadlock trong database
+		- Not strong
+	- Làm sao Golang có thể xử lý cả ngàn goroutine.
+	- 
+
 - [ ] Kinh nghiệm làm việc (15’)
-	- [ ] Daily tasks
-		- [ ] Nhập  requirement từ BA
-		- [ ] Viết description cho Ticket
-		- [ ] Chia cho team va estimate.
-		- [ ] manday (20 gio).
-			- [ ] làm task bao nhiêu tiếng.
-			- [ ] 
-	- [ ] Magic memory.
-		- [ ] Golang team lead: 5 người
-			- [ ] Tool review
-				- [ ] dungf chung
-				- [ ] flow, 
-			- [ ] 50 repo & services.
-				- [ ] ecomer
-				- [ ] capture images.
-				- [ ] organize .
-				- [ ] venture.
-				- [ ] Lampda.
-			- [ ] thumnail, watermark.
-			- [ ] internal sẽ call như thế nào?
-			- [ ] Deploy trên dev.
-			- [ ] Production. Trigger CI run manual. dùng argoCD. dùng helm chart để quản lý 
-			- [ ] EKS để deployemnt
-			- [ ] Newlic dung sdk.
-			- [ ] Monitor service :
-				- [ ] inline
-				- [ ] Bang loc
-			- [ ] Vendor ban vao activeMQ.
-			- [ ] Consume dung event bridge, lampda. k8s thoi
-			- [ ] keda scale theo con pod, 
-			- [ ] 400 pod, 
-			- [ ] db connection. 
-			- [ ] water mark thumbnail.
-			- [ ] Dung connection.
-			- [ ] rabbitMQ dung mot pod thoi.
-			- [ ] Tao thumpnail, tracking, tao len s3, setting policies (90 days, package re tien)
-			- [ ] api de push Image, consumer.
-			- [ ] hotpot, crm gui marketing.
-			- [ ] 10M anh 1 thang.
-		- [ ] Kiot tại trung tâm thương mại
-		- [ ] etech:
-			- [ ] live stream.
-		- [ ] capture images: wonderland
-			- [ ] 
-		- [ ] vào và mua lại bức ảnh đó.
-		- [ ] 10M ảnh
-		- [ ] Nghiệp vụ
-		- [ ] GMO
-	- [ ] Deadlock trong database
-		- [ ] Ecommerge
-		- [ ] Redis, distributed lock.
-			- [ ] Redis Client? 
-			- [ ] Lua scripts: 
-		- [ ] set key: timeout. 
-		- [ ] Podgresh: 
-			- [ ] Index : đánh combine index: a,b,c
-			- [ ] Where = a, ab, abc
-			- [ ] Explain analysis vs Explain 
-			- [ ] ??? sao biet ve nam sinh du t chua hoi.
-	- [ ] Cach em dang su dung AI:
-		- [ ] Co workflow
-		- [ ] viet skills
-		- [ ] discuss vao jira
-		- [ ] build proposal & clearify AC. edgcase la chinh.
-		- [ ] Tool de review code.
-			- [ ] AI review, con nguoi co tham gia
-			- [ ] Scope: business: 
-		- [ ] RAG. 
-	- [ ] Khó khăn vào thách thức
+	- Daily tasks
+	- Khó khăn vào thách thức
 - [ ] #technical_knowledge 
-	- [ ] What is the protocol use to communicate between your services
-	- [ ] How do you deploy your service, to mange deplyment state?
-		- [ ] Ask do I familiar with CI/CD.
-			- [ ] Gitlab ci, gitlab runner.
-		- [ ] Ask do I familiar with k8s.
-			- [ ] Build docker file.
-	- [ ] How do you observer or telemety your services? Do you apply tracing
-		- [ ] 
-	- [ ] How to you write test and manage test coverage.
-		- [ ] 
-	- [ ] Which one your code need unit test and what is the perfect percent of coverage
-	- [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+	-  What is the protocol use to communicate between your services
+	- How do you deploy your service, to mange deplyment state?
+		- Ask do I familiar with CI/CD.
+			- Gitlab ci, gitlab runner.
+		- Ask do I familiar with k8s.
+			- Build docker file.
+	- How do you observer or telemety your services? Do you apply tracing
+	- How to you write test and manage test coverage.
+	- Which one your code need unit test and what is the perfect percent of coverage
+	- Do you apply any system design, Design pattern to your services. What is pro and cons of that design
 - [ ] Problem Solving
 - [ ] Logical Thinking
-	- [ ] 
 - [ ] OAuth
 - [ ] OOP
 	- [ ] What is OOP ?
 	- [ ] What is SOLID
 - [ ] Golang
-	- [ ] What is goroutines
-	- [ ] How to avoid rate condition
-	- [ ] How you resolve consensure problem indo
+	- What is goroutines
+	- How to avoid rate condition
+	- How you resolve consensure problem indo
 - [ ] Ask about SA: How service talking with each other
 - [ ] Draw about current project structure
 
@@ -337,7 +359,7 @@ Mình có thể viết luôn đoạn code Go ~30 dòng cài sẵn 3 lỗi cho ph
 The two main approaches are:
 
 1. **Orchestration:** Here, an orchestrator service coordinates the saga by calling each microservice in sequence and managing the compensations if something fails.
-    
+
 2. **Choreography:** In this approach, each microservice knows when to perform its local transaction and how to handle compensation, and they communicate through events.
 
 * Two phase commit:

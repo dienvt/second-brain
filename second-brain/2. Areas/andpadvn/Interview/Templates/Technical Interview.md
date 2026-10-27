@@ -7,38 +7,34 @@ Evaluation:
 ---
 ## Agenda: 1st technical interview (60m)
 - [ ] Greeting and ask for the introduction. Ice breaking
-	- [ ] Introduce interviewee (english is optional)
-	- [ ] 
-		- [ ] 
+	- Introduce interviewee (english is optional)
 - [ ] Hỏi về định hướng khi chọn andpad
-	- [ ] Match voi he thong cua minh
+	- Match voi he thong cua minh
 - [ ] Kinh nghiệm làm việc (15’)
-	- [ ] Daily tasks
-	- [ ] Khó khăn vào thách thức
+	- Daily tasks
+	- Khó khăn vào thách thức
 - [ ] #technical_knowledge 
-	- [ ] What is the protocol use to communicate between your services
-	- [ ] How do you deploy your service, to mange deplyment state?
-		- [ ] Ask do I familiar with CI/CD.
-			- [ ] Gitlab ci, gitlab runner.
-		- [ ] Ask do I familiar with k8s.
-			- [ ] Build docker file.
-	- [ ] How do you observer or telemety your services? Do you apply tracing
-		- [ ] 
-	- [ ] How to you write test and manage test coverage.
-		- [ ] 
-	- [ ] Which one your code need unit test and what is the perfect percent of coverage
-	- [ ] Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+	-  What is the protocol use to communicate between your services
+	- How do you deploy your service, to mange deplyment state?
+		- Ask do I familiar with CI/CD.
+			- Gitlab ci, gitlab runner.
+		- Ask do I familiar with k8s.
+			- Build docker file.
+	- How do you observer or telemety your services? Do you apply tracing
+	- Which one your code need unit test and what is the perfect percent of coverage
+	- DB Indexing and DB deadlock
+	- Do you apply any system design, Design pattern to your services. What is pro and cons of that design
+	- Goroutine, Context propagation, Error handling.
 - [ ] Problem Solving
 - [ ] Logical Thinking
-	- [ ] 
 - [ ] OAuth
 - [ ] OOP
 	- [ ] What is OOP ?
 	- [ ] What is SOLID
 - [ ] Golang
-	- [ ] What is goroutines
-	- [ ] How to avoid rate condition
-	- [ ] How you resolve consensure problem indo
+	- What is goroutines
+	- How to avoid rate condition
+	- How you resolve consensure problem indo
 - [ ] Ask about SA: How service talking with each other
 - [ ] Draw about current project structure
 
